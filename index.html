@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guidebook</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <img src="assets/hypixel.jpeg" alt="Hypixel" />
+    <button class="menu-btn">Menu</button>
+  </header>
+
+  <nav>
+    <button class="active" data-tab="early">Early game</button>
+    <button data-tab="mid">Midgame</button>
+    <button data-tab="late">Lategame</button>
+    <button data-tab="end">Endgame</button>
+  </nav>
+
+  <main>
+    <div class="panel active" data-panel="early">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+
+    <div class="panel" data-panel="mid">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+
+    <div class="panel" data-panel="late">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+
+    <div class="panel" data-panel="end">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </main>
+
+  <footer>
+    <button class="active">Guidebook</button>
+    <button>Players</button>
+    <button>Progress</button>
+    <button>Settings</button>
+  </footer>
+
+  <script>
+    document.querySelectorAll('nav button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelector(`.panel[data-panel="${btn.dataset.tab}"]`).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
