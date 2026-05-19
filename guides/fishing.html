@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fishing Guide — Hypixel SkyBlock</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="topnav-wrap">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
+          <line x1="2" y1="4" x2="14" y2="4"/>
+          <line x1="2" y1="8" x2="14" y2="8"/>
+          <line x1="2" y1="12" x2="14" y2="12"/>
+        </svg>
+      </button>
+      <a href="../index.html" class="brand">
+        <img src="../assets/hypixel.png" alt="" />
+        <span>Hypixel SkyBlock</span>
+      </a>
+      <div class="search-wrap">
+        <div class="search-bar">
+          <svg class="search-icon" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="6.5" cy="6.5" r="4.5"/>
+            <line x1="10" y1="10" x2="14" y2="14"/>
+          </svg>
+          <input type="text" placeholder="Search guides, items, mechanics…" />
+          <span class="search-kbd">⌘K</span>
+        </div>
+      </div>
+      <nav class="topnav-links">
+        <a href="../index.html" class="topnav-link active">Guidebook</a>
+        <a href="../players.html" class="topnav-link">Players</a>
+        <a href="../progress.html" class="topnav-link">Progress</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="wiki-body">
+    <aside class="wiki-sidebar" id="sidebar">
+      <div class="sidebar-inner">
+        <section class="sidebar-section">
+          <h6 class="sidebar-heading">Progression</h6>
+          <ul class="sidebar-list">
+            <li><a href="../index.html" class="sidebar-item active"><span class="stage-pip pip-early"></span>Early Game<em>0–160</em></a></li>
+            <li><a href="../index.html" class="sidebar-item"><span class="stage-pip pip-mid"></span>Midgame<em>160–280</em></a></li>
+            <li><a href="../index.html" class="sidebar-item"><span class="stage-pip pip-late"></span>Late Game<em>280–440</em></a></li>
+            <li><a href="../index.html" class="sidebar-item"><span class="stage-pip pip-end"></span>Endgame<em>440+</em></a></li>
+          </ul>
+        </section>
+        <section class="sidebar-section">
+          <h6 class="sidebar-heading">Community</h6>
+          <ul class="sidebar-list">
+            <li><a href="../players.html" class="sidebar-item">Players</a></li>
+            <li><a href="../progress.html" class="sidebar-item">Progress</a></li>
+          </ul>
+        </section>
+        <div class="infobox">
+          <div class="infobox-title">Fishing</div>
+          <div class="infobox-row"><span>Skill cap</span><span>Fishing 50</span></div>
+          <div class="infobox-row"><span>Trophy types</span><span>Bronze / Silver / Gold / Diamond</span></div>
+          <div class="infobox-row"><span>Best water rod</span><span>Rod of the Sea</span></div>
+          <div class="infobox-row"><span>Best lava rod</span><span>Shredder / Lava Rod</span></div>
+          <div class="infobox-row"><span>Sea creatures</span><span>50+</span></div>
+          <div class="infobox-row"><span>Best pet</span><span>Dolphin / Flying Fish</span></div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="wiki-main">
+      <nav class="breadcrumb-nav">
+        <a href="../index.html">Home</a>
+        <span class="bc-sep">›</span>
+        <a href="../index.html">Guidebook</a>
+        <span class="bc-sep">›</span>
+        <span>Fishing</span>
+      </nav>
+
+      <div class="wiki-header">
+        <div>
+          <h1 class="page-title">Fishing Guide</h1>
+          <p class="page-subtitle">Water and lava fishing, trophy fish, sea creatures, rod progression, armor sets, pets, and best money-making methods.</p>
+        </div>
+        <div class="header-badges">
+          <span class="badge badge-version">v0.21</span>
+        </div>
+      </div>
+
+      <article class="wiki-article">
+
+        <!-- ===================== 1. INTRODUCTION ===================== -->
+        <h2>Introduction &amp; Importance</h2>
+        <p>Fishing is one of the most unique skills in Hypixel SkyBlock. Where most gathering skills have you break blocks or swing a weapon, Fishing requires patience, active sea creature combat, and knowledge of where and how to fish for specific targets. You're not just catching fish — you're catching Sea Creatures, Trophy Fish, rare item drops, and in some areas, materials tied to major endgame progression systems like Kuudra.</p>
+        <p>Fishing XP drives your SkyBlock level just like every other gathering skill, and Fishing 50 is a milestone that serious players eventually target. But the real appeal of Fishing is its dual nature: it's a viable income source at almost every stage of the game, and the collection of Trophy Fish is a long-term goal with real tangible rewards through the Trophy Fisherman NPC. Unlike some skills where the endgame is simply "number goes up," Fishing gives you specific targets to work toward — complete a set of trophy fish, unlock a unique rod, go fish for more trophies with that rod. There's a loop here that many players find genuinely engaging over hundreds of hours.</p>
+        <p>Trophy Armor sets are another compelling reason to invest in Fishing. Angler Armor in particular gives stacking Fishing Speed as you catch more fish, which compounds on itself and dramatically improves both income and XP rates the more you play. Players who build a proper Fishing setup and commit to it can reach a point where each hour of active Fishing generates several million coins in trophy sales, creature drops, and incidental loot.</p>
+        <p>This guide covers both water and lava fishing, the full rod progression, sea creature combat, trophy fish mechanics, armor sets, pets, location guides, and the complete route from Fishing 1 to 50.</p>
+
+        <!-- ===================== 2. FISHING SPEED ===================== -->
+        <h2>Fishing Speed Explained</h2>
+        <p>Fishing Speed is the most important stat in all of Fishing, and understanding it early prevents a lot of wasted investment. Fishing Speed reduces the time between bites — specifically, it shortens the window between casting your line and your bobber going under. A higher Fishing Speed means you get more bites per minute, which means more sea creatures, more trophy fish chances, and more Fishing XP per hour. It compounds in all directions at once.</p>
+        <p>The math is straightforward: base bobber wait time without any Fishing Speed is roughly 15–20 seconds per cast depending on location. At high Fishing Speed values — achievable with full Angler Armor, a good rod, and appropriate pet — that wait time drops to under 5 seconds. At max Fishing Speed configurations it drops to 1–3 seconds. The difference between 0 Fishing Speed and 300 Fishing Speed is roughly 5–10× more catches per hour. This is why Fishing Speed is the first stat to prioritize in any fishing setup, before worrying about damage, magic find, or secondary bonuses.</p>
+        <p>Sources of Fishing Speed include: Angler Armor set bonus (the primary source for most players, stacks with catches), rod enchants (Lure reduces wait time, Frail reduces creature health so kills are faster), specific rod passive bonuses, and pet abilities. The Dolphin and Flying Fish pets both provide notable Fishing Speed boosts. Stack every source available — there is no Fishing Speed cap that makes further investment wasteful within normal gameplay.</p>
+        <div class="wiki-note"><strong>Fishing Speed vs Fishing Fortune:</strong> Unlike Farming where Fortune is the primary scaling stat, Fishing Speed is the core mechanic in Fishing. Fortune exists in Fishing but it's secondary. More bites per minute beats more drops per bite at most progression stages.</div>
+
+        <!-- ===================== 3. WATER vs LAVA FISHING ===================== -->
+        <h2>Water Fishing vs Lava Fishing</h2>
+        <p>These are two fundamentally separate systems that share some mechanics but have distinct content, rods, creatures, and locations.</p>
+
+        <h3>Water Fishing</h3>
+        <p>Standard fishing in any body of water. Works everywhere there's a water source — Hub pond, Spider's Den river, Crystal Hollows lakes, and more. Catches include regular fish (Cod, Salmon, Pufferfish, Tropical Fish), sea creatures, and Trophy Fish. The vast majority of Fishing progression content — Angler Armor, most Trophy Fish, sea creature combat — happens through water fishing. This is the default mode and where new players spend most of their Fishing time.</p>
+        <p>Water fishing sea creatures range from trivial (Sea Walker, Sea Guardian) to extremely dangerous (Water Hydra, Sea Emperor). The creatures you encounter depend on your Fishing level, your Luck of the Sea enchant level, and which area you're fishing in. Higher-level areas spawn stronger creatures with better drops. Progressing through fishing areas as your combat level improves is the natural flow of the skill.</p>
+
+        <h3>Lava Fishing</h3>
+        <p>Lava fishing is locked to the Crimson Isle and requires a Lava Rod — casting a normal fishing rod into lava does nothing. The creatures you catch are fire-themed: Fire Eel, Magma Slug, Moldfin, Lordly Magmafish, and the notorious Thunder. These lava creatures have their own drop tables, many of which are valuable for crafting or Bazaar sales, and some have Trophy Fish equivalents catchable in lava.</p>
+        <p>The most important reason to learn lava fishing is Kuudra. The Specialist role in Kuudra runs involves fishing in specific lava pools during the boss fight to summon Supply Crates. The Shredder rod is the standard tool for this role because of its extremely high Fishing Speed, which translates to faster crate spawns and better overall run efficiency. Even if you never touch lava fishing casually, understanding it matters for endgame dungeon-adjacent content.</p>
+        <p>Lava fishing creatures hit harder than their water counterparts at equivalent Fishing levels. Make sure your combat gear is appropriate for the Crimson Isle before switching to lava fishing — dying repeatedly to lava creatures loses more time than the lava fishing gains back.</p>
+
+        <!-- ===================== 4. ROD PROGRESSION ===================== -->
+        <h2>Rod Progression</h2>
+
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr><th>Rod</th><th>How to Get</th><th>Key Benefit</th><th>Stage</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Basic Fishing Rod</td><td>NPC shop (few coins)</td><td>Starting point, nothing special</td><td>Fishing 1–5</td></tr>
+              <tr><td>Speedster Rod</td><td>Crafted (Uncommon)</td><td>First real Fishing Speed boost</td><td>Fishing 5–15</td></tr>
+              <tr><td>Yeti Rod</td><td>Jerry's Workshop seasonal event</td><td>High Fishing Speed; great seasonal rod</td><td>Midgame (winter)</td></tr>
+              <tr><td>Rod of the Sea</td><td>Crafted / AH purchase</td><td>Increases sea creature spawn chance; solid all-around</td><td>Midgame water rod</td></tr>
+              <tr><td>Shredder</td><td>Jelly Slime Trophy Fish exchange</td><td>Very high Fishing Speed; lava + Kuudra specialist</td><td>Late/endgame</td></tr>
+              <tr><td>Trophy Rods</td><td>Trophy Fisherman NPC exchanges</td><td>Type-specific bonuses; various effects</td><td>Late/endgame</td></tr>
+              <tr><td>Divan's Rod</td><td>Mining progression (rare mats)</td><td>Massive Fishing Speed + special abilities; true BIS</td><td>Endgame</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Basic Rod to Speedster</h3>
+        <p>The Basic Fishing Rod from the NPC shop should be replaced the moment you can craft the Speedster Rod. The Speedster Rod is an Uncommon crafted item that gives a meaningful Fishing Speed boost at the cost of modest materials. It doesn't do anything flashy but the Fishing Speed difference is immediately noticeable in bite frequency. Craft it as soon as the materials are available and don't look back.</p>
+
+        <h3>Yeti Rod — Best Seasonal Option</h3>
+        <p>The Yeti Rod is a seasonal drop available during Jerry's Workshop winter events. It has high base Fishing Speed and a unique passive that makes it one of the best rods in the game for its accessibility. If Jerry's Workshop is currently running, buy a Yeti Rod from the Auction House even if it's moderately expensive — it will carry you through most of mid-game Fishing without needing replacement. The caveat is availability: it's only obtainable during the winter event, so if you miss the window you'll have to wait or pay premium prices from players who stocked up.</p>
+
+        <h3>Rod of the Sea — Water Fishing Standard</h3>
+        <p>The Rod of the Sea is the benchmark midgame water fishing rod. It increases the chance of encountering sea creatures on each catch, which means more XP per hour from the creature kills and more opportunities for rare creature drops. Combined with good enchants, the Rod of the Sea carries most players from Fishing 20 through Fishing 40 without needing anything fancier. It's craftable from Fishing XP collection rewards plus materials available on the Auction House at moderate prices.</p>
+
+        <h3>Shredder — Lava Meta Rod</h3>
+        <p>The Shredder is obtained by exchanging Jelly Slime Trophy Fish (a lava-exclusive trophy) at the Trophy Fisherman NPC. Its passive ability gives extremely high Fishing Speed in lava specifically, making it the go-to rod for Kuudra Specialist role and general lava fishing. Some players also use it for water fishing due to sheer Fishing Speed, though Rod of the Sea's sea creature spawn bonus can outperform Shredder on pure sea creature XP in water. For lava content the Shredder is unambiguously the correct choice.</p>
+
+        <h3>Divan's Rod — Endgame</h3>
+        <p>Divan's Rod is crafted from materials tied to the Mining skill's endgame progression — specifically components from Dwarven Mines and Crystal Hollows. It has the highest Fishing Speed of any rod in the game plus a special ability that gives stacking bonuses during fishing sessions. The crafting cost is significant and the required materials are often expensive on the Auction House. Treat Divan's Rod as a very long-term goal and fish with Rod of the Sea or Shredder until you have the resources for it.</p>
+
+        <!-- ===================== 5. ROD ENCHANTS ===================== -->
+        <h2>Rod Enchantments</h2>
+        <p>Rod enchantments are where a lot of Fishing performance is locked. The right combination of enchants on your Rod of the Sea or Shredder significantly outperforms a well-enchanted basic rod. Here are the enchants that matter and why:</p>
+        <ul>
+          <li><strong>Luck of the Sea I–5:</strong> Increases the chance of catching rare fish, sea creatures, and Trophy Fish. This is a core enchant on every fishing rod regardless of purpose. Apply Luck of the Sea as high as you can afford immediately — it directly increases your Trophy Fish encounter rate and better sea creature spawns.</li>
+          <li><strong>Lure I–5:</strong> Reduces the time between bites. Stacks with Fishing Speed from gear and pets. Good for XP farming sessions where bite rate is the primary concern. Lower priority than Luck of the Sea but still worth having.</li>
+          <li><strong>Frail I–5:</strong> Reduces sea creature health. Each level reduces how much HP you have to burn through per creature kill. At Frail V sea creatures die significantly faster, which means less time fighting and more time fishing. Particularly valuable if your combat gear is modest relative to the sea creatures in your area.</li>
+          <li><strong>Piscary I–5:</strong> Increases damage dealt to sea creatures. Complements Frail for faster kills. At high levels this lets you one-shot or two-shot weaker sea creatures and significantly reduces kill time on tougher ones.</li>
+          <li><strong>Angler I–5:</strong> Increases the number of sea creatures you encounter. More sea creatures means more XP, more drops, and more fishing content per session. Good general enchant for active fishing sessions.</li>
+          <li><strong>Expertise I–10:</strong> Gives stacking Fishing Speed for each sea creature you kill, up to a maximum stack. The more you fish and kill, the more Fishing Speed you have during that session. Expertise's value compounds in long sessions — it makes the rod inherently better the longer you use it. Apply this early on your main rod and let the counter build over time.</li>
+          <li><strong>Blessing I–5:</strong> Grants Fishing XP per cast. Useful during dedicated Fishing XP grinding sessions where you want to level the skill as fast as possible. Lower priority than combat enchants for players focused on income.</li>
+        </ul>
+        <div class="wiki-note"><strong>Enchant priority:</strong> Luck of the Sea first, always. Then Expertise on your main rod. Then Frail + Piscary for faster kills, and Lure for faster bites. Blessing is situational for XP runs only.</div>
+
+        <!-- ===================== 6. SEA CREATURES ===================== -->
+        <h2>Sea Creatures Guide</h2>
+        <p>Sea creatures are the central mechanic of SkyBlock Fishing. When your bobber goes under and you reel in, there's a chance the catch is a sea creature instead of a fish — and sea creatures require you to kill them before you can cast again. This is not optional and this is not AFK-able: if you reel in a sea creature and leave it alive, you get no Fishing XP and can't fish again in that spot until the creature despawns or you kill it.</p>
+        <p>This combat requirement is the reason Fishing is an active skill. Your fishing damage, defense, and utility all matter. As you push into higher-level fishing areas the sea creatures hit harder and have more HP, requiring appropriate gear. Early game Hub Pond sea creatures can be killed with almost any combat setup. Crimson Isle lava creatures can one-shot an unprepared player. Match your fishing location to your combat readiness.</p>
+
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr><th>Sea Creature</th><th>Rarity</th><th>Combat Required</th><th>Notable Drops</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Sea Walker</td><td>Common</td><td>Trivial</td><td>Minor coins, basic fish</td></tr>
+              <tr><td>Sea Guardian</td><td>Common</td><td>Very low</td><td>Minor Fishing XP</td></tr>
+              <tr><td>Sea Witch</td><td>Uncommon</td><td>Low — casts slowness</td><td>Minor drops, some coins</td></tr>
+              <tr><td>Zombie Merman</td><td>Uncommon</td><td>Low-medium</td><td>Occasionally Trophy Fish</td></tr>
+              <tr><td>Sea Archer</td><td>Uncommon</td><td>Medium — ranged attacks</td><td>Arrows, minor drops</td></tr>
+              <tr><td>Night Squid</td><td>Common</td><td>Low</td><td>Ink Sacks for crafting</td></tr>
+              <tr><td>Catfish</td><td>Rare</td><td>Medium-High</td><td>Catfish Trophy, coins</td></tr>
+              <tr><td>Guardian Defender</td><td>Rare</td><td>High</td><td>Guardian Defender material; Magic Find reward</td></tr>
+              <tr><td>Grim Reaper</td><td>Rare</td><td>High</td><td>Good drops, rare fish items</td></tr>
+              <tr><td>Water Hydra</td><td>Very Rare</td><td>Very High — multiple phases</td><td>Sponge, Angler Armor components</td></tr>
+              <tr><td>Sea Emperor</td><td>Legendary — event only</td><td>Extreme</td><td>Massive loot drops; event-exclusive items</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>The Water Hydra deserves special mention. It has multiple health pools and spawns in phases — when you kill the first form, it splits into smaller Hydra segments that each need to be killed. The drops are worth it: Water Hydra reliably drops materials used for Angler Armor crafting, which is the primary reason mid-game Fishers want to encounter them frequently. Rod of the Sea's sea creature spawn bonus significantly increases your Hydra encounter rate compared to basic rods.</p>
+        <p>Sea creature HP and damage output scales with your Fishing level and the area you're fishing in. A Sea Guardian at the Hub Pond at Fishing 10 is an easy kill. The same encounter at the Crystal Hollows at Fishing 30 might involve a tougher version of the creature with better drops. Higher-area sea creatures give more Fishing XP per kill, which is another reason to push into better fishing locations as your setup improves.</p>
+
+        <!-- ===================== 7. TROPHY FISHING ===================== -->
+        <h2>Trophy Fishing</h2>
+        <p>Trophy Fish are a separate catch type from normal fish and sea creatures. They're rare — you won't see one every session early on — but they're one of the most rewarding long-term goals in the Fishing skill. Each Trophy Fish exists in four quality tiers: Bronze, Silver, Gold, and Diamond. Diamond is extremely rare and typically worth significant coins on the Bazaar or as exchange fodder at the Trophy Fisherman NPC.</p>
+        <p>Trophy Fish are caught based on several overlapping factors: the area you're fishing in, current weather conditions, time of day in SkyBlock, your Luck of the Sea enchant level, and specific bonuses from trophy-hunting rods. Some trophy types only appear in specific areas — lava-exclusive trophies can't be caught in water, and winter-only trophies don't spawn outside of Jerry's Workshop season. Building a complete trophy collection requires fishing in multiple areas across multiple seasons.</p>
+        <p>Each unique Trophy Fish you catch — regardless of tier — gives a permanent stat bonus when deposited into your Trophy Fish collection. These bonuses are permanent and stack. Collecting every available trophy type over time gives a meaningful cumulative stat boost to Fishing-relevant stats. This makes trophy hunting rewarding even for players who aren't primarily chasing coins — every new type is a permanent character upgrade.</p>
+
+        <h3>Trophy Fish Tiers and Value</h3>
+        <p>Bronze and Silver trophies sell for modest amounts on the Bazaar — enough to notice but not enough to be a primary income source. Gold trophies start getting valuable, particularly for rarer fish types. Diamond trophies are where real money enters the picture. Some Diamond-tier trophies sell for millions of coins each, and the extremely rare ones (Obese Jerry Diamond, for example, during winter event) can fetch tens of millions. The catch rate for Diamond is low enough that a single Diamond drop in a long session is a good session.</p>
+        <p>The Trophy Fisherman NPC accepts sets of trophies in exchange for unique rods and equipment. The Shredder rod, mentioned earlier, comes from exchanging a set of Jelly Slime trophies. Other unique rods require different trophy sets. If you're working toward a specific trophy rod, check the NPC's requirements and target-fish those specific trophy types. It's more efficient than fishing randomly and hoping the right trophies accumulate.</p>
+
+        <h3>Trophy Fish by Area</h3>
+        <ul>
+          <li><strong>Hub and standard water areas:</strong> Common trophy types including Sea Creature variants. Good starting point for building out the collection.</li>
+          <li><strong>Crystal Hollows:</strong> Crystal-themed trophies. Some of these fetch good prices on the Bazaar due to lower catch rates in this area. The fishing here also has unique sea creature spawns.</li>
+          <li><strong>Crimson Isle (Lava):</strong> Lava-exclusive trophies — Moldfin, Bladder, Blobfish variants, and the Jelly Slime required for the Shredder rod. Must use a Lava Rod to catch these.</li>
+          <li><strong>Jerry's Workshop (Winter):</strong> Winter-exclusive trophies including Obese Jerry variants. These are among the most sought-after trophies in the game both for collection completeness and Bazaar value. If the winter event is active and you're serious about trophy fishing, prioritize these immediately.</li>
+        </ul>
+
+        <!-- ===================== 8. TROPHY ARMOR SETS ===================== -->
+        <h2>Trophy Armor Sets</h2>
+        <p>Four fishing-specific armor sets are obtainable through Fishing and sea creature drops. Each has a different purpose and optimal use case, and understanding which one to build first matters for how fast your Fishing progression goes.</p>
+
+        <h3>Angler Armor — The Leveling Set</h3>
+        <p>Angler Armor is the most important Fishing armor set for anyone trying to level the skill efficiently. Its set bonus gives stacking Fishing Speed that increases every time you catch a fish or sea creature, up to a maximum stack. In practice this means the longer your fishing session runs, the faster you fish — Angler Armor rewards continuous sessions and punishes short bursts. At maximum stacks, the Fishing Speed bonus from the set is substantial and makes a clearly noticeable difference in bite frequency.</p>
+        <p>Crafting Angler Armor requires materials from sea creature drops, particularly Water Hydra components. This ties your armor progression directly to your sea creature encounter rate — another reason to use Rod of the Sea with Angler enchant early, since more sea creature spawns means faster Angler Armor material accumulation. Getting full Angler Armor crafted and wearing it is the most impactful single gear upgrade for mid-game Fishing.</p>
+
+        <h3>Hunter Armor — Movement Set</h3>
+        <p>Hunter Armor provides a speed burst after killing sea creatures. If you fish at a location where you need to move between fishing spots — running to where the creature spawned, killing it, then running back — Hunter Armor reduces the downtime between kills and casts. It's situationally useful for active, mobile fishing styles but falls behind Angler Armor for raw XP/hr in standard stationary setups. Some players swap to Hunter Armor for specific sea creature hunting sessions where creature mobility is a factor.</p>
+
+        <h3>Crystal Armor — Trophy Hunting Set</h3>
+        <p>Crystal Armor increases the spawn rate of rare sea creatures, which correlates with higher Trophy Fish encounter rates. It's the dedicated trophy hunting set for players who specifically want to maximize their trophy collection. Crystal Armor's trade-off is that it provides less Fishing Speed than Angler Armor, so your raw bite rate is lower. The meta recommendation: use Angler Armor while leveling and doing general income fishing, switch to Crystal Armor for dedicated trophy hunting sessions where you want to maximize rare spawn rates.</p>
+
+        <h3>Diver Armor — Utility Set</h3>
+        <p>Diver Armor gives Aqua Affinity (full underwater mining speed), increased movement speed in water, and some Fishing-adjacent stat bonuses. It's most useful in areas where you need to navigate underwater between fishing spots, or in specific challenge content where underwater movement matters. For normal fishing it's outclassed by Angler and Crystal. Worth knowing about but not a priority craft for most players.</p>
+
+        <!-- ===================== 9. BEST FISHING LOCATIONS ===================== -->
+        <h2>Best Fishing Locations</h2>
+
+        <h3>Hub Pond (Fishing 1–15)</h3>
+        <p>The Hub pond near spawn is the starting area for Fishing. Sea creatures here are weak, bite rate is decent for a starting location, and it's convenient when you're doing other Hub-related tasks. Don't expect impressive drops or XP rates — the Hub pond is simply the safest introduction to the mechanics. Transition away from it as soon as you have Speedster Rod and basic combat gear that can handle stronger sea creatures.</p>
+
+        <h3>Spider's Den River (Fishing 10–25)</h3>
+        <p>The Spider's Den has a river running through it with better sea creatures than the Hub pond. Ink Sack-dropping Night Squids appear here in decent numbers, and the general sea creature quality is a step up. The location is also convenient if you're doing Spider Slayer alongside Fishing — both activities benefit from being in the same area. A solid mid-early location before you push to Crystal Hollows or Crimson Isle.</p>
+
+        <h3>Crystal Hollows (Fishing 25–40)</h3>
+        <p>The Crystal Hollows has fishing areas inside several of its biomes. The sea creatures here are significantly stronger than early areas but the drops are proportionally better. Trophy Fish exclusive to the Crystal Hollows only appear here, and the rare sea creature variants drop materials used for advanced fishing crafts. You need functional combat gear for the Crystal Hollows — arriving in basic armor will result in frequent deaths. Bring appropriate Mage or Berserker gear and treat the sea creature kills as light combat content.</p>
+
+        <h3>Crimson Isle — Lava Fishing</h3>
+        <p>The Crimson Isle's lava lakes are the home of lava fishing. Lava creatures here include some of the strongest non-boss enemies in the Fishing ecosystem. Drops from Crimson Isle lava fishing include lava-exclusive Trophy Fish (critical for the Shredder rod), materials for Kuudra-related crafts, and creature-specific loot worth decent Bazaar prices. The combined income from lava creature drops and trophy fish sales makes this one of the better active fishing income locations in the game for geared players.</p>
+
+        <h3>Jerry's Workshop — Seasonal Best</h3>
+        <p>Every few weeks, the Jerry's Workshop winter event activates and transforms the entire area into a dedicated Fishing zone. Obese Jerry sea creatures spawn constantly, they're relatively easy to kill, and they give excellent Fishing XP per kill. Winter-exclusive Trophy Fish appear at higher rates than most trophies elsewhere. Special fishing missions from NPCs in the workshop give additional coin rewards. The Yeti Rod — one of the best rods in the game — is only available during this event.</p>
+        <p>If you need to grind Fishing levels and a Jerry's Workshop event is upcoming or currently active, strongly consider doing your grinding exclusively during the event window. The XP/hr during Jerry's Workshop is meaningfully higher than any non-event location, and the trophy fish and Yeti Rod opportunities don't appear elsewhere. Check the SkyBlock calendar or community trackers to know when the next event window opens.</p>
+
+        <h3>Mushroom Desert</h3>
+        <p>The Mushroom Desert has some unique sea creature types not found in other areas. Specifically there are Mushroom Desert-exclusive creatures with drop tables worth knowing if you're building a complete Fishing collection. It's not a primary leveling or income location, but it's worth a targeted session if you're missing specific collection items or sea creature-related achievements tied to this area.</p>
+
+        <!-- ===================== 10. PETS FOR FISHING ===================== -->
+        <h2>Pets for Fishing</h2>
+        <p>Pet choice in Fishing is more situational than in most other skills — the best pet genuinely changes based on what you're doing in a given session. Know your options and swap appropriately.</p>
+
+        <h3>Legendary Dolphin — Open Water Best in Slot</h3>
+        <p>The Legendary Dolphin is the best pet for water fishing in open ocean or large lake areas. Its primary ability gives a Fishing Speed bonus that scales with how long you're in open water (not directly adjacent to blocks). In open fishing spots this is consistently active and stacks well with Angler Armor and rod enchants. The Dolphin's secondary perk gives a small bonus catch chance for valuable fish types. For dedicated water fishing sessions in appropriate areas, Dolphin is the correct choice at Legendary rarity.</p>
+
+        <h3>Legendary Flying Fish — General Fishing Pet</h3>
+        <p>The Flying Fish gives Fishing Speed plus raw movement Speed. It's not area-locked the way the Dolphin is — it works in rivers, small ponds, and tighter fishing spots where the Dolphin's open water bonus might not consistently activate. Flying Fish is the reliable all-rounder choice: it performs well in any fishing area and the movement speed bonus helps when chasing sea creatures that spawn at distance. For players who fish in a variety of locations and don't want to swap pets constantly, Flying Fish is the safe default.</p>
+
+        <h3>Baby Squid — Ink and Early Pet</h3>
+        <p>The Baby Squid gives Ink Sack drop bonuses from Night Squids and some minor Fishing Fortune. It's a functional early fishing pet before you have Dolphin or Flying Fish at Legendary rarity, and if Ink Sacks are in demand on the Bazaar it can generate noticeable passive income during Spider's Den fishing sessions. As a long-term pet it's outclassed by Dolphin and Flying Fish but doesn't need to be replaced urgently while saving up.</p>
+
+        <h3>Parrot — Potion Amplifier</h3>
+        <p>The Parrot (obtained from Foraging) amplifies all active potion effects by 50%. If you use Fishing Potions regularly during fishing sessions — which serious fishers should — the Parrot turns a standard Fishing Potion into a significantly stronger version. The Fishing Potion gives a temporary Fishing Speed and Luck of the Sea boost; with Parrot active those boosts are 50% stronger for the potion duration. For players who consistently use God Potions or fishing-specific potions, Parrot is a legitimate consideration even over Flying Fish in some setups.</p>
+
+        <h3>Squid — Minor Utility</h3>
+        <p>The Rare/Legendary Squid pet gives a chance to drop Squid Hat (a cosmetic with minor Fishing Fortune) from Night Squids and adds some passive Fishing Fortune. It's a niche choice for players specifically farming Squid Hat drops or doing Night Squid collection grinds. Not competitive with Dolphin or Flying Fish for general Fishing efficiency.</p>
+
+        <!-- ===================== 11. PROGRESSION ROUTE ===================== -->
+        <h2>Beginner to Endgame Fishing Route</h2>
+
+        <h3>Beginner (Fishing 1–20)</h3>
+        <p>Start at the Hub Pond with a Speedster Rod as soon as you craft one. Apply Luck of the Sea I–III and Lure I–II as early enchant investments. Kill every sea creature that spawns — this is mandatory, not optional. The XP from creature kills is a significant portion of Fishing XP early on, and leaving creatures alive means no XP and no progress. When you hit Fishing 10, start crafting Angler Armor piece by piece from Water Hydra drops — even partial Angler sets give partial bonuses while you build toward the full four-piece. Grab a Flying Fish or Baby Squid pet as an early fishing companion.</p>
+        <p>The Hub pond is fine until Fishing 12–15 but transition to Spider's Den river afterward. The better sea creature quality there immediately improves both your XP rate and your Angler Armor material accumulation. Don't linger at the Hub pond past the point where you're not getting killed easily.</p>
+
+        <h3>Midgame (Fishing 20–35)</h3>
+        <p>Full Angler Armor should be your gear priority. Move to Crystal Hollows fishing once you have enough combat gear to survive the area. Upgrade to Rod of the Sea and apply Expertise as soon as available — let it start building stacks. Upgrade your pet to Flying Fish or start saving for Legendary Dolphin. Begin trophy fish hunting: track which trophies you're missing and fish in appropriate areas to fill in collection gaps. Rod of the Sea with Angler + Frail III+ lets you kill sea creatures quickly enough that combat downtime stops being the bottleneck.</p>
+        <p>Start checking trophy fish Bazaar prices regularly. As your Luck of the Sea and area quality improve, you'll start seeing Gold trophy catches occasionally. These are worth meaningful coins. Build the habit of checking prices before selling — some trophies are worth significantly more than their "junk sell" value at NPCs.</p>
+
+        <h3>Late Game / Endgame (Fishing 35–50)</h3>
+        <p>By Fishing 35 you should have full Angler Armor, Rod of the Sea fully enchanted (Luck of the Sea V, Expertise building, Frail V, Angler V), Legendary Flying Fish or Dolphin, and a functioning income stream from trophy sales and creature drops. Transition to Crimson Isle lava fishing for the Shredder rod grind — you need Jelly Slime trophies, which only come from lava. Getting the Shredder unlocks the Kuudra Specialist role and significantly improves lava income.</p>
+        <p>Jerry's Workshop during winter events remains the best Fishing XP/hr regardless of your gear level. Time major Fishing grinding pushes around these events. At Fishing 45+ with max Angler stacks, good rod, and appropriate pet, Jerry's Workshop can push 20M+ Fishing XP per hour. Outside of the event, Crimson Isle lava fishing and Crystal Hollows water fishing are the primary endgame income sources.</p>
+        <p>Trophy collection completion is the true endgame for dedicated fishers. Each unique trophy deposited gives permanent stat bonuses. The complete set represents hundreds of hours of fishing across multiple areas and seasons, but the cumulative stat bonuses are meaningful and the Bazaar income from Diamond trophies along the way pays for itself many times over.</p>
+
+        <!-- ===================== 12. MONEY MAKING ===================== -->
+        <h2>Money Making from Fishing</h2>
+
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr><th>Method</th><th>Coins/hr estimate</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Trophy fish sales (Gold/Diamond)</td><td>1M–10M+ variable</td><td>Heavily dependent on trophy rarity and current Bazaar prices</td></tr>
+              <tr><td>Lava fishing (Crimson Isle)</td><td>1M–3M</td><td>Consistent creature drops; Shredder required for top performance</td></tr>
+              <tr><td>Sea creature drops (rare spawns)</td><td>Variable 500k–2M</td><td>Scales with creature tier and Magic Find</td></tr>
+              <tr><td>Jerry's Workshop (winter event)</td><td>2M–5M+</td><td>Best combined XP+coins; winter-exclusive trophies add significant value</td></tr>
+              <tr><td>Crystal Hollows fishing</td><td>1M–2M</td><td>Area-exclusive trophies + decent creature drops</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Fishing income is inherently variable because it depends heavily on what drops during a given session. A session with two Diamond trophy catches might earn 5M. A session with only Bronze trophies earns a fraction of that for identical time investment. The sustainable way to think about Fishing income is in terms of weekly averages rather than hourly snapshots — variance smooths out over many sessions.</p>
+        <p>The most consistent income method is Crimson Isle lava fishing with Shredder + appropriate combat gear. Each lava creature kill drops various materials with reasonably predictable Bazaar value, and the lava trophy catch rate adds a reliable income stream on top. The floor on Crimson Isle lava fishing is higher than most water fishing methods because creature drop income is consistent even when trophies don't cooperate.</p>
+        <p>God Potions during active sessions effectively increase all income. The combined Fishing Speed, Luck, and Combat bonuses from God Potion status translate to faster catches, better trophy rates, and faster creature kills. For sessions longer than 30 minutes it's usually worth using a God Potion — the income increase over the potion duration exceeds the cost at mid-to-late game fishing setups. Pair with Parrot pet for the 50% amplification of the Fishing Potion components.</p>
+
+        <!-- ===================== 13. JERRY'S WORKSHOP FESTIVAL ===================== -->
+        <h2>Jerry's Workshop Festival Guide</h2>
+        <p>Jerry's Workshop is a seasonal event that activates on a recurring schedule (roughly every 3–4 real weeks for several days). The entire Workshop island transforms into a dedicated fishing zone with dramatically accelerated Fishing content. If you only read one section of this guide for planning purposes, it should be this one — the event window is that impactful for Fishing progression.</p>
+        <p>During the event, Obese Jerry sea creatures spawn at an extremely high rate across all fishing spots in the Workshop. Obese Jerries have moderate HP and easy-to-dodge attacks, making them accessible to mid-game combat setups. Each kill grants substantial Fishing XP — higher than most non-event sea creatures — and they drop coins, materials, and occasionally valuable event-specific items. A player with full Angler Armor and Legendary Flying Fish or Dolphin can clear Obese Jerry spawns fast enough to maintain near-continuous fishing without meaningful downtime between casts.</p>
+        <p>Winter-exclusive Trophy Fish appear during the event at rates significantly better than their out-of-season availability. The Obese Jerry Trophy Fish in Bronze through Diamond tiers is one of the most valuable trophy types in the game at Diamond rarity — players who fish during the event with high Luck of the Sea and good setups can accumulate multiple Diamond Obese Jerries per event window, each worth millions of coins. The event also spawns a unique sea creature — the Ice Yeti — that drops components for the Yeti Rod. Buy or craft Yeti Rod materials during the event if you don't have the rod yet.</p>
+        <p>Special fishing missions from NPCs inside the Workshop give additional coin rewards and sometimes unique item drops for completing catch quotas within time limits. These missions reset daily during the event. Do them every day — they represent essentially free coins and items on top of your normal fishing income.</p>
+        <div class="wiki-warn"><strong>Plan around the event:</strong> If you're at Fishing 30+ and need to push toward 50, check community trackers (like SkyBlock Calendar sites or the official Discord) for the next Jerry's Workshop window. If the event is coming up within a week, consider holding off on major Fishing grinds and doing other content until the event starts. The XP difference between Jerry's Workshop and standard fishing locations can cut your level grind time significantly.</div>
+
+        <!-- ===================== 14. COMMON MISTAKES ===================== -->
+        <h2>Common Mistakes</h2>
+
+        <p><strong>Not killing sea creatures.</strong> This is the most common Fishing error and it completely breaks progression. Fishing XP comes from killing sea creatures, not from catching fish. Players who cast their rod, see a sea creature spawn, and ignore it because they "just want to fish" are earning essentially no XP per session. Every sea creature that spawns must be killed before you cast again. There are no exceptions to this rule if you want Fishing levels.</p>
+
+        <p><strong>Using the wrong rod for the location.</strong> A Lava Rod in water does nothing. A water rod in lava does nothing. This sounds obvious but players who switch between water and lava fishing areas sometimes forget to swap their rod and spend several minutes confused about why they're catching nothing. Keep both rod types accessible in your inventory if you switch regularly.</p>
+
+        <p><strong>Ignoring Fishing Speed entirely.</strong> New Fishers sometimes invest in Magic Find, combat stats, or other secondary attributes before building any Fishing Speed. Fishing Speed determines how many catches you get per minute. Every other investment is multiplied by catch rate — if you're getting 4 catches per minute instead of 12, all your other upgrades are working at one-third efficiency. Always build Fishing Speed first: Angler Armor, appropriate rod enchants, and a good pet.</p>
+
+        <p><strong>Not building Angler Armor during mid-game.</strong> Some players push through Fishing 20–35 wearing combat armor and wondering why their Fishing feels slow. Angler Armor's Fishing Speed stacking bonus is substantial and it's farmable from Water Hydra drops — materials you accumulate naturally from fishing anyway. Skipping Angler Armor means running without the biggest available Fishing Speed source during the mid-game window. Craft it as soon as the Hydra drops accumulate.</p>
+
+        <p><strong>Missing Jerry's Workshop events.</strong> The XP and income during Jerry's Workshop are dramatically better than normal fishing. Missing event windows forces you to do the same Fishing grind at much lower efficiency for weeks afterward. Check the SkyBlock calendar and prioritize Fishing during event windows.</p>
+
+        <p><strong>Not tracking trophy fish collection.</strong> Each unique trophy fish deposited gives permanent stat bonuses. Players who sell every trophy they catch for quick coins are permanently losing those stat bonuses. Deposit at least one of each unique trophy type (any tier) to the collection before selling duplicates and higher-tier duplicates. The stat bonuses are permanent and won't come back if you skip them.</p>
+
+        <p><strong>Fishing in crowded spots.</strong> Fishing in SkyBlock is affected by how many players are in the same area. More players in the same pond means fewer fish per player, lower sea creature spawn rates, and competition for the same trophy fish chances. Find quieter servers or fishing spots with fewer active fishers nearby. During peak hours on popular servers, sea creature spawn rates at popular spots can drop noticeably. Use the server selector to find lower-population lobbies when fishing seriously.</p>
+
+        <p><strong>Selling trophies without checking Bazaar prices.</strong> Trophy fish prices fluctuate based on supply and demand. Some trophy types are significantly more valuable than their sell-to-NPC price. Never sell trophies to NPCs — always check the Bazaar. Some Diamond trophies that an NPC buys for a few hundred coins sell for millions to other players. This is free money left on the table if you NPC-sell.</p>
+
+        <!-- ===================== 15. FAQ ===================== -->
+        <h2>Frequently Asked Questions</h2>
+
+        <p><strong>Can I AFK fish in SkyBlock?</strong></p>
+        <p>Not really, no. The core loop requires you to reel in your bobber when it goes under (manual input) and kill sea creatures that spawn (active combat). There are semi-AFK setups that minimize active input — some involve specific afk machines that auto-click at timed intervals — but these are generally considered borderline rule violations. Hypixel's rules prohibit automated gameplay; a setup that requires no real player input falls into macro territory. Fish actively or don't fish. If you need genuinely passive income, other skills (Snow Minions, AFK Mushroom Farming) are better suited to that playstyle.</p>
+
+        <p><strong>What's the best pet for Fishing?</strong></p>
+        <p>Legendary Dolphin for open water fishing in large bodies of water. Legendary Flying Fish for general Fishing across varied locations or if you frequently move between spots. Parrot if you consistently use Fishing or God Potions during sessions. For active sea creature combat grinding specifically, a Legendary Shredder pet (if you have it from drops) gives bonus damage against sea creatures, which speeds up kills significantly. Match the pet to what you're doing in a given session rather than picking one and never swapping.</p>
+
+        <p><strong>How do I catch Trophy Fish faster?</strong></p>
+        <p>Maximize Luck of the Sea enchant level on your rod (this directly increases trophy fish encounter chance), use Crystal Armor when trophy hunting for the rare sea creature and trophy spawn bonus, fish in the appropriate area for the specific trophies you need, and use Fishing Potions with Parrot pet active for the enchanted boost. Beyond gear, time of day in SkyBlock affects some trophy types — check community wikis for which trophies have time-of-day bonuses if you're hunting a specific type.</p>
+
+        <p><strong>What's the point of the Shredder rod if I fish in water?</strong></p>
+        <p>The Shredder's high Fishing Speed is its main draw, and while Rod of the Sea's sea creature spawn bonus usually wins for water fishing in terms of XP, the Shredder is mandatory for lava fishing and the Kuudra Specialist role. If you never do lava fishing or Kuudra, the Shredder is less essential. But most endgame players do both eventually, making the Shredder a core inventory item rather than a niche specialty rod.</p>
+
+        <p><strong>Why does Fishing XP feel slow compared to other skills?</strong></p>
+        <p>Sea creature kill XP is the majority of Fishing XP, but each kill is gated behind a fishing cast and a bobber wait. The "kills per minute" rate in Fishing is inherently lower than, say, chopping trees in Foraging or breaking blocks in Mining. High Fishing Speed and efficient creature killing brings it up significantly, but the mechanic design means Fishing levels more slowly than some other skills at equivalent time investment. This is partly why Jerry's Workshop is so valuable — Obese Jerry's fast respawn and easy kills compress the normal kill-per-minute bottleneck substantially.</p>
+
+        <p><strong>Is Divan's Rod worth farming toward?</strong></p>
+        <p>If you're already deeply invested in Mining and have the prerequisite materials, yes — Divan's Rod is the best rod in the game and its Fishing Speed advantage over alternatives is real. If you're primarily a Fisher who doesn't play Mining seriously, farming Divan's Rod materials is a significant cross-skill investment that may not be worth it compared to simply fishing with Rod of the Sea or Shredder. Evaluate based on your existing Mining progression rather than treating it as a Fishing-only goal.</p>
+
+      </article>
+    </main>
+  </div>
+
+  <nav class="mobile-nav">
+    <a href="../index.html" class="active">Guidebook</a>
+    <a href="../players.html">Players</a>
+    <a href="../progress.html">Progress</a>
+  </nav>
+
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    const toggle  = document.getElementById('sidebarToggle');
+    toggle.addEventListener('click', () => {
+      sidebar.classList.contains('open')
+        ? (sidebar.classList.remove('open'), overlay.classList.remove('open'))
+        : (sidebar.classList.add('open'), overlay.classList.add('open'));
+    });
+    overlay.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('open');
+    });
+  </script>
+</body>
+</html>

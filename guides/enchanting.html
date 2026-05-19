@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enchanting — Hypixel SkyBlock</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="topnav-wrap">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
+          <line x1="2" y1="4" x2="14" y2="4"/>
+          <line x1="2" y1="8" x2="14" y2="8"/>
+          <line x1="2" y1="12" x2="14" y2="12"/>
+        </svg>
+      </button>
+      <a href="../index.html" class="brand">
+        <img src="../assets/hypixel.png" alt="" />
+        <span>Hypixel SkyBlock</span>
+      </a>
+      <div class="search-wrap">
+        <div class="search-bar">
+          <svg class="search-icon" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="6.5" cy="6.5" r="4.5"/>
+            <line x1="10" y1="10" x2="14" y2="14"/>
+          </svg>
+          <input type="text" placeholder="Search guides, items, mechanics…" />
+          <span class="search-kbd">⌘K</span>
+        </div>
+      </div>
+      <nav class="topnav-links">
+        <a href="../index.html" class="topnav-link active">Guidebook</a>
+        <a href="../players.html" class="topnav-link">Players</a>
+        <a href="../progress.html" class="topnav-link">Progress</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="wiki-body">
+    <aside class="wiki-sidebar" id="sidebar">
+      <div class="sidebar-inner">
+        <section class="sidebar-section">
+          <h6 class="sidebar-heading">Progression</h6>
+          <ul class="sidebar-list">
+            <li><a href="../index.html" class="sidebar-item active"><span class="stage-pip pip-early"></span>Early Game<em>0–160</em></a></li>
+            <li><a href="../index.html" class="sidebar-item"><span class="stage-pip pip-mid"></span>Midgame<em>160–280</em></a></li>
+            <li><a href="../index.html" class="sidebar-item"><span class="stage-pip pip-late"></span>Late Game<em>280–440</em></a></li>
+            <li><a href="../index.html" class="sidebar-item"><span class="stage-pip pip-end"></span>Endgame<em>440+</em></a></li>
+          </ul>
+        </section>
+        <section class="sidebar-section">
+          <h6 class="sidebar-heading">Community</h6>
+          <ul class="sidebar-list">
+            <li><a href="../players.html" class="sidebar-item">Players</a></li>
+            <li><a href="../progress.html" class="sidebar-item">Progress</a></li>
+          </ul>
+        </section>
+        <div class="infobox">
+          <div class="infobox-title">Enchanting</div>
+          <div class="infobox-row"><span>Skill cap</span><span>Enchanting 60</span></div>
+          <div class="infobox-row"><span>Table games</span><span>3 (Chronomatron, Ultrasequencer, Superpairs)</span></div>
+          <div class="infobox-row"><span>Best pet</span><span>Legendary Guardian</span></div>
+          <div class="infobox-row"><span>Attempts/day (base)</span><span>4 per game</span></div>
+          <div class="infobox-row"><span>With Guardian</span><span>+2 attempts (Legendary)</span></div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="wiki-main">
+      <nav class="breadcrumb-nav">
+        <a href="../index.html">Home</a>
+        <span class="bc-sep">›</span>
+        <a href="../index.html">Guidebook</a>
+        <span class="bc-sep">›</span>
+        <span>Enchanting</span>
+      </nav>
+
+      <div class="wiki-header">
+        <div>
+          <h1 class="page-title">Enchanting Guide</h1>
+          <p class="page-subtitle">Experimentation Table games, the Guardian pet, XP methods, best books to hunt, and how to profit from enchanting.</p>
+        </div>
+        <div class="header-badges">
+          <span class="badge badge-version">v0.21</span>
+        </div>
+      </div>
+
+      <article class="wiki-article">
+
+        <h2>Introduction &amp; Why Enchanting Matters</h2>
+        <p>Enchanting is central to everything in SkyBlock. A sword without enchants is a weapon; the same sword with Sharpness VI, Ender Slayer VI, Giant Killer V, and Lethality V is a completely different tool. The Enchanting skill itself determines the maximum level of enchantments you can access — try to apply Sharpness VI to a weapon at Enchanting 20 and you'll be blocked. Getting to Enchanting 60 unlocks the strongest enchant tiers and grants +4 Intelligence per level, which adds up to a meaningful 240 Intelligence at the cap — significant for Mage builds.</p>
+        <p>The other reason Enchanting matters is the Experimentation Table. This daily minigame system is the primary XP source for the skill and also generates enchanted book rewards. Skip it and you're leaving both XP and sellable items on the table every single day.</p>
+
+        <h2>Enchanting Basics</h2>
+        <p>SkyBlock's enchanting system works almost entirely through books. You obtain enchant books (from the Auction House, Experimentation Table drops, or mob loot), then apply them to your gear at the Enchanting Table or Anvil. The Enchanting Table in SkyBlock doesn't consume Lapis or experience the same way vanilla does — it's the Anvil that combines and applies books.</p>
+        <p>To upgrade an enchant level, combine two books of the same enchant and level at an Anvil: two copies of Sharpness III become one Sharpness IV. This doubles the book cost at every tier. Getting from Sharpness I to Sharpness VI requires 32 Sharpness I books (2^5). That's why high-level enchant books command significant AH prices — the combine cost is exponential.</p>
+        <p>Your Enchanting skill level acts as a gating mechanism. Some enchants require a minimum Enchanting level to apply or even to combine. When you're blocked from applying a book, the Anvil will tell you what level you need. This is a real early-game bottleneck worth being aware of — don't assume a book you bought on the AH will immediately apply.</p>
+        <div class="wiki-note"><strong>Tip:</strong> Applying any enchant book to any item gives a small amount of Enchanting XP. Combining books also gives XP proportional to the book levels involved. Early on, do both as often as possible — it adds up over hundreds of applications.</div>
+
+        <h2>Experimentation Table — Core Mechanic</h2>
+        <p>The Experimentation Table is a craftable block (available from the Bazaar recipe or island shop) that hosts three separate minigames. Each game resets daily, each gives Enchanting XP and enchanted book rewards, and each has a daily attempt limit. You can run them in any order. This is the backbone of Enchanting XP progression — doing these every day is more important than any other Enchanting activity.</p>
+
+        <h3>Chronomatron (Simon Says)</h3>
+        <p>Chronomatron is a pattern memory game. A sequence of colored blocks lights up one at a time; you must click them back in the same order from memory. Each round adds one more step to the sequence, starting at 3 and extending to 7 for the full 5-round completion. Getting each round correct gives incremental XP, and completing all 5 rounds gives a bonus XP reward plus the best book tier for that attempt.</p>
+        <p>The key to this game is not trying to memorize individual colors but instead treating the sequence as a rhythm. Watch where the lights go spatially on the grid and reproduce the spatial pattern. Players who struggle with longer sequences often find it helps to verbalize or tap along while watching. With a bit of practice, 5-round clears become consistent.</p>
+
+        <h3>Ultrasequencer (Number Hunt)</h3>
+        <p>Ultrasequencer shows a grid of numbered blocks placed in random positions. You must click them in ascending order (1, then 2, then 3...) as fast as possible before the timer expires. The grid is shuffled between each attempt. Six rounds per attempt — each correct completion gives XP and reward tiers.</p>
+        <p>Speed is what separates players here. Before clicking 1, scan the full grid and roughly mentally note where the low numbers are. Don't hunt one number at a time starting from scratch — keep a general awareness of number positions as you clear them. Players who preload the layout click much faster than those who scan fresh after each click.</p>
+
+        <h3>Superpairs (Memory Match)</h3>
+        <p>Superpairs is a memory card-matching game. A grid of face-down blocks each has a matching pair hidden somewhere else in the grid. Flip blocks to find matches. When you find a matching pair, both blocks clear. The fewer total flips needed to clear the grid, the better your reward tier. Three rounds per attempt.</p>
+        <p>The strategy here is discipline: always remember what you've flipped. Even if a flip doesn't immediately match, that information is valuable for future moves. Players who flip randomly and forget past locations waste a large number of moves. Treat unmatched flips as free information about block positions, not wasted moves.</p>
+
+        <h3>Daily Attempt Summary</h3>
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr>
+                <th>Game</th>
+                <th>Base Attempts/Day</th>
+                <th>With Epic Guardian</th>
+                <th>With Legendary Guardian</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Chronomatron</td><td>4</td><td>5</td><td>6</td></tr>
+              <tr><td>Ultrasequencer</td><td>4</td><td>5</td><td>6</td></tr>
+              <tr><td>Superpairs</td><td>4</td><td>5</td><td>6</td></tr>
+              <tr><td><strong>Total</strong></td><td><strong>12</strong></td><td><strong>15</strong></td><td><strong>18</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Guardian Pet — Why It's Mandatory</h2>
+        <p>The Guardian pet, obtained from Sea Creature fishing drops, grants +1 additional attempt per Experimentation Table game at Epic rarity and +2 at Legendary. That's the difference between 12 and 18 total attempts per day — a 50% increase in daily Enchanting XP and book drops. Over a month of consistent daily play, a Legendary Guardian gives you the equivalent of 15 extra days of grinding at the base attempt rate.</p>
+        <p>Guardian pets at Epic rarity are inexpensive relative to most pets — check the AH before assuming cost is a barrier. Legendary Guardian is more expensive but should be on the upgrade list once you're mid-game. Even the Epic version is worth equipping the moment you have it. Running the table without a Guardian when you could have one is one of the most common inefficiencies in Enchanting progression.</p>
+        <p>The pet also grants Fishing Speed as a secondary bonus, so it has some utility even outside of Enchanting contexts.</p>
+        <div class="wiki-note"><strong>Tip:</strong> Switch to your Guardian pet before opening the Experimentation Table each day. It's easy to forget, and running 12 attempts instead of 18 because you had the wrong pet out is a frustrating avoidable loss.</div>
+
+        <h2>XP Optimization</h2>
+        <p>The daily Experimentation Table is far and away the best Enchanting XP source. Getting all 18 attempts perfect (all rounds correct in every attempt) every single day is the ceiling. Everything else supplements it.</p>
+        <p>Additional XP sources, in approximate order of impact:</p>
+        <ul>
+          <li><strong>Applying books to items:</strong> Small XP for each application. Do this naturally as you enchant gear — there's no reason not to.</li>
+          <li><strong>Combining enchanted books:</strong> The Anvil gives XP proportional to book levels. If you're combining a stack of low-level books to build up to a higher level, the XP accumulates noticeably.</li>
+          <li><strong>Enchanting Table book purchases:</strong> You can purchase enchants from the Enchanting Table UI using experience points. This gives Enchanting XP. The loop of buying cheap enchants, stripping them (or discarding them), and repeating works, but it's slow and requires a steady supply of experience. Generally not worth optimizing around unless you're already maxing other sources.</li>
+        </ul>
+        <div class="wiki-warn"><strong>Warning:</strong> Missing even a single day of Experimentation Table attempts is not recoverable. Attempts do not stack between days — unused attempts are simply lost when the daily reset happens. Build the habit of running all three games first thing when you log in.</div>
+
+        <h2>Book Hunting Strategy</h2>
+        <p>The Experimentation Table generates random enchanted books as rewards. The tier of book (and the chance of high-value drops) improves with higher Enchanting level and better performance on the games. Perfect clears consistently yield better loot than partial ones.</p>
+        <p>High-value books to watch for — these sell well on the AH:</p>
+        <ul>
+          <li><strong>Smite VII:</strong> Always in demand for Undead content. Prices stay high.</li>
+          <li><strong>Giant Killer V:</strong> Core combat enchant. Consistent AH demand.</li>
+          <li><strong>Looting IV:</strong> Drops improvement on weapons. Actively sought by grinders.</li>
+          <li><strong>Sharpness V+:</strong> Core weapon enchant at all levels. Sells quickly.</li>
+          <li><strong>Telekinesis I:</strong> Simple but everyone needs it. Steady low-tier sales.</li>
+          <li><strong>True Protection I:</strong> Dungeon-specific. Only obtainable from Dungeon drops or the table at higher Enchanting levels. Excellent value.</li>
+          <li><strong>Smarty Pants V:</strong> Dungeon helmet enchant. Rare and valued by Dungeon runners.</li>
+          <li><strong>Execute V:</strong> Combat enchant with consistent demand.</li>
+        </ul>
+        <p>Even common books like Protection V and Growth V sell for tens of thousands each. Don't discard table drops without checking AH prices first.</p>
+
+        <h2>Enchanting for Profit</h2>
+        <p>Three reliable profit methods exist within the Enchanting system, and they stack with each other if you have the time to run them all.</p>
+        <p><strong>Book combining:</strong> Buy low-level books on the AH at bulk prices — Sharpness I, Protection I, and similar common books often list for 50–200 coins each when sellers are unloading stacks. Combine them up using the Anvil: two I's make one II, two II's make one III, etc. A Sharpness V (requiring 16 Sharpness Is) can sell for 80,000–200,000 depending on demand. The math only works if you're buying the source books cheaply via buy orders or large AH lots. Check the combine cost against the current Sharpness V AH price before committing to a run.</p>
+        <p><strong>Daily table drops:</strong> Simply sell every book the Experimentation Table gives you. Even at average performance and base attempt counts, the weekly book output from this source adds up to a consistent passive income stream. Over time this is one of the best passive coin generators in the game relative to the time it takes (about 5–10 minutes per day).</p>
+        <p><strong>Gear enchanting and flipping:</strong> Buy raw unenchanted or lightly enchanted gear on the AH, apply a full set of quality enchants, and relist it at the enchanted price premium. The margin depends entirely on which enchants you apply, current AH demand, and your ability to source books cheaply. This method is more complex than the others and requires good price awareness, but the potential margins are larger.</p>
+
+        <h2>Important Enchants Reference</h2>
+        <h3>Weapon Enchants</h3>
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr>
+                <th>Enchant</th>
+                <th>Max Level</th>
+                <th>Effect</th>
+                <th>Priority</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Sharpness</td><td>VI</td><td>Universal damage increase vs all mobs</td><td>Core — always apply</td></tr>
+              <tr><td>Smite</td><td>VII</td><td>Damage vs Undead (zombies, skeletons, withers)</td><td>High for Undead zones — replaces Sharpness</td></tr>
+              <tr><td>Ender Slayer</td><td>VI</td><td>Damage vs Endermen and Ender Dragon</td><td>High for End content</td></tr>
+              <tr><td>Impaling</td><td>III</td><td>Damage vs Sea Creatures</td><td>Fishing combat only</td></tr>
+              <tr><td>Giant Killer</td><td>V</td><td>Bonus damage vs high-HP enemies</td><td>High — useful everywhere</td></tr>
+              <tr><td>Lethality</td><td>V</td><td>Reduces enemy defense on critical hits</td><td>High for defense-tanky enemies</td></tr>
+              <tr><td>Execute</td><td>V</td><td>Bonus damage vs low-HP enemies</td><td>Medium — good for bossing</td></tr>
+              <tr><td>First Strike</td><td>IV</td><td>Damage multiplier on first hit against a mob</td><td>Medium for AoE grinding</td></tr>
+              <tr><td>Critical</td><td>V</td><td>Increases Crit Chance</td><td>Medium — fill gaps in Crit Chance</td></tr>
+              <tr><td>Looting</td><td>IV</td><td>Increases drop rates from kills</td><td>Medium — always good for grinders</td></tr>
+              <tr><td>Scavenger</td><td>III</td><td>Coins dropped from kills</td><td>Low-medium for coin grinders</td></tr>
+              <tr><td>Telekinesis</td><td>I</td><td>Auto-collects drops to inventory</td><td>Mandatory QoL</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="wiki-warn"><strong>Warning:</strong> Sharpness and Smite do not stack — they occupy the same enchant slot. Pick the one that applies to the mobs you're farming. Using Sharpness in a pure Undead zone is a significant damage loss versus Smite VII.</div>
+
+        <h3>Armor Enchants</h3>
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr>
+                <th>Enchant</th>
+                <th>Max Level</th>
+                <th>Effect</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Protection</td><td>V</td><td>Defense increase</td><td>Core armor enchant</td></tr>
+              <tr><td>True Protection</td><td>I</td><td>Superior defense in Dungeons</td><td>Dungeon-specific drop only</td></tr>
+              <tr><td>Growth</td><td>V</td><td>Max Health increase</td><td>Core — always apply to all armor</td></tr>
+              <tr><td>Feather Falling</td><td>V</td><td>Reduces fall damage (boots)</td><td>Boots only</td></tr>
+              <tr><td>Thorns</td><td>III</td><td>Reflects portion of damage back to attacker</td><td>Nice secondary — not priority</td></tr>
+              <tr><td>Rejuvenate</td><td>V</td><td>HP regeneration rate increase</td><td>Good for sustained combat</td></tr>
+              <tr><td>Smarty Pants</td><td>V</td><td>Intelligence bonus (helmet, Dungeon only)</td><td>Dungeon Mage-relevant</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Tool Enchants</h3>
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr>
+                <th>Enchant</th>
+                <th>Max Level</th>
+                <th>Effect</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Efficiency</td><td>V</td><td>Mining/chopping speed</td><td>Core for any tool</td></tr>
+              <tr><td>Fortune</td><td>III</td><td>Increased drop rates from mining/farming</td><td>Important for farming tools</td></tr>
+              <tr><td>Silk Touch</td><td>I</td><td>Collect blocks instead of drops</td><td>Specific use cases; mutually exclusive with Fortune</td></tr>
+              <tr><td>Telekinesis</td><td>I</td><td>Auto-collect drops to inventory</td><td>Mandatory on all tools</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Common Mistakes</h2>
+        <ul>
+          <li><strong>Missing daily Experimentation Table games:</strong> This is the single biggest Enchanting XP loss. Missed attempts don't roll over. Even a few missed days per week has a dramatic cumulative effect on progression speed.</li>
+          <li><strong>Playing without a Guardian pet:</strong> Every day without a Guardian at the Experimentation Table is 3–6 wasted attempts. Get an Epic Guardian from fishing drops or the AH as soon as possible.</li>
+          <li><strong>Rushing games and getting answers wrong:</strong> A failed round in Chronomatron or Ultrasequencer gives less XP and worse book rewards than a perfect one. It's better to be slightly slower and accurate. Practice the game logic offline before spending real attempts on early mistakes.</li>
+          <li><strong>Ignoring book combining profit:</strong> Low-level books on the AH are frequently underpriced relative to their combine value. This is a low-effort income stream once you understand the math.</li>
+          <li><strong>Overpaying for AH books without price-checking:</strong> AH book prices vary enormously between listings. Always check the lowest BIN price and recent sales before buying. The difference between the cheapest and most expensive listing for the same book is often 5–10×.</li>
+          <li><strong>Applying Sharpness to weapons used in Undead zones:</strong> Smite VII outperforms Sharpness VI against all Undead mobs by a large margin. Keep weapons specialized to the content you're running, or maintain separate weapons for different zones.</li>
+        </ul>
+
+      </article>
+    </main>
+  </div>
+
+  <nav class="mobile-nav">
+    <a href="../index.html" class="active">Guidebook</a>
+    <a href="../players.html">Players</a>
+    <a href="../progress.html">Progress</a>
+  </nav>
+
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    const toggle  = document.getElementById('sidebarToggle');
+    toggle.addEventListener('click', () => {
+      sidebar.classList.contains('open')
+        ? (sidebar.classList.remove('open'), overlay.classList.remove('open'))
+        : (sidebar.classList.add('open'), overlay.classList.add('open'));
+    });
+    overlay.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('open');
+    });
+  </script>
+</body>
+</html>

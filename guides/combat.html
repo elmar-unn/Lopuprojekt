@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Combat Guide — Hypixel SkyBlock</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="topnav-wrap">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
+          <line x1="2" y1="4" x2="14" y2="4"/>
+          <line x1="2" y1="8" x2="14" y2="8"/>
+          <line x1="2" y1="12" x2="14" y2="12"/>
+        </svg>
+      </button>
+      <a href="../index.html" class="brand">
+        <img src="../assets/hypixel.png" alt="" />
+        <span>Hypixel SkyBlock</span>
+      </a>
+      <div class="search-wrap">
+        <div class="search-bar">
+          <svg class="search-icon" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="6.5" cy="6.5" r="4.5"/>
+            <line x1="10" y1="10" x2="14" y2="14"/>
+          </svg>
+          <input type="text" placeholder="Search guides, items, mechanics…" />
+          <span class="search-kbd">⌘K</span>
+        </div>
+      </div>
+      <nav class="topnav-links">
+        <a href="../index.html" class="topnav-link active">Guidebook</a>
+        <a href="../players.html" class="topnav-link">Players</a>
+        <a href="../progress.html" class="topnav-link">Progress</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="wiki-body">
+    <aside class="wiki-sidebar" id="sidebar">
+      <div class="sidebar-inner">
+        <section class="sidebar-section">
+          <h6 class="sidebar-heading">Progression</h6>
+          <ul class="sidebar-list">
+            <li><a href="../index.html" class="sidebar-item active"><span class="stage-pip pip-early"></span>Early Game<em>0–160</em></a></li>
+            <li><a href="../index.html" class="sidebar-item"><span class="stage-pip pip-mid"></span>Midgame<em>160–280</em></a></li>
+            <li><a href="../index.html" class="sidebar-item"><span class="stage-pip pip-late"></span>Late Game<em>280–440</em></a></li>
+            <li><a href="../index.html" class="sidebar-item"><span class="stage-pip pip-end"></span>Endgame<em>440+</em></a></li>
+          </ul>
+        </section>
+        <section class="sidebar-section">
+          <h6 class="sidebar-heading">Community</h6>
+          <ul class="sidebar-list">
+            <li><a href="../players.html" class="sidebar-item">Players</a></li>
+            <li><a href="../progress.html" class="sidebar-item">Progress</a></li>
+          </ul>
+        </section>
+        <div class="infobox">
+          <div class="infobox-title">Combat</div>
+          <div class="infobox-row"><span>Skill cap</span><span>Combat 60</span></div>
+          <div class="infobox-row"><span>Classes</span><span>5 (Dungeons)</span></div>
+          <div class="infobox-row"><span>Best XP/hr</span><span>High-floor Dungeons</span></div>
+          <div class="infobox-row"><span>Damage formula</span><span>Strength × Crit</span></div>
+          <div class="infobox-row"><span>Best early mob</span><span>Zealots (The End)</span></div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="wiki-main">
+      <nav class="breadcrumb-nav">
+        <a href="../index.html">Home</a>
+        <span class="bc-sep">›</span>
+        <a href="../index.html">Guidebook</a>
+        <span class="bc-sep">›</span>
+        <span>Combat</span>
+      </nav>
+
+      <div class="wiki-header">
+        <div>
+          <h1 class="page-title">Combat Guide</h1>
+          <p class="page-subtitle">All five classes, weapon and armor progression, enchants, damage optimization, best XP methods, and money-making from early game through endgame.</p>
+        </div>
+        <div class="header-badges">
+          <span class="badge badge-version">v0.21</span>
+        </div>
+      </div>
+
+      <article class="wiki-article">
+
+        <h2>Why Combat Matters</h2>
+        <p>Combat is the central skill around which virtually everything in SkyBlock revolves. Every 10 levels of Combat grants +4 Crit Chance and +1 Strength permanently. Milestone bonuses at Combat 20, 30, 40, and 50 add additional stats on top of that. Combat 12 gates access to The End, which is the best early grinding location in the entire game. Combat 15 unlocks the Catacombs entrance. High Catacombs level, in turn, gates every major floor — and without reaching F7 you can never craft a Hyperion or obtain Necron's armor pieces.</p>
+        <p>Every serious money-making activity in the game ties directly to Combat investment. Zealot farming in The End, dragon fights, all Slayer quests, Kuudra, and full dungeon runs all require either a high Combat level, strong gear, or both. Combat XP also feeds directly into your SkyBlock level, which gates additional features and NPC unlocks. Neglecting Combat early costs you far more time than any other skill.</p>
+        <p>The most important thing to internalize about SkyBlock combat is that it is not vanilla Minecraft. Damage, defense, crits, and mob health all operate through completely custom formulas. Understanding those formulas — not just blindly following gear upgrades — is what separates players who progress quickly from those who waste millions on gear that underperforms.</p>
+
+        <h2>The Damage Formula</h2>
+        <p>Every physical hit in SkyBlock follows this formula when it crits:</p>
+        <p><strong>Damage = (5 + Weapon Damage × (1 + Strength / 100)) × (1 + Crit Damage / 100)</strong></p>
+        <p>Breaking that down: your weapon's base Damage stat gets multiplied by your Strength bonus, giving you a "pre-crit" number. That number then gets multiplied again by your Crit Damage bonus when the hit crits. Since Crit Damage multiplies your entire damage output, and since Strength multiplies your weapon's base stat, both are valuable — but they interact with Crit Chance in a critical way.</p>
+
+        <h3>Crit Chance First, Always</h3>
+        <p>If you have 50% Crit Chance, half your hits deal full damage and half deal much less. Averaging that out means your effective DPS is dramatically lower than the tooltip implies. At 100% Crit Chance every single hit crits, and only then does your Crit Damage number become your true damage multiplier. This is the most common and most expensive mistake beginners make: stacking Crit Damage accessories and reforges while sitting at 60–70% Crit Chance. The damage loss is enormous.</p>
+        <p>Get to 100% Crit Chance first. The cleanest way early on is to reforge all your accessories to Itchy (+2% Crit Chance per accessory), pick up a few combat level milestones, and add Critical V to your weapon (+50% Crit Chance enchant). Once you're at 100%, switch reforges toward Crit Damage sources like Shaded or Precise. Only after that does stacking more Crit Damage make sense.</p>
+
+        <h3>Strength's Role</h3>
+        <p>Strength multiplies your weapon's base Damage stat, so weapons with higher base Damage scale better with Strength. A weapon with 250 base Damage at 400 Strength gives you (5 + 250 × (1 + 400/100)) = (5 + 250 × 5) = 1255 before crit. That same weapon at 200 Strength only gives 755. The gap widens dramatically as Strength climbs. This is why Berserk players obsess over Withered reforge — it gives massive raw Strength on wither weapons.</p>
+
+        <h3>Intelligence and Magic Damage</h3>
+        <p>Magic damage — used by Mage class abilities like Hyperion's Wither Impact — operates on a different formula. Intelligence (mana) scales magic damage. Higher mana pool means harder-hitting spells, and Mage class bonuses amplify this further. Mage does not rely on Crit Chance the same way physical classes do — spell damage is not subject to the crit mechanic. This is why Mage stacks Intelligence and Magic Damage percentage instead of Crit stats.</p>
+
+        <h3>Ferocity</h3>
+        <p>Ferocity gives you additional hits per swing. At 100 Ferocity you land one extra hit per swing, at 200 you land two, and so on. Each extra hit is a full damage hit that can also crit independently. This only becomes relevant at endgame — Berserk players with Fabled reforged weapons, Tiger pet, and high-end accessories can accumulate meaningful Ferocity. For most of early and midgame it barely moves the needle, so don't chase it until everything else is sorted.</p>
+
+        <div class="wiki-note"><strong>Priority order for physical builds:</strong> Reach 100% Crit Chance → maximize Crit Damage → stack Strength → get Ferocity last. Deviating from this order costs you more damage than any single gear upgrade.</div>
+
+        <h2>The Five Classes</h2>
+        <p>Classes only apply inside the Catacombs. Each class has a leveling bonus that scales one or more stats as you gain class XP. Focusing a single class is strongly recommended — spreading XP across all five keeps your bonuses weak across the board. You can switch classes freely between runs in the dungeon lobby.</p>
+
+        <h3>Mage</h3>
+        <p>Mage is the most dominant class for F5 and above, and for most of endgame. The core of Mage is Hyperion's Wither Impact ability, which deals a massive burst of magic damage in an area around the target. In dungeon rooms with clustered mobs, a single Wither Impact cast can wipe everything at once. No other class comes close to this room-clearing speed at high floors.</p>
+        <p>Mage scales off Intelligence — every point of Intelligence increases your mana pool, and your mana pool scales the damage of spells. The go-to armor for early Mage is Wise Dragon Armor, which gives a large Intelligence pool. Mid-game Mage switches to Storm's Armor from F6 drops. The set bonus on Storm's specifically rewards chaining abilities, making Hyperion spam even more effective.</p>
+        <p>Because Mage uses magic damage, it bypasses the Crit Chance gating that holds back physical builds. You still want some Crit stats for your wand auto-attacks, but the majority of your damage is ability-based. Your investment priority is: high mana pool, Magic Damage percentage (from reforges, accessories, class level), then raw Intelligence.</p>
+        <ul>
+          <li><strong>Best weapon:</strong> Hyperion (F7 crafted) — no viable substitute at high floors</li>
+          <li><strong>Best armor:</strong> Wise Dragon (mid), Storm's (F6), full starred Necron/Sadan hybrid (endgame)</li>
+          <li><strong>Best pets:</strong> Legendary Enderman (Intelligence + Magic Damage), Legendary Baby Yeti (survivability), Epic/Legendary Sheep (mana regen for spam)</li>
+          <li><strong>Weapon reforge:</strong> Withered or Wise depending on item type</li>
+          <li><strong>Weakness:</strong> Very expensive to build correctly. Hyperion alone costs 150–500M+ depending on stars and enchants. Suboptimal Mage with low mana pool underperforms Berserk significantly.</li>
+        </ul>
+
+        <h3>Berserk</h3>
+        <p>Berserk is the pure melee DPS class and the most popular for mid-game dungeon content. It stacks Strength and Crit Damage, hits extremely fast with high Ferocity, and sustains through Life Steal rather than relying on a Healer. In a good party, a well-geared Berserk player clears F6 and F7 rooms extremely fast.</p>
+        <p>The class bonus for Berserk increases melee damage the higher your level gets. Level 30+ Berserk class gives a meaningful damage multiplier that stacks on top of all your stats. This makes class leveling more impactful for Berserk than almost any other class.</p>
+        <p>Berserk mobility matters — you need to be in melee range constantly, so Aspect of the End or equivalent for gap-closing is important even at high floors. The Withered reforge on Wither weapons (Livid Dagger, Scylla, Axe of the Shredded) is the highest single damage reforge in the game for physical builds.</p>
+        <ul>
+          <li><strong>Best weapons:</strong> Livid Dagger (F5), Scylla (F6+, crafted), Axe of the Shredded (F7)</li>
+          <li><strong>Best armor:</strong> Shadow Assassin (F5/F6), full Necron (F7 crafted, endgame)</li>
+          <li><strong>Best pets:</strong> Legendary Tiger (massive physical damage), Legendary Golden Dragon (best stat pet in game at level 200)</li>
+          <li><strong>Weapon reforge:</strong> Withered (from Wither Blood — Slayer drop). Budget option: Legendary reforge</li>
+          <li><strong>Weakness:</strong> Melee range dependency. Less effective vs spread-out mobs. No room-clearing AoE until very high gear levels.</li>
+        </ul>
+
+        <h3>Archer</h3>
+        <p>Archer uses ranged weapons — primarily bows — and its class bonus boosts ranged damage. Juju Shortbow is the standard weapon from early Dungeons through mid-game. Terminator is the endgame Archer weapon and one of the most expensive items in SkyBlock, but with proper setup it achieves the highest consistent single-target DPS outside of Hyperion AoE bursts.</p>
+        <p>Archer's biggest advantage is safety. You deal damage from range, avoiding mob attacks that one-shot Berserk players who get too close. In Master Mode where mob damage skyrockets, keeping distance is often the difference between dying and surviving. Archer also naturally distributes damage across multiple targets with rapid fire, making it excellent for rooms with spread-out enemies.</p>
+        <p>Arrow management is a real concern — Terminator at high fire rates burns through arrows quickly. Keep a large arrow supply or use the Infinite Quiver enchant. The Precise enchant is critical for Archer — it converts Crit Damage into ranged damage in a way that scales very favorably at high stat levels.</p>
+        <ul>
+          <li><strong>Best weapons:</strong> Juju Shortbow (mid-game), Terminator (endgame, 50–150M)</li>
+          <li><strong>Best armor:</strong> Shadow Assassin (mid), Necron or Maxor's Armor (endgame)</li>
+          <li><strong>Best pets:</strong> Legendary Griffin (outside Dungeons), Wither Skeleton (Crit stats early), Legendary Tiger (physical damage boost applies to arrows)</li>
+          <li><strong>Weapon reforge:</strong> Fierce (from Tiger's Eye), Spiritual for some setups</li>
+          <li><strong>Weakness:</strong> Requires unobstructed line of sight. Arrow costs can add up. Terminator costs limit when most players transition.</li>
+        </ul>
+
+        <h3>Tank</h3>
+        <p>Tank absorbs damage and draws enemy aggro away from the rest of the party. In a premade 5-player group with a dedicated Tank, the other four DPS players can freely damage everything without worrying about getting hit. This significantly speeds up dungeon clears at F7 and M1+ where mob damage becomes lethal for unarmored DPS.</p>
+        <p>Tank is largely irrelevant for solo play and pub (random player) groups below F6, where most players just go full DPS and rely on Healer or self-sustain. In coordinated teams, Tank becomes very important from M3 upward. The Defense formula (Defense / (Defense + 400)) means stacking defense gives diminishing but still meaningful returns — at 2000 Defense you reduce incoming damage by 83%, which makes you extremely difficult to kill.</p>
+        <ul>
+          <li><strong>Best weapons:</strong> Astraea (crafted, endgame), Bonzo's Staff (utility item, not a damage weapon)</li>
+          <li><strong>Best armor:</strong> Full Wither armor with Ancient reforges, Necron Helmet for Wither Blade absorption, Maxor's Boots</li>
+          <li><strong>Best pets:</strong> Wither Skeleton (survivability), Ender Dragon (high HP + defense)</li>
+          <li><strong>Weakness:</strong> Minimal damage output. Essentially useless outside coordinated premade groups. Poor XP efficiency solo.</li>
+        </ul>
+
+        <h3>Healer</h3>
+        <p>Healer keeps the party alive through healing orbs, healing auras, and the Wand of Atonement dungeon item. From F1 through F5, most parties can survive without a dedicated Healer if players have decent Defense and Life Steal. F6 and above — especially M5+ — is where Healer becomes invaluable. Mob damage at those levels is high enough that without healing, DPS players die before they can kill everything.</p>
+        <p>A Healer in a well-coordinated M7 group lets everyone else run glass-cannon builds (maximum damage, minimal Defense), dramatically increasing clear speed. The Healer eats the damage output while the party removes threats as fast as possible. Outside of that coordinated context, Healer brings very little — it's the least useful class for solo players at any stage.</p>
+        <ul>
+          <li><strong>Best weapons:</strong> Wand of Atonement (healing orbs), Gyrokinetic Wand</li>
+          <li><strong>Best armor:</strong> Maxor's Armor (Healer-specific set bonus), Wise Dragon for mana</li>
+          <li><strong>Best pets:</strong> Epic/Legendary Sheep (continuous mana regen for constant ability use), Baby Yeti (damage reduction)</li>
+          <li><strong>Weakness:</strong> Zero damage. No solo viability. Requires coordinated team to be worth the slot.</li>
+        </ul>
+
+        <h2>Weapon Progression</h2>
+        <p>Weapon progression in SkyBlock follows a clear path from cheap budget options to some of the most expensive items in the game. The key at every stage is matching your weapon to your class — a Mage using a physical sword wastes their class bonus, and a Berserk using a low-base-damage weapon wastes their Strength stacking.</p>
+
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr><th>Stage</th><th>Weapon</th><th>Class</th><th>How to Get</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Early</td><td>Rogue Sword</td><td>Any</td><td>Free from Elizabeth in Hub</td><td>Good speed boost for early movement</td></tr>
+              <tr><td>Early</td><td>Cleaver</td><td>Berserk</td><td>Bazaar (~50k)</td><td>Higher base damage than Rogue Sword</td></tr>
+              <tr><td>Early-Mid</td><td>Aspect of the End</td><td>Berserk/Any</td><td>Endermen drop / AH (~300–600k)</td><td>Teleport ability makes it extremely useful for movement even when outgrown for damage</td></tr>
+              <tr><td>Mid</td><td>Aspect of the Dragons</td><td>Berserk</td><td>Crafted from Dragon Fragments (~2–5M total)</td><td>Very strong base damage, good scaling with Strength. Carry this until F5 Dungeons</td></tr>
+              <tr><td>Mid-Dungeon</td><td>Spirit Sceptre</td><td>Mage</td><td>F4 boss drop / AH</td><td>First viable Mage weapon. Good mana scaling, important stepping stone</td></tr>
+              <tr><td>Mid-Dungeon</td><td>Livid Dagger</td><td>Berserk</td><td>F5 Livid boss drop / AH (~20–50M)</td><td>Get it Fabled reforged and Recombobulated for a major power spike</td></tr>
+              <tr><td>Late-Berserk</td><td>Axe of the Shredded</td><td>Berserk</td><td>F6+ rooms / AH</td><td>Wide hitbox, high damage</td></tr>
+              <tr><td>Late-Berserk</td><td>Scylla</td><td>Berserk</td><td>Crafted from F6+ fragments</td><td>Best pre-endgame Berserk weapon. Withered reforge here is enormous</td></tr>
+              <tr><td>Late-Archer</td><td>Juju Shortbow</td><td>Archer</td><td>Crafted / AH (~5–15M)</td><td>Rapid fire, very effective mid-game. Scales with Crit Damage</td></tr>
+              <tr><td>Endgame-Mage</td><td>Hyperion</td><td>Mage</td><td>Crafted from Necron's Handle + materials (~150–500M)</td><td>Wither Impact AoE ability. Three Blade Scrolls activate it. Best weapon in the game for dungeon clearing</td></tr>
+              <tr><td>Endgame-Archer</td><td>Terminator</td><td>Archer</td><td>AH (~50–150M depending on stars)</td><td>Duplex 5 enchant doubles arrows. Unmatched single-target DPS with high Crit Damage</td></tr>
+              <tr><td>Endgame-Balanced</td><td>Valkyrie</td><td>Any physical</td><td>F7 / AH</td><td>Good all-rounder for players not committed to one class</td></tr>
+              <tr><td>Endgame-Tank</td><td>Astraea</td><td>Tank</td><td>Crafted</td><td>Defense-scaling damage — the Tank weapon that actually deals reasonable damage</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Why Hyperion is in Its Own Category</h3>
+        <p>Hyperion's Wither Impact ability fires a wither skull projectile that detonates on contact, dealing magic damage in a large area and healing you for a portion of the damage dealt. The heal scales with mob HP, meaning in high-HP dungeon rooms it fully restores your health on every cast. With three Blade Scrolls applied (from Dungeon drops), Wither Impact activates passively, turning every right-click into a room-clearing AoE burst.</p>
+        <p>At max Mage level with Storm's Armor, the damage per Wither Impact cast is orders of magnitude higher than any melee hit a Berserk can achieve against groups. In a 10-mob dungeon room, Hyperion kills everything in two or three casts while a Berserk player is still hitting mobs one at a time. The weapon defines Mage and — by extension — defines the meta for F5 and above.</p>
+
+        <div class="wiki-warn"><strong>Warning:</strong> Do not buy Hyperion before you have Storm's Armor or better, a high Mage class level, and a plan to afford the full build. A bare Hyperion with no mana scaling underperforms a well-geared Livid Dagger setup. The weapon needs the entire Mage build around it to shine.</div>
+
+        <h2>Armor Progression</h2>
+        <p>Armor in SkyBlock provides Defense, Health, and class-specific bonuses. Defense reduces incoming damage through the formula Defense / (Defense + 400) — at 400 Defense you take 50% less damage, at 800 you take 67% less, at 2000 you take 83% less. Defense is never a waste, but past a certain threshold for your floor the marginal return diminishes and it's better to invest in damage.</p>
+
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr><th>Stage</th><th>Armor</th><th>Class</th><th>Defense</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Early</td><td>Iron / Gold Armor</td><td>Any</td><td>~50–80</td><td>Fine for the Hub. Replace immediately once you reach The End.</td></tr>
+              <tr><td>Early</td><td>Zombie Knight Armor</td><td>Any</td><td>~150</td><td>Cheap Bazaar set (~20k for full set). Good padding for early Dungeons.</td></tr>
+              <tr><td>Early-Mid</td><td>Ender Armor</td><td>Any</td><td>~200</td><td>While in The End dimension, all stats are doubled. This makes it extremely powerful for Endermen grinding specifically. Buy it as soon as you unlock The End.</td></tr>
+              <tr><td>Mid</td><td>Strong Dragon Armor</td><td>Berserk/Any</td><td>~350</td><td>+Strength bonus. Good all-rounder for mid-game. Costs 1–3M for a set.</td></tr>
+              <tr><td>Mid</td><td>Unstable Dragon Armor</td><td>Any DPS</td><td>~300</td><td>+Crit Damage set bonus. Great for pushing Crit Damage high. Similar price to Strong.</td></tr>
+              <tr><td>Mid</td><td>Wise Dragon Armor</td><td>Mage</td><td>~250</td><td>+Intelligence. The Mage's transition armor between early and Storm's. Provides massive mana pool.</td></tr>
+              <tr><td>Mid-Dungeon</td><td>Shadow Assassin</td><td>Berserk</td><td>~500</td><td>F5/F6 drop. Crit Damage + Strength + Speed. Best pre-endgame Berserk dungeon armor.</td></tr>
+              <tr><td>Late-Mage</td><td>Storm's Armor</td><td>Mage</td><td>~500</td><td>F6 Sadan drop. Set bonus chains abilities for additional damage. Required for proper Hyperion play.</td></tr>
+              <tr><td>Late-Any</td><td>Maxor's Armor</td><td>Healer/Tank</td><td>~700</td><td>High Defense and HP. Healer set bonus.</td></tr>
+              <tr><td>Endgame-Berserk</td><td>Necron's Armor</td><td>Berserk</td><td>~800+</td><td>Crafted from F7 Wither Lord fragments (~50–200M). The best physical DPS armor. Set bonus multiplies Crit stats substantially.</td></tr>
+              <tr><td>Endgame-Outside</td><td>Crimson / Terror / Fervor</td><td>Berserk/Mage</td><td>Varies</td><td>Kuudra drops. Fervor for Mage, Terror/Crimson for Berserk. Competitive with Necron for specific content outside Dungeons.</td></tr>
+              <tr><td>Endgame-Outside</td><td>Aurora Armor</td><td>Mage</td><td>~600</td><td>Kuudra. Good Magic Damage bonuses for Mage outside Dungeons.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Master Stars</h3>
+        <p>Master Stars come from Master Mode (M1–M7) chest drops. Each star applied to a dungeon armor piece adds a percentage of its base stats — a 5-star Necron Chestplate has dramatically better stats than a 0-star one. Stars 1 through 5 are normal stars; stars above 5 come from Master Mode and are increasingly rare. Apply stars in order — you cannot skip a tier.</p>
+        <p>Before starring any piece, apply all Gemstone Slots (using gemstones of your choice) and wax the item with Dungeon Wax. Wax locks in applied upgrades and allows the item to be traded after starring. Starring an unwaxed item can make it account-bound. The full 5-star process on a set of Necron armor is expensive — budget 50–100M+ for the complete starred upgrade path depending on market prices.</p>
+
+        <div class="wiki-note"><strong>Tip:</strong> Ender Armor's 2× stat multiplier only applies inside The End dimension. Do not use it in Dungeons or other areas — you will have roughly half the stats you think you have.</div>
+
+        <h2>Enchants</h2>
+        <p>Enchants provide some of the highest damage-per-coin investment in the game, especially early on. Most combat enchants are cheap on the Bazaar and pay for themselves in the first hour of grinding. Never leave a weapon unenchanted.</p>
+
+        <h3>Weapon Enchants</h3>
+
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr><th>Enchant</th><th>Max Level</th><th>Effect</th><th>Priority</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Sharpness</td><td>V (VII in Dungeons)</td><td>+X% damage vs all mobs</td><td>Core — always apply</td></tr>
+              <tr><td>Smite</td><td>VII</td><td>+X% damage vs Undead mobs only</td><td>Top priority for Dungeons (most mobs are Undead)</td></tr>
+              <tr><td>Ender Slayer</td><td>VI</td><td>+X% damage vs Endermen</td><td>Essential for The End / Enderman Slayer</td></tr>
+              <tr><td>Impaling</td><td>III</td><td>+X% damage vs Sea Creatures</td><td>Only for fishing combat</td></tr>
+              <tr><td>Bane of Arthropods</td><td>VI</td><td>+X% damage vs Spiders</td><td>Spider's Den / Tarantula Slayer</td></tr>
+              <tr><td>Critical</td><td>V</td><td>+50% Crit Chance</td><td>Critical early until you hit 100% CC from other sources</td></tr>
+              <tr><td>First Strike</td><td>IV</td><td>Massive bonus damage on first hit of a fight</td><td>Very strong for Zealot farming — each Zealot is a fresh fight</td></tr>
+              <tr><td>Giant Killer</td><td>V</td><td>Bonus damage scaling with enemy HP above yours</td><td>Excellent general enchant — most strong mobs have more HP than you</td></tr>
+              <tr><td>Lethality</td><td>V</td><td>Reduces enemy Crit Damage reduction</td><td>Strong in Dungeons where mobs have Defense</td></tr>
+              <tr><td>Execute</td><td>V</td><td>Bonus damage to enemies below 20% HP</td><td>Good finisher enchant — kills feel cleaner</td></tr>
+              <tr><td>Looting</td><td>IV</td><td>Increases drop chance and quantity</td><td>Important for money-making — get this on your farming weapon</td></tr>
+              <tr><td>Telekinesis</td><td>I</td><td>Auto-collects drops into inventory</td><td>QoL must-have — without it drops scatter on the ground</td></tr>
+              <tr><td>Scavenger</td><td>III</td><td>Coins per kill</td><td>Decent passive income, cheap to apply</td></tr>
+              <tr><td>Life Steal</td><td>IV</td><td>Heals you for a portion of damage dealt</td><td>Core sustain enchant for Berserk — reduces Healer dependency</td></tr>
+              <tr><td>Prosecute</td><td>V</td><td>Ignores enemy Defense based on missing HP</td><td>Very strong in Dungeons</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="wiki-warn"><strong>Warning:</strong> Sharpness and Smite cannot both be applied to the same weapon. In Dungeons where most mobs are Undead, Smite deals significantly more damage than Sharpness VII. Outside Dungeons against non-Undead mobs, Smite does exactly zero bonus damage. Keep a Smite weapon for Dungeons and a Sharpness weapon for general grinding.</div>
+
+        <h3>Armor Enchants</h3>
+
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr><th>Enchant</th><th>Piece</th><th>Effect</th><th>Priority</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Protection</td><td>All</td><td>+Defense per level</td><td>Core for all armor — always apply</td></tr>
+              <tr><td>True Protection</td><td>All (Dungeons)</td><td>Flat damage reduction — better than Protection inside Dungeons</td><td>Replace Protection once you're in Dungeons consistently</td></tr>
+              <tr><td>Growth</td><td>All</td><td>+Health per level</td><td>Core — bigger health pool = more survivability</td></tr>
+              <tr><td>Rejuvenate</td><td>All</td><td>+HP regen rate</td><td>Good passive sustain</td></tr>
+              <tr><td>Feather Falling</td><td>Boots</td><td>Reduces fall damage</td><td>Get this on boots immediately — fall deaths are embarrassing</td></tr>
+              <tr><td>Thorns</td><td>All</td><td>Reflects a portion of damage taken back to attacker</td><td>Useful for Tank builds or farming areas with many small hits</td></tr>
+              <tr><td>Smarty Pants</td><td>Helmet (Dungeon)</td><td>+Intelligence in Dungeons</td><td>Good for Mage helmet slot</td></tr>
+              <tr><td>Mana Steal</td><td>Chestplate</td><td>Chance to restore mana on hit</td><td>Useful for Mage sustain</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Reforges</h2>
+        <p>Reforges are applied to weapons and armor at the Blacksmith and provide stat bonuses. The right reforge on a weapon or armor piece provides more stats than almost any other upgrade short of a gear tier change. Reforge stones (special items that unlock new reforges) are obtainable from Slayer drops, Dragon kills, and other sources.</p>
+
+        <h3>Weapon Reforges</h3>
+
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr><th>Reforge</th><th>Source</th><th>Best For</th><th>Key Stats</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Withered</td><td>Wither Blood (Wither Skeleton Slayer drop)</td><td>Berserk on Wither weapons</td><td>Massive Strength + Crit Damage. Best physical DPS reforge by a wide margin on eligible weapons.</td></tr>
+              <tr><td>Fabled</td><td>Dragon Claw (Dragon Slayer drop)</td><td>Berserk on any weapon</td><td>Ferocity + Strength + Crit Damage. Works on all weapons, not just Wither. Good budget option before Withered.</td></tr>
+              <tr><td>Wise</td><td>Recombobulated Blue Cheese (various)</td><td>Mage weapons</td><td>Intelligence + Magic Damage. The Mage weapon reforge.</td></tr>
+              <tr><td>Spiritual</td><td>Spiritual Artifact (Dungeon drop)</td><td>Archer bows</td><td>Crit Chance + Crit Damage. Good for reaching 100% CC on bow builds.</td></tr>
+              <tr><td>Legendary</td><td>Standard Blacksmith reforge</td><td>Budget DPS</td><td>Balanced Strength + Crit Damage. Best default option when you can't afford reforge stones.</td></tr>
+              <tr><td>Fierce</td><td>Tiger's Eye (purchased from Adventurer)</td><td>Archer</td><td>Crit Chance + Crit Damage boost for ranged weapons.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Armor Reforges</h3>
+
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr><th>Reforge</th><th>Source</th><th>Best For</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Ancient</td><td>Ancient Rose (Dragon Slayer drops)</td><td>Wither armor sets (Necron, Storm's, Maxor, Goldor, Sadan)</td><td>The Ancient reforge applies a set bonus to Wither armor — wearing four Ancient-reforged Wither pieces multiplies all Wither armor stats by a significant percentage. This makes it by far the best armor reforge for endgame dungeon sets.</td></tr>
+              <tr><td>Fierce</td><td>Standard</td><td>Pre-Wither armor DPS builds</td><td>Crit Damage focus. Good before you have access to Wither armor.</td></tr>
+              <tr><td>Godly</td><td>Standard</td><td>Mixed builds needing Crit Chance</td><td>Balanced Crit Chance + Crit Damage. Helps reach 100% CC if you're short.</td></tr>
+              <tr><td>Wise</td><td>Standard</td><td>Mage armor (non-Wither)</td><td>Intelligence on all pieces. Best for Wise Dragon or early Mage sets.</td></tr>
+              <tr><td>Sighted</td><td>Standard</td><td>Mage hybrid builds</td><td>Magic Damage bonus. Can be better than Wise on fully built Mage setups.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="wiki-note"><strong>Tip:</strong> When transitioning to Wither armor (Necron, Storm's, etc.), always reforge the full set to Ancient before anything else. The set bonus unlocked at four pieces of Ancient-reforged Wither armor is worth far more than any alternative reforge choice.</div>
+
+        <h2>Accessories for Combat</h2>
+        <p>Accessories (talismans, rings, artifacts) sit in your Accessory Bag and provide passive stat bonuses. The bag has limited slots that expand as you unlock more through various sources. Every accessible slot should have an accessory in it. The reforges on your accessories are collectively one of the biggest stat sources in the game — reforging an entire accessory bag correctly is a multi-million coin investment but makes a massive difference.</p>
+
+        <h3>Crit Chance from Accessories</h3>
+        <p>Itchy reforge gives +2% Crit Chance per accessory at common tier, scaling up at higher rarities. In the early game, reforging all your talismans to Itchy is the fastest path to 100% Crit Chance. Once you're comfortably over 100% CC (you want a small buffer because losing CC after reforging armor is a common mistake), you can start transitioning accessories toward Crit Damage reforges.</p>
+
+        <h3>Key Combat Accessories</h3>
+        <ul>
+          <li><strong>Combat Talisman / Ring / Artifact:</strong> Each tier gives +1/+2/+3 Strength. The full upgrade chain is cheap and always worth having.</li>
+          <li><strong>Spider Artifact:</strong> Crafted from Spider Eye drops, upgraded through Tarantula Slayer. Gives Crit Chance and Crit Damage.</li>
+          <li><strong>Bat Talisman:</strong> Obtained from The Park Bat quest. Small stats but free.</li>
+          <li><strong>Campfire Badge:</strong> Obtained from Campfire quest chain in Hub. Gives small HP bonus.</li>
+          <li><strong>Slayer artifacts:</strong> Each Slayer type (Zombie, Spider, Wolf, Enderman, Blaze) has a talisman-to-artifact chain. These give class-relevant stats and are well worth obtaining through natural Slayer progression.</li>
+          <li><strong>Intimidation Talisman:</strong> Causes weaker mobs to flee. Niche but useful for specific farming setups.</li>
+          <li><strong>Potion Affinity Artifact:</strong> Increases potion duration. Very strong — God potions last longer.</li>
+        </ul>
+
+        <h3>Reforging Your Accessory Bag</h3>
+        <p>The standard approach is: reforge everything Itchy until you hit 100% CC with some buffer. Then reforge higher-rarity accessories (Rare+) to Shaded (+Crit Damage) or Precise (+Crit Damage), keeping lower-rarity pieces as Itchy to maintain the 100% CC floor. The exact split depends on your other stat sources. Check your Crit Chance in your stats menu after any reforge session — do not let it drop below 100%.</p>
+
+        <h2>Combat XP Methods</h2>
+        <p>Combat XP scales with mob difficulty and type. Higher-tier mobs and Dungeon bosses give far more XP than basic Hub enemies. The optimal method changes significantly between early, mid, and late game.</p>
+
+        <h3>Early Game (Combat 1–30)</h3>
+        <p>Kill everything. Graveyard zombies in the Hub respawn constantly and are trivially easy — good for the first few levels. The Spider's Den has higher-level spiders and the Watcher boss fight, both giving decent XP. Pick up any available Combat quests from NPCs; quest bonuses can give as much XP as dozens of normal kills.</p>
+        <p>The most important thing in early game is reaching Combat 12 as fast as possible to unlock The End. Once there, Endermen give significantly more XP than Hub mobs, and with Ender Armor equipped you have 2× all stats in that dimension, making you much stronger than your gear level implies. Grind Endermen from Combat 12 until Dungeons become available and viable for you.</p>
+
+        <h3>Mid Game (Combat 30–50)</h3>
+        <p>Zealot farming in The End is the best mid-game option. Zealots give solid Combat XP per kill, spawn rapidly, and can drop Summoning Eyes worth 1–3M each. The combination of XP gain and passive income makes Zealots the best mid-game grind for players who aren't yet running high dungeons consistently.</p>
+        <p>F1–F4 Dungeons provide XP bursts on boss kills that can outpace Zealot XP rates once you can clear them quickly. The issue is that early Dungeon clears take a long time — an inefficient F3 run can take 20+ minutes, making the XP/hr competitive but not decisively better than Zealot farming. As your Dungeons speed improves, shift more time toward Dungeons.</p>
+        <p>Slayer bosses (Zombie Revenant, Tarantula, Sven Packmaster) give Combat XP on boss kill. T3 and T4 bosses give meaningful amounts. Slayer progression is worth pursuing naturally anyway for its gear and Combat Wisdom bonuses.</p>
+
+        <h3>Late Game (Combat 50–60)</h3>
+        <p>F6, F7, and Master Mode are where Combat XP per hour truly scales up. A fast F7 run with a good team can take 8–12 minutes and deliver 8–15M Combat XP from the run itself plus boss kill. Doing five to seven F7 runs per hour is achievable with the right team and gear.</p>
+        <p>M1–M3 are slightly more accessible than high Normal Mode floors for players who have just unlocked Master Mode, while still giving excellent XP. M4+ requires tight gear requirements but pays off in both XP and drops.</p>
+
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr><th>Method</th><th>Combat XP/hr (approx)</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>F7 (fast team)</td><td>8–15M</td><td>Best XP/hr with the right group. Requires Cata 28+ and solid gear.</td></tr>
+              <tr><td>M1–M3</td><td>5–10M</td><td>Good transition from Normal Mode. More forgiving than M4+.</td></tr>
+              <tr><td>M5–M7</td><td>10–20M+</td><td>Best absolute XP in the game but requires endgame gear.</td></tr>
+              <tr><td>Zealot farming</td><td>3–8M</td><td>Depends heavily on how fast you kill and if Eyes activate extra spawns. Passive income alongside XP.</td></tr>
+              <tr><td>Enderman Slayer T4</td><td>2–5M</td><td>Good XP plus valuable drops. Worth doing naturally.</td></tr>
+              <tr><td>Blaze Slayer T3–T4</td><td>2–4M</td><td>Crimson Isle location, good if grinding Mage drops too.</td></tr>
+              <tr><td>Hub Graveyard</td><td>0.5–1M</td><td>Starter only. No reason to be here past Combat 15.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Bestiary and Combat Wisdom</h2>
+        <p>Bestiary tracks how many times you have killed each individual mob type in the game. Every time you hit a kill milestone for a mob (50 kills, 250 kills, 1000 kills, etc.), you receive a permanent stat bonus — usually Health, Strength, Defense, or Magic Find, depending on the mob. These bonuses persist forever and stack across all mob types.</p>
+        <p>Maxing out the entire Bestiary is an extremely long-term project, but the stat gains add up to hundreds of combined stats across all categories. Practically speaking, you'll fill Bestiary naturally as you grind. Actively checking which mobs you're close to a milestone on and farming them quickly to claim the bonus is worth doing periodically. Mob tiers that give Magic Find are particularly valuable for loot-farming builds.</p>
+
+        <h3>Combat Wisdom</h3>
+        <p>Combat Wisdom is gained by killing Slayer bosses. Each boss type at T1 for the first time gives +1 Wisdom. T2 gives +1 more, T3 another +1, T4 gives +2, and T5 (where available) gives +2. The maximum Combat Wisdom from Slayers across all types is +34. Wisdom increases the rate at which you gain Combat XP — a player with +20 Combat Wisdom gains Combat XP noticeably faster than one with +0. Getting your Wisdom up early, by naturally progressing Slayer quests, accelerates all future Combat leveling. It compounds over time.</p>
+
+        <h2>Grinding Location Details</h2>
+
+        <h3>Hub Graveyard</h3>
+        <p>Zombies spawn constantly in the Graveyard behind the Hub spawn. Useful for Combat 1–10 before you have any real gear. The Graveyard also has a small chance to spawn Uncommon and Rare zombies with slightly better loot tables. Do not stay here past Combat 10 — you are leaving XP on the table.</p>
+
+        <h3>Spider's Den</h3>
+        <p>The Spider's Den is home to various spider types and the Watcher miniboss. Useful from Combat 5 through roughly Combat 25. Spiders here give decent XP, and the Tarantula Slayer questline is based here — you'll spend time in this area anyway while progressing Slayer. The Watcher boss drops Spider Eyes and components useful for crafting. Pull out once you unlock The End.</p>
+
+        <h3>The End</h3>
+        <p>The best single grinding location in the game from Combat 12 through midgame. The End has Endermen as the primary mob, and Ender Armor's 2× stat multiplier inside this dimension makes you dramatically stronger for the cost. Zealots are an Enderman variant with much lower HP — they die faster, give the same or more XP, and can drop Summoning Eyes worth 1–3M each. With a fast kill setup (Aspect of the End teleport + strong weapon), you can chain Zealot kills extremely rapidly. The End should be your primary grinding zone from unlock until you're doing F5+ Dungeons regularly.</p>
+        <p>When Summoning Eyes are placed in the twelve Eye Pedestals around the Ender Crystal, the Dragon spawns. While the Dragon itself is separate content, the presence of active Eyes causes Zealots to spawn faster and in greater numbers — meaning a public lobby with an active Dragon summon is far better for Zealot farming than an empty one. Join lobbies where Eyes are being placed for maximum efficiency.</p>
+
+        <h3>Howling Cave (Hub Wolves)</h3>
+        <p>The wolves in the Hub area near the Howling Cave are the location for Sven Packmaster Slayer quests. Wolves here respawn at a decent rate and can give reasonable XP during Slayer quests. Not the best standalone grinding zone, but you'll be here for Wolf Slayer progression.</p>
+
+        <h3>The Catacombs</h3>
+        <p>Once you're capable of doing Dungeons reasonably fast, they become your primary Combat XP source. F5 and above gives serious XP. The key variable is run speed — five fast F5 runs beat two slow F7 runs. Match your floor choice to your gear so you're clearing comfortably, not spending 15 minutes per run on a floor that's too difficult. F6 is often the sweet spot for players gearing up toward F7 readiness.</p>
+
+        <h3>Crimson Isle</h3>
+        <p>The Crimson Isle is the home of Blazes and the Blaze Slayer questline. Blaze mobs give good XP outside of Slayer quests as well, and the island also has Ashfang and Magma Cube mobs for variety. Blaze Slayer T3–T4 drops include Mana Disintegrator and Gauntlet of Contagion — important Mage items — making it worth grinding for Mage builds specifically. The area also has Kuudra Tier content, which is a separate boss fight requiring its own preparation.</p>
+
+        <h2>Pets for Combat</h2>
+        <p>Pets provide passive stat bonuses and special abilities. Only one pet can be active at a time, so choosing the right pet for your activity matters. Combat pets scale with level — a level 100 pet is noticeably stronger than a level 1 version of the same pet, and the jump from level 100 to level 200 (accessible on Legendary pets) is substantial.</p>
+
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr><th>Pet</th><th>Rarity</th><th>Best For</th><th>Key Ability</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Tiger</td><td>Legendary</td><td>Berserk, all physical DPS</td><td>Melee damage multiplier that scales with Crit Damage. The best combat pet for physical builds at high stats.</td></tr>
+              <tr><td>Golden Dragon</td><td>Legendary</td><td>All classes (best general pet)</td><td>Stats scale with level up to 200. At level 200, gives a percentage multiplier to all stats — no other pet competes at that level. Worth leveling to 200 for endgame.</td></tr>
+              <tr><td>Enderman</td><td>Legendary</td><td>Mage</td><td>Intelligence bonus and doubles Magic Damage in some scenarios. The primary Mage pet for damage.</td></tr>
+              <tr><td>Baby Yeti</td><td>Epic/Legendary</td><td>Any (survivability)</td><td>Defense and incoming damage reduction. Strong for players who die frequently in their current content.</td></tr>
+              <tr><td>Griffin</td><td>Legendary</td><td>Open world grinding</td><td>Spawns Mythological Mobs (Minotaur, Gaia Construct, etc.) randomly while active outside Dungeons. Good for grinding Bestiary and outside-Dungeon stat items.</td></tr>
+              <tr><td>Spirit</td><td>Legendary</td><td>Dungeons (any class)</td><td>Extremely strong inside Dungeons specifically. Rare drop from F6+ secret chests — very hard to obtain but one of the best Dungeon pets.</td></tr>
+              <tr><td>Wither Skeleton</td><td>Epic/Legendary</td><td>Early Berserk</td><td>Crit Chance + Crit Damage. Solid stat pet before Tiger is affordable.</td></tr>
+              <tr><td>Sheep</td><td>Epic/Legendary</td><td>Mage/Healer</td><td>Continuous mana regeneration. Lets Mage players cast Wither Impact more frequently without running dry.</td></tr>
+              <tr><td>Ender Dragon</td><td>Legendary</td><td>Tank</td><td>High HP + Defense bonus. Pairs well with Tank's survivability focus.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="wiki-note"><strong>Tip:</strong> Tiger vs Golden Dragon at high levels — Tiger wins for pure combat output at most stat levels. Golden Dragon at level 200 can compete or exceed Tiger depending on your total stats. If you're min-maxing and have the resources, level a Golden Dragon to 200 and compare your stats directly.</div>
+
+        <h2>Survivability</h2>
+        <p>Dying in SkyBlock costs you time and in some contexts gear durability or special buffs. Dungeon deaths also hurt your score, reducing your chest loot quality. Understanding how to not die — rather than just dealing maximum damage — separates good players from great ones.</p>
+
+        <h3>Defense Mechanics</h3>
+        <p>Defense reduces all incoming damage through the formula: damage taken = raw damage × 400 / (400 + Defense). A mob that deals 2000 raw damage to a player with 0 Defense deals 2000. Against a player with 400 Defense it deals 1000. Against a player with 800 Defense it deals 667. Against a player with 2000 Defense it deals 333. Defense never fully blocks damage but it scales aggressively — the first few hundred Defense points have the highest return.</p>
+
+        <h3>Bonzo's Mask</h3>
+        <p>Bonzo's Mask, dropped from F1, gives a passive "one free death" mechanic. When it would activate, it triggers automatically and prevents death by restoring your HP briefly. The mask then goes on a short cooldown. For early Dungeon players who die to unexpected damage spikes, this is the most valuable F1 drop. Keep it equipped in your helmet slot until you're consistently not dying — usually around F4–F5 with proper gear.</p>
+
+        <h3>Potions</h3>
+        <p>God Potions combine Speed, Strength, Crit Chance, Haste, and other bonuses into a single long-duration potion. Using a God Potion for serious content (F6+, Slayer T4, boss fights) is always worth it — the damage bonus alone more than compensates for the cost. You can only consume one combined potion per Dungeon run, so choose timing wisely.</p>
+
+        <h3>Life Steal and Self-Sustain</h3>
+        <p>The Life Steal enchant heals you for a percentage of damage dealt on each hit. At high damage output, Life Steal heals faster than most mobs can hurt you. Berserk players rely on this heavily to avoid needing a Healer in party. Maximize your Life Steal enchant level and pair it with high hit rate (fast weapon or Ferocity) for consistent healing.</p>
+
+        <h3>Warding (Dungeon Skill)</h3>
+        <p>Warding is an emergency ability some Dungeon items provide — it uses mana to regenerate a chunk of HP. Useful in situations where you're taking sustained damage and Life Steal isn't keeping up. Know your keybinds for it.</p>
+
+        <div class="wiki-warn"><strong>Warning:</strong> Always verify your Crit Chance is still at 100% after reforging armor. It is very easy to accidentally drop below 100% after changing a piece of gear, especially if you rely on accessory reforges for most of your CC. Check your stats screen before entering any serious content.</div>
+
+        <h2>Common Mistakes</h2>
+        <ul>
+          <li><strong>Stacking Crit Damage before 100% Crit Chance.</strong> The single most common mistake. Every percentage of CC below 100 is a multiplicative damage loss. Crit Damage is worthless if half your hits don't crit.</li>
+          <li><strong>Using Sharpness instead of Smite in Dungeons.</strong> Most Dungeon mobs are Undead. Smite VII deals significantly more damage than Sharpness VII against Undead and costs similar amounts. Always check your mob type before choosing damage enchants.</li>
+          <li><strong>No Telekinesis enchant.</strong> Without Telekinesis, mob drops fall on the ground and despawn before you can collect them. This means missed coins, drops, and XP orbs. Telekinesis costs essentially nothing to apply.</li>
+          <li><strong>Staying in Ender Armor outside The End.</strong> Ender Armor's 2× multiplier only applies in The End dimension. In Dungeons or anywhere else you have half the stats you'd expect. Transition to Dragon armor or Shadow Assassin for Dungeons.</li>
+          <li><strong>Not using class-appropriate reforges on weapons.</strong> A Withered Berserk weapon outperforms a Legendary-reforged weapon by around 40% raw damage at similar investment. Reforge stones are expensive but they matter enormously.</li>
+          <li><strong>Buying Hyperion without building around it.</strong> Hyperion is not an upgrade — it is a build. Without Storm's Armor (or better), high Mage class level, and sufficient mana, Hyperion deals mediocre damage. Buying it bare and expecting instant power is a common expensive mistake.</li>
+          <li><strong>Ignoring Bestiary.</strong> Bestiary bonuses are permanent and cumulative. If you kill 10,000 Endermen but never check your Bestiary milestones, you miss stat bonuses that never come back from those kills.</li>
+          <li><strong>Skipping Defense to push floors too early.</strong> F6 and F7 mobs one-shot players with insufficient Defense. A fast death means a poor score and no meaningful loot. Farm the previous floor until your Defense is comfortably above the recommendation for the next one.</li>
+          <li><strong>Running Dungeons solo below F5.</strong> Lower floors give far less XP and loot in solo mode compared to being in a five-player group. Even a random group clears faster and earns better loot than solo.</li>
+          <li><strong>Not applying wax before starring Dungeon armor.</strong> Starring an unwaxed piece makes it soulbound. The correct order is: gemstones first, then wax, then stars.</li>
+        </ul>
+
+        <h2>Money Making from Combat</h2>
+        <p>Combat is the primary income source for most mid and late-game players. The activities below range from accessible to endgame-only, but all of them require strong combat investment to do efficiently.</p>
+
+        <h3>Zealot Farming</h3>
+        <p>Summoning Eyes drop from Zealots in The End with a base chance that scales with your Magic Find stat. Eyes sell on the Bazaar for 1–3M each. A well-equipped player in a lobby with an active Dragon spawning cycle can get 2–5 Eyes per hour, sometimes more with high Magic Find. The income is 2–8M/hr depending on eye rate, eye price, and how fast you're killing. Looting IV on your weapon and Luck of the Sea on items boosts drop rates. It is passive and requires zero preparation once your gear is set up.</p>
+
+        <h3>Dragon Fights</h3>
+        <p>Killing the Ender Dragon drops armor fragments based on dragon type (Protector, Strong, Unstable, Young, Old, Wise, Superior). Superior Dragon Armor pieces are worth tens of millions of coins each. Even the less valuable types (Strong, Unstable) sell for 500k–5M per piece. Participating in Dragon fights regularly — especially in Protector lobbies where the dragon spawns frequently — generates consistent income. Magic Find increases the chance of fragment drops.</p>
+
+        <h3>F7 and Master Mode Drops</h3>
+        <p>F7 drops Necron's Handle (the crafting material for Hyperion), Wither Blade scrolls, and Wither essence. Master Mode adds Master Stars, higher-quality fragments, and rare chest drops from bosses. A consistent F7/M1–M3 farmer earns several million coins per hour from chest loot alone, separate from any Boss drops. The income is reliable and scales with how fast you can clear.</p>
+
+        <h3>Enderman Slayer</h3>
+        <p>Enderman Slayer T3 has a chance to drop the Etherwarp Conduit, an item used to craft the Etherwarp Transmitter teleportation upgrade. Etherwarp Conduit prices fluctuate but frequently sell for 20–50M+ each. T3 Enderman Slayer is accessible at mid-game gear levels and takes a few minutes per boss. Even one Conduit drop per session makes it a highly profitable activity. T4 drops are better but require significantly stronger gear.</p>
+
+        <h3>Blaze Slayer</h3>
+        <p>Blaze Slayer drops include the Mana Disintegrator (a Mage accessory), Gauntlet of Contagion (crafting material), and Flare components. These items serve Mage builds specifically and maintain consistent demand. T3–T4 Blaze Slayer in the Crimson Isle is a solid income source for players who need Mage gear anyway, turning their grind time into profit.</p>
+
+        <h3>Tarantula Slayer</h3>
+        <p>Tarantula Slayer produces the Spider Artifact upgrade chain and Tarantula components used in various crafting recipes. The Spider Artifact is particularly valuable because every serious DPS player needs it for Crit stats. T3–T4 Tarantula farming gives moderate but consistent income and is worth doing for natural Slayer progression.</p>
+
+        <h2>FAQ</h2>
+
+        <h3>Why is The End the best early area?</h3>
+        <p>Ender Armor doubles all your stats inside The End dimension. A player with 200 Defense effectively has 400 Defense there. A player with 150 Strength effectively has 300. This makes you far stronger for your gear level than anywhere else in the game. Combined with Zealots being fast to kill and dropping Summoning Eyes worth millions each, The End is both the best XP location and the best income location for the early game stretch from Combat 12 through midgame.</p>
+
+        <h3>Which class is best for solo play?</h3>
+        <p>Mage and Berserk are both viable for solo. Mage with Hyperion clears rooms so fast that solo runs approach team speeds for experienced players. Berserk sustains through Life Steal, requiring no external healing. If you're starting out and don't have Hyperion, Berserk is more forgiving and cheaper to build. If you have the resources for a full Mage build, Mage scales higher in terms of clear speed.</p>
+
+        <h3>Can you switch classes between runs?</h3>
+        <p>Yes. Class switching is done in the Dungeon lobby before entering a floor. You keep your class XP for each class independently — switching to Healer for one run does not remove your Berserk XP. However, your class bonuses only apply when playing that class, so switching frequently means your main class's level bonus stays lower. Pick one class to main and only deviate when your team has a specific need.</p>
+
+        <h3>What does Catacombs level do besides gating floors?</h3>
+        <p>Catacombs level scales the stats on all Dungeon gear. A Necron Helmet worn by someone with Catacombs 40 has significantly higher effective stats than the same helmet worn by someone with Catacombs 25. The scaling is substantial — at very high Catacombs levels, dungeon armor dramatically outperforms outside-world gear of nominally similar quality. This is why veteran players often have Catacombs level as a higher priority than raw gear upgrades.</p>
+
+        <h3>What is the difference between Dungeons Combat XP and regular Combat XP?</h3>
+        <p>Dungeons give both regular Combat XP and Catacombs XP on the same run. Catacombs XP levels your Catacombs skill (separate from Combat), which is what gates floor access and scales Dungeon gear. Regular Combat XP from Dungeons feeds into your Combat skill level for the +4 Crit Chance / +1 Strength per 10 levels bonuses. Both are gained simultaneously, so time spent in Dungeons advances both skills at once — another reason Dungeons are so efficient for character progression.</p>
+
+        <h3>When should I transition from Zealot farming to Dungeons?</h3>
+        <p>Once you can clear F5 in under 10 minutes consistently with a group, Dungeons become more efficient in terms of XP per hour. The income comparison is more nuanced — Zealot farming is passive with no preparation overhead, while Dungeons require coordination and gear. Most players naturally overlap both — running Dungeons for gear progression and farming Zealots during off-hours or when no party is available. There is no strict cutoff; run Dungeons whenever you can form or join a good group, and farm Zealots when you are grinding solo.</p>
+
+      </article>
+    </main>
+  </div>
+
+  <nav class="mobile-nav">
+    <a href="../index.html" class="active">Guidebook</a>
+    <a href="../players.html">Players</a>
+    <a href="../progress.html">Progress</a>
+  </nav>
+
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    const toggle  = document.getElementById('sidebarToggle');
+    toggle.addEventListener('click', () => {
+      sidebar.classList.contains('open')
+        ? (sidebar.classList.remove('open'), overlay.classList.remove('open'))
+        : (sidebar.classList.add('open'), overlay.classList.add('open'));
+    });
+    overlay.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('open');
+    });
+  </script>
+</body>
+</html>

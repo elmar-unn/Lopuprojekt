@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dungeons Guide — Hypixel SkyBlock</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="topnav-wrap">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
+          <line x1="2" y1="4" x2="14" y2="4"/>
+          <line x1="2" y1="8" x2="14" y2="8"/>
+          <line x1="2" y1="12" x2="14" y2="12"/>
+        </svg>
+      </button>
+      <a href="../index.html" class="brand">
+        <img src="../assets/hypixel.png" alt="" />
+        <span>Hypixel SkyBlock</span>
+      </a>
+      <div class="search-wrap">
+        <div class="search-bar">
+          <svg class="search-icon" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="6.5" cy="6.5" r="4.5"/>
+            <line x1="10" y1="10" x2="14" y2="14"/>
+          </svg>
+          <input type="text" placeholder="Search guides, items, mechanics…" />
+          <span class="search-kbd">⌘K</span>
+        </div>
+      </div>
+      <nav class="topnav-links">
+        <a href="../index.html" class="topnav-link active">Guidebook</a>
+        <a href="../players.html" class="topnav-link">Players</a>
+        <a href="../progress.html" class="topnav-link">Progress</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="wiki-body">
+    <aside class="wiki-sidebar" id="sidebar">
+      <div class="sidebar-inner">
+        <section class="sidebar-section">
+          <h6 class="sidebar-heading">Progression</h6>
+          <ul class="sidebar-list">
+            <li><a href="../index.html" class="sidebar-item"><span class="stage-pip pip-early"></span>Early Game<em>0–160</em></a></li>
+            <li><a href="../index.html" class="sidebar-item active"><span class="stage-pip pip-mid"></span>Midgame<em>160–280</em></a></li>
+            <li><a href="../index.html" class="sidebar-item"><span class="stage-pip pip-late"></span>Late Game<em>280–440</em></a></li>
+            <li><a href="../index.html" class="sidebar-item"><span class="stage-pip pip-end"></span>Endgame<em>440+</em></a></li>
+          </ul>
+        </section>
+        <section class="sidebar-section">
+          <h6 class="sidebar-heading">Community</h6>
+          <ul class="sidebar-list">
+            <li><a href="../players.html" class="sidebar-item">Players</a></li>
+            <li><a href="../progress.html" class="sidebar-item">Progress</a></li>
+          </ul>
+        </section>
+        <div class="infobox">
+          <div class="infobox-title">Dungeons</div>
+          <div class="infobox-row"><span>Floors</span><span>F1–F7 + M1–M7</span></div>
+          <div class="infobox-row"><span>Classes</span><span>5</span></div>
+          <div class="infobox-row"><span>Party size</span><span>1–5</span></div>
+          <div class="infobox-row"><span>Unlocks</span><span>Combat 15</span></div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="wiki-main">
+      <nav class="breadcrumb-nav">
+        <a href="../index.html">Home</a>
+        <span class="bc-sep">›</span>
+        <a href="../index.html">Guidebook</a>
+        <span class="bc-sep">›</span>
+        <span>Dungeons</span>
+      </nav>
+
+      <div class="wiki-header">
+        <div>
+          <h1 class="page-title">Dungeons Guide</h1>
+          <p class="page-subtitle">The Catacombs — floor requirements, classes, gear recommendations, scoring, and Master Mode.</p>
+        </div>
+        <div class="header-badges">
+          <span class="badge badge-version">v0.21</span>
+        </div>
+      </div>
+
+      <article class="wiki-article">
+
+        <p>Dungeons are team PvE content where 1–5 players work through procedurally generated rooms before fighting a boss. They're unlocked through Combat 15 and are the main driver of gear progression from midgame onward.</p>
+
+        <h2>Getting Started</h2>
+        <p>Talk to Mort in the Hub (Graveyard area) to unlock The Catacombs. You need <strong>Combat 15</strong> minimum. To enter solo from Floor III onward you need Saul's Recommendation, which requires completing F3 in a team first.</p>
+        <p>Each floor requires a specific Catacombs level — this goes up with every floor you complete. You gain Catacombs XP from run completions, boss kills, and daily objectives.</p>
+
+        <h2>Classes</h2>
+        <p>Pick one class per run. Your class choice affects what gear scales and what abilities you get. You can swap between runs.</p>
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr><th>Class</th><th>Role</th><th>Best for</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Healer</strong></td><td>Keeps team alive with healing orbs and auras</td><td>Support, high-level group runs</td></tr>
+              <tr><td><strong>Berserk</strong></td><td>Melee damage, Life Steal sustain</td><td>Fast clears, most popular DPS class</td></tr>
+              <tr><td><strong>Mage</strong></td><td>Magic damage, requires high Intelligence</td><td>F5–F7, Hyperion users</td></tr>
+              <tr><td><strong>Archer</strong></td><td>Ranged DPS, kills high-HP targets safely</td><td>Bowmen, Terminator users in Master Mode</td></tr>
+              <tr><td><strong>Tank</strong></td><td>Absorbs damage, draws aggro from team</td><td>Survivability-first runs, M7</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Each class has a Leveling Bonus that scales stats as you gain class XP. Running one class consistently is significantly better than spreading XP across all five.</p>
+
+        <h2>Floor Requirements</h2>
+        <p>Catacombs level requirements are minimums — you can enter at lower levels but will struggle. The defense numbers below are practical recommendations, not hard gates.</p>
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr><th>Floor</th><th>Cata Level</th><th>Boss</th><th>Rec. Defense</th><th>Key drops</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Entrance</td><td>Combat 15</td><td>Bonzo (preview)</td><td>200+</td><td>Bonzo's Staff, Bonzo's Mask</td></tr>
+              <tr><td>F1</td><td>Cata 1</td><td>Bonzo</td><td>250+</td><td>Bonzo's Mask, Bonzo's Staff</td></tr>
+              <tr><td>F2</td><td>Cata 3</td><td>Scarf</td><td>300+</td><td>Scarf's Studies, Scarf's Thesis</td></tr>
+              <tr><td>F3</td><td>Cata 5</td><td>The Professor</td><td>350+</td><td>Adaptive Helmet, Zombie Knight pieces</td></tr>
+              <tr><td>F4</td><td>Cata 9</td><td>Thorn</td><td>400+</td><td>Spirit Bow, Adaptive Chestplate</td></tr>
+              <tr><td>F5</td><td>Cata 14</td><td>Livid</td><td>550+</td><td>Livid Dagger, Shadow Assassin pieces</td></tr>
+              <tr><td>F6</td><td>Cata 19</td><td>Sadan</td><td>600+</td><td>Storm's Armor, Shadow Assassin pieces</td></tr>
+              <tr><td>F7</td><td>Cata 24</td><td>The Wither Lords</td><td>700+</td><td>Necron's Handle, Wither Blades, Blood-stained Sword</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="wiki-note"><strong>Tip:</strong> Bonzo's Mask from F1 gives a free one-death save passively — get it early and keep it in your armor until you're past F4.</div>
+
+        <h2>Dungeon Mechanics</h2>
+        <p>A few mechanics that catch new players off guard:</p>
+        <ul>
+          <li><strong>Speed cap:</strong> Any speed above 100 is reduced by 33%. Dragon armor's speed bonus works differently inside dungeons.</li>
+          <li><strong>Potions:</strong> You can only consume one potion per run (except Healing, Stamina, and Mana potions).</li>
+          <li><strong>Death:</strong> You become a ghost and can still interact with the run. Coins in your purse are safe — dungeons don't take your coins on death.</li>
+          <li><strong>Wither Keys:</strong> Each floor drops two Wither Keys and one Blood Key from killing all starred mobs in specific rooms. Blood Key opens the Blood Room.</li>
+          <li><strong>Essence:</strong> Dropped from bosses and rooms — spend at Ophelia or other NPCs to upgrade Dungeon items.</li>
+        </ul>
+
+        <h2>Scoring & Grades</h2>
+        <p>Your run score is made up of four categories: Skill (deaths + puzzle fails), Exploration (rooms + secrets), Speed (completion time), and Bonus (extra). Aim for 300+ for S+.</p>
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr><th>Score</th><th>Grade</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>300+</td><td>S+</td></tr>
+              <tr><td>270–299</td><td>S</td></tr>
+              <tr><td>230–269</td><td>A</td></tr>
+              <tr><td>160–229</td><td>B</td></tr>
+              <tr><td>100–159</td><td>C</td></tr>
+              <tr><td>0–99</td><td>D</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>S+ grants a Plushie drop chance and better chest contents. For high scores, secrets are the biggest factor — explore every room and open all secret locations.</p>
+
+        <h2>Gear by Stage</h2>
+        <h3>F1–F3</h3>
+        <p>Zombie Knight Armor or Hardened Diamond gets you through F1–F2. Aim for Strong Dragon or Unstable Dragon before F3. Aspect of the End or AotD works fine as a weapon here.</p>
+
+        <h3>F4–F5</h3>
+        <p>F4 is where Bonzo's Mask stops trivializing deaths — you need real defense. Shadow Assassin Chestplate from F5 is a major upgrade. Livid Dagger from F5 should be your next weapon goal — get it Fabled and Recombobulated.</p>
+
+        <h3>F6–F7</h3>
+        <p>Shadow Assassin full set or Storm's Armor for Mage. F7 needs ~700 Defense and Catacombs 28+. You're working toward Necron's Handle here. Hyperion requires the Handle plus crafting materials — it's the main reason people grind F7.</p>
+
+        <h2>Master Mode</h2>
+        <p>Master Mode (M1–M7) is a harder version unlocked after completing all 7 floors. Mobs have dramatically higher HP and damage. Each Master floor has its own Catacombs level requirement on top of the normal floor requirement.</p>
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr><th>Floor</th><th>Cata Level (rough)</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>M1</td><td>~27</td><td>Good starting point for Master Mode</td></tr>
+              <tr><td>M3</td><td>~31–32</td><td>Defense becomes critical</td></tr>
+              <tr><td>M4</td><td>~36</td><td>MP 1000+ strongly recommended</td></tr>
+              <tr><td>M5</td><td>~38–40</td><td>Terminator required — Juju won't work here</td></tr>
+              <tr><td>M6</td><td>~41–44</td><td>Master Stars on armor equal to floor number</td></tr>
+              <tr><td>M7</td><td>45+</td><td>Best-in-slot: Divan's Head, Skeleton Master Chest, Necron Legs, Maxor Boots</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Master Stars are applied to Dungeon gear using Star Fragments from Master Mode chests. Add gemstones and wax your equipment before starring — order matters.</p>
+
+      </article>
+    </main>
+  </div>
+
+  <nav class="mobile-nav">
+    <a href="../index.html" class="active">Guidebook</a>
+    <a href="../players.html">Players</a>
+    <a href="../progress.html">Progress</a>
+  </nav>
+
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    const toggle  = document.getElementById('sidebarToggle');
+
+    toggle.addEventListener('click', () => {
+      sidebar.classList.contains('open')
+        ? (sidebar.classList.remove('open'), overlay.classList.remove('open'))
+        : (sidebar.classList.add('open'), overlay.classList.add('open'));
+    });
+
+    overlay.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('open');
+    });
+  </script>
+
+</body>
+</html>

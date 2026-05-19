@@ -1,0 +1,26 @@
+{
+  "name": "lopuprojekt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass scss/main.scss style.css --style compressed --silence-deprecation=import",
+    "watch": "sass scss/main.scss style.css --watch --style compressed --silence-deprecation=import"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elmar-unn/Lopuprojekt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/elmar-unn/Lopuprojekt/issues"
+  },
+  "homepage": "https://github.com/elmar-unn/Lopuprojekt#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "sass": "^1.99.0"
+  }
+}

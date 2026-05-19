@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foraging Guide — Hypixel SkyBlock</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="topnav-wrap">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
+          <line x1="2" y1="4" x2="14" y2="4"/>
+          <line x1="2" y1="8" x2="14" y2="8"/>
+          <line x1="2" y1="12" x2="14" y2="12"/>
+        </svg>
+      </button>
+      <a href="../index.html" class="brand">
+        <img src="../assets/hypixel.png" alt="" />
+        <span>Hypixel SkyBlock</span>
+      </a>
+      <div class="search-wrap">
+        <div class="search-bar">
+          <svg class="search-icon" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="6.5" cy="6.5" r="4.5"/>
+            <line x1="10" y1="10" x2="14" y2="14"/>
+          </svg>
+          <input type="text" placeholder="Search guides, items, mechanics…" />
+          <span class="search-kbd">⌘K</span>
+        </div>
+      </div>
+      <nav class="topnav-links">
+        <a href="../index.html" class="topnav-link active">Guidebook</a>
+        <a href="../players.html" class="topnav-link">Players</a>
+        <a href="../progress.html" class="topnav-link">Progress</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="wiki-body">
+    <aside class="wiki-sidebar" id="sidebar">
+      <div class="sidebar-inner">
+        <section class="sidebar-section">
+          <h6 class="sidebar-heading">Progression</h6>
+          <ul class="sidebar-list">
+            <li><a href="../index.html" class="sidebar-item active"><span class="stage-pip pip-early"></span>Early Game<em>0–160</em></a></li>
+            <li><a href="../index.html" class="sidebar-item"><span class="stage-pip pip-mid"></span>Midgame<em>160–280</em></a></li>
+            <li><a href="../index.html" class="sidebar-item"><span class="stage-pip pip-late"></span>Late Game<em>280–440</em></a></li>
+            <li><a href="../index.html" class="sidebar-item"><span class="stage-pip pip-end"></span>Endgame<em>440+</em></a></li>
+          </ul>
+        </section>
+        <section class="sidebar-section">
+          <h6 class="sidebar-heading">Community</h6>
+          <ul class="sidebar-list">
+            <li><a href="../players.html" class="sidebar-item">Players</a></li>
+            <li><a href="../progress.html" class="sidebar-item">Progress</a></li>
+          </ul>
+        </section>
+        <div class="infobox">
+          <div class="infobox-title">Foraging</div>
+          <div class="infobox-row"><span>Skill cap</span><span>Foraging 50</span></div>
+          <div class="infobox-row"><span>Best location</span><span>The Park</span></div>
+          <div class="infobox-row"><span>Best tool</span><span>Treecapitator</span></div>
+          <div class="infobox-row"><span>Best pet</span><span>Legendary Monkey</span></div>
+          <div class="infobox-row"><span>Key enchant</span><span>Replenish I</span></div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="wiki-main">
+      <nav class="breadcrumb-nav">
+        <a href="../index.html">Home</a>
+        <span class="bc-sep">›</span>
+        <a href="../index.html">Guidebook</a>
+        <span class="bc-sep">›</span>
+        <span>Foraging</span>
+      </nav>
+
+      <div class="wiki-header">
+        <div>
+          <h1 class="page-title">Foraging Guide</h1>
+          <p class="page-subtitle">Trees, XP methods, Foraging Fortune, best axes, pets, and how to reach max level efficiently.</p>
+        </div>
+        <div class="header-badges">
+          <span class="badge badge-version">v0.21</span>
+        </div>
+      </div>
+
+      <article class="wiki-article">
+
+        <!-- ===================== 1. INTRODUCTION ===================== -->
+        <h2>Introduction &amp; Why Foraging Matters</h2>
+        <p>Foraging is one of SkyBlock's simpler skills in terms of mechanics, but it's easily overlooked by new players who treat it as an afterthought. That's a mistake. Foraging gives raw stat bonuses per level — Strength and Crit Chance are the most impactful — and every level pushes your overall SkyBlock level upward alongside Mining, Farming, and the other gathering skills. Hitting SkyBlock level 7 requires Foraging 5, and that threshold is what unlocks Bazaar access. Getting there takes roughly 20 minutes of chopping trees, which makes it one of the fastest early unlocks in the game.</p>
+        <p>Beyond those early gates, Foraging is worth leveling because wood collections drive a surprising number of useful milestones. Oak Wood Collection unlocks the Jungle Axe early on, which is a meaningful QoL upgrade before Treecapitator. Spruce and Birch collections have their own reward tracks. And Foraging 15 — which you'll hit naturally if you do the Park quest chain — unlocks the Treecapitator, the tool that transforms foraging from a slow slog into an efficient loop.</p>
+        <p>The other reason not to sleep on Foraging: the XP is among the easiest in the game to accumulate passively. While grinding wood collections for crafting materials, building island infrastructure, or completing NPC quests that require log deliveries, you're gaining Foraging XP the entire time. Players who neglect Foraging often hit a SkyBlock level wall around 150–200 that forces them to grind skills they've ignored. Starting the Foraging habit early — even just doing The Park quest chain in your first week — avoids that bottleneck entirely.</p>
+        <p>This guide covers everything: how Foraging Fortune works, which trees give the most XP, the complete tool progression from iron axe to Treecapitator, the Monkey pet and why it's so important, the optimal Park rotation, and common mistakes that slow players down significantly.</p>
+
+        <!-- ===================== 2. FORAGING FORTUNE ===================== -->
+        <h2>Foraging Fortune Explained</h2>
+        <p>Foraging Fortune (FF) works on the same principle as Farming Fortune and Mining Fortune: it directly multiplies the number of logs and saplings that drop when you chop a tree. The formula is identical to the other Fortune mechanics:</p>
+        <p><strong>Drops = base drops × (1 + Foraging Fortune / 100)</strong></p>
+        <p>At 0 FF you get the base drop count. At 100 FF you get 2× drops. At 200 FF you get 3×. Every point of Foraging Fortune scales linearly with no diminishing returns, which means each additional point of FF is worth exactly as much as the last one in terms of raw output. This is what makes Foraging Fortune so important in combination with the Monkey pet — more Fortune directly translates to more XP per log, not just more logs dropped.</p>
+
+        <h3>Sources of Foraging Fortune</h3>
+        <p>Compared to Farming Fortune, the sources of Foraging Fortune are more limited, which means each individual source matters more:</p>
+        <ul>
+          <li><strong>Foraging skill passive:</strong> +1 Foraging Fortune per skill level. At Foraging 50 this contributes +49 FF. This is the foundation that all other sources build on.</li>
+          <li><strong>Harvesting enchant on axe:</strong> Harvesting is the Foraging-equivalent of the Farming hoe enchant. Each level gives +10 Foraging Fortune, up to Harvesting V for +50 FF. Apply this to your Treecapitator as soon as you have the book.</li>
+          <li><strong>Monkey pet ability:</strong> The Legendary Monkey's passive ability grants bonus Foraging Fortune that scales with pet level. This is separate from the XP multiplier effect — the Fortune bonus alone can push 30–50 FF at high pet levels.</li>
+          <li><strong>Blooming reforge:</strong> The Blooming reforge on an axe gives Foraging Fortune directly. Requires a Blooming Core reforge stone, which is a rare drop from The Park enemies and certain collection milestones. If you have a Blooming Core, apply it to your Treecapitator immediately — it's the best axe reforge for Foraging Fortune by a significant margin.</li>
+          <li><strong>Renowned reforge:</strong> The fallback reforge when Blooming Core isn't available. Gives general stats including some Foraging Fortune. Most players use Renowned until they get a Blooming Core.</li>
+          <li><strong>Green Thumb perk:</strong> A small Foraging Fortune bonus from certain Foraging collection milestone rewards.</li>
+        </ul>
+        <div class="wiki-note"><strong>Why Fortune matters for XP:</strong> The Monkey pet's XP ability scales directly with Foraging Fortune. More Fortune means more XP per log chopped, not just more logs. This is the core synergy that makes stacking Foraging Fortune worth doing even if you don't care about wood drops.</div>
+
+        <!-- ===================== 3. TREE TYPES & XP ===================== -->
+        <h2>Tree Types &amp; XP Rates</h2>
+        <p>Not all trees are created equal for Foraging purposes. The number of logs per tree, how quickly they chop, and where they spawn all affect your XP/hr significantly. Understanding which trees to prioritize — and which to skip — makes a real difference over a multi-hour grind session.</p>
+
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr><th>Tree Type</th><th>Approx. logs per tree</th><th>XP per log</th><th>Best location</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Oak</td><td>4–8</td><td>Medium</td><td>Hub Island, Private Island</td><td>Most common, good baseline for collections</td></tr>
+              <tr><td>Birch</td><td>5–10</td><td>Medium</td><td>The Park (Birch Forest area)</td><td>Taller than Oak, slightly more logs per tree</td></tr>
+              <tr><td>Spruce</td><td>8–14</td><td>Medium-High</td><td>The Park (Spruce Grove)</td><td>Dense log columns; good for Spruce Wood collection</td></tr>
+              <tr><td>Jungle</td><td>30–100+</td><td>High</td><td>The Park (Jungle area)</td><td>Massive trees; slow without Treecapitator; best XP per tree</td></tr>
+              <tr><td>Dark Oak</td><td>12–24</td><td>High</td><td>The Park (Dark Forest)</td><td>4-trunk cluster structure; very dense; top XP/hr</td></tr>
+              <tr><td>Acacia</td><td>6–10</td><td>Medium</td><td>Mushroom Desert</td><td>Irregular shape; decent mid-game option</td></tr>
+              <tr><td>Mahogany</td><td>15–30</td><td>Very High</td><td>The Park (exclusive)</td><td>Park-exclusive tree; among the best for XP per tree</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>The takeaway is clear: Jungle Trees and Dark Oak in The Park, plus Mahogany where available, are the trees you want to be chopping for maximum XP. Jungle Trees seem intimidating because of their sheer size — a fully grown Jungle tree in The Park can have 60–100+ logs — but Treecapitator trivializes them completely by breaking every connected log the moment you break the base. Without Treecapitator, a single Jungle Tree takes over a minute to chop manually. With it, under two seconds.</p>
+        <p>Dark Oak has a distinct structure: four 2×2 trunks fused into a single tree with a thick canopy. The log density per tree footprint is extremely high, and The Park's Dark Forest area clusters these trees tightly together. In a good rotation you can chain Dark Oak breaks every 15–20 seconds as trees respawn. This combination of tree density and log count per tree makes The Park Dark Forest the best sustained XP/hr location in Foraging outside of event scenarios.</p>
+
+        <!-- ===================== 4. BEST LOCATIONS ===================== -->
+        <h2>Best Foraging Locations</h2>
+
+        <h3>The Park — Best in Class</h3>
+        <p>The Park is to Foraging what the Crystal Hollows is to Mining — the definitive location for anyone trying to level the skill efficiently. It contains every major tree type in the game including Park-exclusive Mahogany trees, and the tree spawn density is dramatically higher than anywhere else. Trees respawn on a roughly 60–90 second cooldown depending on type, and the area is compact enough that a circular rotation covers all active spawns comfortably.</p>
+        <p>The three main subzones you'll use: the Dark Forest in The Park's northern section (Dark Oak clusters, best sustained XP), the Jungle area along the lower paths (massive Jungle trees, most XP per single break event), and the Birch/Spruce mixed forest in the central area (medium XP, good for collection grinding when you need those wood types specifically). Most efficient players bounce between Dark Oak and Jungle depending on respawn cycles.</p>
+        <p>The Park also has a Spirit Maple tree at its peak. Breaking the Spirit Maple gives a burst of bonus Foraging XP and drops a small number of Spirit Maple Logs, which have their own collection rewards. The Spirit Maple respawns on a longer timer than normal trees, but it's worth breaking every time it's available during a grinding session. The XP burst from a single Spirit Maple break is roughly equivalent to clearing several regular trees.</p>
+        <div class="wiki-note"><strong>Park quests first:</strong> Before settling into a grinding routine at The Park, complete the NPC quest chain (Charlie, Kelly, Molbert, Melody). These quests give Foraging gear rewards and Melody's Hair is worth the effort — it's an accessory from completing the Harp minigame that you unlock from Melody after finishing her quest.</div>
+
+        <h3>Hub Island — Early Collection Only</h3>
+        <p>The trees near the Hub spawn area are useful exactly once: for your first 10–15 minutes when you need some Oak and Birch logs for early collections and crafts. The density and tree size are both low, and without Treecapitator the XP/hr is poor. Transition to The Park the moment you have a functional axe and basic knowledge of the layout.</p>
+
+        <h3>Private Island — Not Recommended for XP</h3>
+        <p>You can plant and chop trees on your private island, but the tree respawn rate is slow unless you invest in island upgrades, and you can only have a limited number of trees placed at once. The XP/hr is far lower than The Park even with a well-built private island tree farm. Private island foraging makes sense for one use case only: if you need a specific wood type for crafting and want it on demand without traveling. For leveling the skill, always use The Park.</p>
+
+        <h3>Mushroom Desert — Mid Acacia</h3>
+        <p>Acacia trees grow in the Mushroom Desert area and provide a decent mid-game alternative if The Park is crowded. Acacia Wood collection milestones have rewards worth checking, and the area is generally less contested than The Park during peak hours. It's not close to The Park in XP/hr, but it's a functional secondary location.</p>
+
+        <!-- ===================== 5. TOOL PROGRESSION ===================== -->
+        <h2>Tool Progression</h2>
+
+        <h3>Any Axe (Foraging 1–14)</h3>
+        <p>Before Foraging 15, your tool choice barely matters. Grab an Iron Axe or Gold Axe from the Bazaar for a few hundred coins. Gold Axe breaks logs slightly faster than Iron due to mining speed. Diamond Axe is an option if you have one lying around, but buying one specifically for this window is wasteful — you're replacing it at Foraging 15 regardless. Just use whatever you have and chop away.</p>
+
+        <h3>Jungle Axe — Free Upgrade</h3>
+        <p>The Jungle Axe unlocks from the Jungle Wood collection milestone and is free to craft once you hit the requirement. Its ability automatically breaks all connected logs of a Jungle tree when you break the first one — essentially a limited Treecapitator specifically for Jungle trees. It's a meaningful upgrade over a basic axe for anyone grinding Jungle Wood collection, and it's worth crafting immediately once it's available. However, its usefulness is capped at Jungle trees specifically; it doesn't work on Dark Oak or other types.</p>
+
+        <h3>Treecapitator — Core Tool (Foraging 15)</h3>
+        <p>The Treecapitator is unlocked at Foraging 15 through the Foraging collection system. Breaking the base log of any tree with a Treecapitator instantly breaks every connected log in that tree simultaneously — Jungle trees, Dark Oak clusters, Birch columns, all of them. The XP from the whole tree is granted in a single break event, and if you have Replenish I enchanted on the axe, a sapling automatically plants at the same time. This transforms The Park Dark Oak rotation from a manual slog into a fluid loop where you break one block per tree and move to the next.</p>
+        <p>The Treecapitator is your primary Foraging tool from Foraging 15 through the endgame. There is no superior replacement for general Foraging purposes — it's the end point of the tool progression, not a stepping stone. All your enchant investment goes here.</p>
+
+        <h3>Key Axe Enchantments</h3>
+        <p>Enchantments on your Treecapitator matter a lot for both XP rate and QoL:</p>
+        <ul>
+          <li><strong>Replenish I:</strong> Automatically replants a sapling in the location of the broken base log. This is the single most important QoL enchant on the axe. Without it, you have to manually place saplings after every tree break, which interrupts your rotation and cuts XP/hr substantially. Apply Replenish I the moment you get your Treecapitator.</li>
+          <li><strong>Harvesting V:</strong> +50 Foraging Fortune. Purchased from the Bazaar or obtained through collection rewards. Goes directly onto your Treecapitator. Major FF boost that feeds into the Monkey pet XP multiplier.</li>
+          <li><strong>Cultivating:</strong> Levels up as you break blocks with the axe. Each level gives incrementally more Foraging Fortune. Apply Cultivating as early as possible so the counter starts accumulating — even Cultivating I is a free FF boost that grows passively.</li>
+          <li><strong>Telekinesis I:</strong> Auto-collects all dropped logs and saplings directly into your inventory. Without this, you're running over dropped items after every tree break, wasting time. Put Telekinesis on every Foraging axe you use.</li>
+        </ul>
+        <div class="wiki-warn"><strong>Don't skip Replenish:</strong> Many players chop trees at The Park and wonder why their rotation slows down — they're manually replanting after every Dark Oak break. A Replenish I book from the Bazaar costs a few thousand coins. It's one of the most cost-efficient upgrades you can make for Foraging efficiency.</div>
+
+        <h3>Reforging the Treecapitator</h3>
+        <p>The best axe reforge is <strong>Blooming</strong>, from a Blooming Core reforge stone. It gives direct Foraging Fortune, which feeds back into the Monkey pet XP multiplier. Blooming Cores are rare drops that you'll likely need to buy from the Auction House — budget accordingly. Until you have one, use <strong>Renowned</strong> as a fallback since it provides solid all-around stats including some Foraging Fortune contribution.</p>
+
+        <!-- ===================== 6. THE MONKEY PET ===================== -->
+        <h2>The Monkey Pet — Core XP Multiplier</h2>
+        <p>The Legendary Monkey is to Foraging what the Legendary Elephant is to Farming — the single most impactful pet you can have active during a Foraging session. Its primary ability works differently from most other gathering pets: every time you chop a log, the Monkey grants bonus Foraging XP that scales directly with your current Foraging Fortune. More Fortune means more XP per log, not just more logs dropped. At 100 Foraging Fortune with a Legendary Monkey you're getting roughly 2–3× the XP per log compared to no Fortune. Push Fortune toward 200 and that multiplier grows further.</p>
+        <p>The practical effect is dramatic. In a good Park Dark Oak rotation with Legendary Monkey, 200+ Foraging Fortune, and Treecapitator, you can clear 15–30M Foraging XP per hour depending on how densely the trees are spawning and how clean your rotation is. Without the Monkey pet, the same rotation might yield 5–8M XP/hr. The Monkey is responsible for the majority of that difference.</p>
+        <p>The Monkey's secondary ability gives a chance to double wood drops from trees. This is a nice bonus for collection grinding but secondary to the XP scaling ability — don't evaluate the pet's value by its wood drop bonus alone.</p>
+
+        <h3>Getting Your Monkey</h3>
+        <p>Monkey pets drop from Foraging mobs in The Park and from specific Park collection milestones. Realistically most players buy one from the Auction House. An Epic Monkey is a functional stepping stone and costs significantly less than Legendary — it still gives the XP scaling ability, just at reduced magnitude. Use an Epic Monkey while saving up for Legendary. The jump from Epic to Legendary is substantial, so prioritize it once you're actively grinding Foraging levels.</p>
+
+        <h3>Other Foraging Pets</h3>
+        <p>No other pet is competitive with Monkey for dedicated Foraging XP grinding. The Ocelot pet gives a small speed and some minor Foraging bonuses, and the Bee pet occasionally helps nearby crops but doesn't interact meaningfully with tree chopping. If you somehow don't have any Monkey yet, a Legendary Ocelot is a functional placeholder, but getting a Monkey — even Epic — should be your first priority.</p>
+
+        <!-- ===================== 7. BEGINNER GUIDE ===================== -->
+        <h2>Beginner Guide (Foraging 1–20)</h2>
+        <p>For the first 15 or so Foraging levels, don't overthink it. Every tree you chop while doing other tasks counts toward Foraging XP. Grab a Gold Axe, wander toward The Park during your first exploration session, and just chop things. You'll hit Foraging 5 — the Bazaar unlock threshold — within minutes of actually trying.</p>
+        <p>The most important thing to do early is complete The Park quest chain. Find Charlie near the Park entrance and start the wood delivery sequence: 64 Birch for Charlie, 128 Spruce for Kelly, 512 Jungle for Molbert, 1024 Savanna for Melody. These quests give Foraging-specific gear rewards at each step, and finishing Melody's chain unlocks access to Melody's Harp minigame. Complete the Harp perfectly and you get Melody's Hair — a cosmetic accessory with some useful secondary stats. The quest chain takes 30–60 minutes if you're focused on it, and the rewards justify doing it before any serious grinding.</p>
+        <p>Don't invest enchantments or coins into any axe before Foraging 15. The Treecapitator replaces everything. Use the Jungle Axe (from collection) as a free upgrade if you're focusing on Jungle Wood collection specifically, but otherwise any Iron or Gold axe works fine for the early levels. At Foraging 15, immediately unlock and craft the Treecapitator and apply Replenish I before your next tree break.</p>
+
+        <!-- ===================== 8. MIDGAME GUIDE ===================== -->
+        <h2>Midgame Guide (Foraging 20–40)</h2>
+        <p>By Foraging 20 you should have your Treecapitator with Replenish I and at minimum an Epic Monkey pet. This is when The Park Dark Oak rotation becomes your primary method. Head to the Dark Forest section of The Park, find the cluster of Dark Oak trees, and start breaking the base 2×2 trunk of each tree in sequence. With Replenish I the saplings replant automatically. With Treecapitator the entire canopy drops in a single swing. Circle back to the start of your rotation by the time you finish the cluster and the first trees are already respawning.</p>
+        <p>Your main investments at this stage: Harvesting V on the Treecapitator, Telekinesis I if you haven't applied it yet, and saving up for a Legendary Monkey. Aim for at least 100 total Foraging Fortune from skill levels + Harvesting enchant + pet bonus combined. Check your collection milestones for each wood type — Oak, Spruce, Birch, and Dark Oak all have milestone rewards that include useful items. Some collection rewards drop at relatively low milestones and are worth knowing about before you hit them.</p>
+        <p>Around Foraging 30–35 you can start looking at your Cultivating enchant level. If you've been chopping consistently the Cultivating counter has been quietly accumulating. Cultivating levels from I through X give scaling Foraging Fortune. There's no active effort needed — just check the level periodically and know that it's growing toward eventually giving significant bonus FF.</p>
+        <div class="wiki-note"><strong>Collection milestones worth knowing:</strong> Dark Oak Wood Collection has a reward that gives a boost to Foraging XP directly. Oak Wood Collection eventually rewards a decent accessory. Check the Collection menu under the Foraging tab and identify which ones are close to unlocking — sometimes a targeted session for one specific wood type unlocks a reward that improves your overall efficiency.</div>
+
+        <!-- ===================== 9. ENDGAME GUIDE ===================== -->
+        <h2>Endgame Guide (Foraging 40–50)</h2>
+        <p>The stretch from Foraging 40 to 50 is a long one. The XP curve steepens significantly and even a well-optimized setup takes meaningful time to clear it. By this point your tool and pet setup should be mostly complete: Legendary Monkey, Treecapitator with Harvesting V + Replenish I + Cultivating at a high level, Blooming or Renowned reforge on the axe, and total Foraging Fortune in the 150–250 range.</p>
+        <p>The Park Dark Oak rotation remains the best method. There is no dramatic trick that unlocks here — it's about execution consistency. Keep your rotation clean: break Dark Oak trees in order, never wait at a spawn point longer than a couple of seconds, move to the next tree while saplings are still growing. Players who drift into idle periods during a grinding session lose a surprising amount of XP/hr compared to players who maintain continuous movement through the rotation.</p>
+        <p>With Legendary Monkey + 200 Foraging Fortune + consistent Park rotation you should be clearing 20–30M XP/hr. At 250+ Fortune with Cultivating at a high level this can push toward 35M+. The exact number varies with server conditions (how many other players are chopping the same trees) and how clean your individual rotation is. Expect the Foraging 50 grind to take between 10 and 20 hours of active play depending on your setup and focus.</p>
+        <p>One thing to watch for during the endgame grind: the Spirit Maple tree at The Park peak. It respawns on a slower timer but gives an XP burst well above any normal tree. Make a habit of breaking it whenever you pass through or start a session. Some players specifically route through the Spirit Maple at the beginning of each grinding session before settling into the Dark Oak rotation below.</p>
+
+        <!-- ===================== 10. MONEY MAKING ===================== -->
+        <h2>Money Making with Foraging</h2>
+        <p>Foraging is not a primary money-making skill. Let that be said clearly upfront. The wood you drop while grinding sells on the Bazaar for moderate prices, and with high Foraging Fortune you get significantly more wood per session, but the coins/hr ceiling for Foraging is well below active Farming or Slayer. Treat any coins from Foraging as passive income alongside XP grinding, not as a reason to grind Foraging specifically for money.</p>
+        <p>With that caveat, here is the realistic income picture. Birch Wood and Oak Wood are consistently in demand on the Bazaar for building and crafting recipes. With 200 Foraging Fortune in an active Park session you drop a large volume of logs. Depending on tree type and session length, a typical high-Fortune Foraging session generates 200k–500k coins per hour in wood sales alongside the XP. Spruce and Dark Oak have more niche demand but sometimes spike in price. Check the Bazaar before selling and don't undercut aggressively — raw wood has enough consistent demand that sell orders fill reasonably quickly.</p>
+        <p>The best money specifically from Foraging collections comes from Jungle Wood. Jungle Wood is used in several crafting recipes and certain NPC trades that generate decent returns. If Jungle Wood prices are high on a given day, running a Jungle Tree session in The Park for an hour can produce 300–600k coins in logs alongside competitive XP rates.</p>
+
+        <!-- ===================== 11. THE PARK ROTATION ===================== -->
+        <h2>Efficient Route — The Park Dark Oak Rotation</h2>
+        <p>The Park Dark Oak rotation is simple in description but takes a few sessions to internalize spatially. Here is the core loop:</p>
+        <p>Enter The Park from the Hub portal and head northeast toward the dark forest biome. You'll find clusters of Dark Oak trees — each Dark Oak has a 2×2 base trunk. With Treecapitator equipped, identify the base block (the lowest log in the trunk structure) and break it. The entire tree collapses instantly. A sapling automatically plants from Replenish I. Move immediately to the next Dark Oak in your rotation path without stopping.</p>
+        <p>The rotation path itself should form a rough loop through all the Dark Oak spawn points in the area. Most players memorize 8–12 specific tree spawn locations and cycle through them in order. By the time you reach the end of the loop, the first trees have respawned and you start again. The key is keeping movement continuous — the bottleneck is almost never the tree break itself, it's the travel time between trees. Shorter, tighter loops are better than large sweeping routes even if the tight loop has fewer trees, because less travel time per tree break means more breaks per minute.</p>
+        <p>Supplement the Dark Oak loop with Jungle Trees when Dark Oak spawns are in cooldown. The Jungle area of The Park sits adjacent to the dark forest. A large Jungle Tree gives more total XP than a Dark Oak but spawns more slowly. Use Jungle Trees as fillers during Dark Oak cooldown periods rather than as your primary target — they're better XP per break event but worse XP per minute once you account for respawn timing.</p>
+        <div class="wiki-note"><strong>Server population matters:</strong> The Park is a shared area. If multiple players are running the same Dark Oak rotation simultaneously, trees get broken before your cooldown cycle completes and you end up standing at empty spawns. Either find a less populated server, adjust your rotation to include more trees, or mix in more Jungle Tree breaks during contested periods.</div>
+
+        <!-- ===================== 12. COMMON MISTAKES ===================== -->
+        <h2>Common Mistakes</h2>
+
+        <p><strong>Not unlocking Treecapitator at Foraging 15.</strong> This is far and away the biggest efficiency gap. Grinding Foraging without Treecapitator means manually breaking each log of every tree — a Jungle Tree without Treecapitator takes over a minute. With Treecapitator it takes two seconds. Players who grind Foraging 15–30 without Treecapitator are doing the equivalent of farming without a hoe. The moment you hit Foraging 15, stop everything and unlock it.</p>
+
+        <p><strong>Not using Replenish I.</strong> Once you have Treecapitator, the next barrier is manually replanting saplings. After each tree break you'd normally need to plant a sapling for the tree to respawn. Without Replenish this breaks the rotation rhythm entirely — you end up standing at each break point for 2–3 seconds placing saplings. Replenish I costs a few thousand coins on the Bazaar and turns this into an automatic background process. It's a mandatory quality of life upgrade.</p>
+
+        <p><strong>Ignoring the Monkey pet.</strong> Players who grind Foraging with any other pet active are leaving the majority of their XP on the table. The Monkey's XP scaling ability is the dominant factor in Foraging XP/hr. Even an Epic Monkey roughly doubles effective XP per log compared to no relevant pet. Get one as soon as possible, even if it means spending a bit more coins than comfortable.</p>
+
+        <p><strong>Grinding on private island instead of The Park.</strong> Private island trees have long respawn timers and low density. The Park has fast respawn, high density, and larger tree types. A player running The Park Dark Oak rotation earns 4–6× more XP per hour than a player chopping trees on their private island, even accounting for travel time to The Park. Always leave the island for foraging sessions.</p>
+
+        <p><strong>Neglecting Foraging Fortune.</strong> Every point of Foraging Fortune multiplies the Monkey pet's XP output. Players who treat Foraging Fortune as an afterthought — no Harvesting enchant, wrong reforge, no pet Fortune contribution — are running at a fraction of their potential XP/hr. Stack Harvesting V, use the right reforge, level your Monkey to add its Fortune passive. These together can add 100+ Foraging Fortune, which translates directly into more XP per log through the Monkey ability.</p>
+
+        <p><strong>Skipping the Park quest chain.</strong> The quest chain (Charlie through Melody) takes under an hour and rewards Foraging gear, Melody's Hair, and establishes the wood collection counts you'll need for collection milestones later. There's no reason not to do it during your first visit to The Park. Players who skip it end up having to grind the required wood types anyway when collection milestones come up, without the bonus rewards.</p>
+
+        <p><strong>Not applying Telekinesis.</strong> Dropped logs fall around the broken tree position and you have to run over them to pick up. Telekinesis I auto-collects everything into your inventory. A session without Telekinesis has you constantly backtracking to pick up logs you ran past. It's a trivial Bazaar purchase.</p>
+
+        <!-- ===================== 13. FAQ ===================== -->
+        <h2>Frequently Asked Questions</h2>
+
+        <p><strong>What is the Foraging skill cap?</strong></p>
+        <p>Foraging 50. Unlike Farming, Foraging does not have a Gold medal mechanic or contest system that allows raising the cap above 50. Once you hit Foraging 50 you've maxed the skill and XP stops accumulating. The skill gives +1 Foraging Fortune per level from 1–50 plus raw stat bonuses (Strength and Crit Chance primarily) at various milestones.</p>
+
+        <p><strong>What is the fastest way to level Foraging?</strong></p>
+        <p>Legendary Monkey + Treecapitator with Replenish I and Harvesting V + The Park Dark Oak rotation. These three elements together are responsible for the vast majority of the XP/hr achievable at any given Foraging level. Getting any one of the three without the others significantly limits your rate. Prioritize in this order if resources are limited: Treecapitator first (Foraging 15), then Replenish I on the axe, then the best Monkey you can afford.</p>
+
+        <p><strong>Does Foraging have any endgame content?</strong></p>
+        <p>Not really, no. Foraging is primarily a skill leveled for SkyBlock Level contributions, collection milestone rewards, and the passive stat bonuses it provides at higher levels. There's no Foraging-specific boss, dungeon, or endgame system the way Mining has Heart of the Mountain or Farming has the Garden contest system. Max Foraging is a long-term passive goal rather than a dedicated focus for most players. The exception is players specifically chasing SkyBlock Level milestones who need to push all gathering skills to 50.</p>
+
+        <p><strong>Should I always be in The Park for Foraging?</strong></p>
+        <p>For XP grinding, yes. The only exception is if you need a specific wood type for collection milestones that The Park doesn't have in abundance, or if The Park is extremely crowded and tree spawns are being cleared before you reach them. In those cases, alternative locations like Mushroom Desert for Acacia or a private island setup for Oak/Birch can fill the gap. But as a general rule, if you're trying to gain Foraging XP, you should be in The Park.</p>
+
+        <p><strong>Is Foraging Fortune worth stacking if I just want to sell wood?</strong></p>
+        <p>It's worth having Harvesting V and the right reforge for the XP benefit through the Monkey pet — the wood sales are a bonus rather than the primary motivation. If you only care about wood for collections or Bazaar sales and don't care about Foraging XP, a basic axe with Telekinesis gets the job done. But anyone who's actively trying to gain Foraging levels should treat Fortune as a core investment, not an optional extra.</p>
+
+        <p><strong>Can I AFK Foraging?</strong></p>
+        <p>No. Trees require active block breaks to chop, and even with Treecapitator you have to manually swing at each tree's base. There is no passive tree growth mechanic equivalent to Mushroom spreading in Farming. Foraging is always an active skill. If you want passive income or XP while doing other things, other skills are better suited to that.</p>
+
+      </article>
+    </main>
+  </div>
+
+  <nav class="mobile-nav">
+    <a href="../index.html" class="active">Guidebook</a>
+    <a href="../players.html">Players</a>
+    <a href="../progress.html">Progress</a>
+  </nav>
+
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    const toggle  = document.getElementById('sidebarToggle');
+    toggle.addEventListener('click', () => {
+      sidebar.classList.contains('open')
+        ? (sidebar.classList.remove('open'), overlay.classList.remove('open'))
+        : (sidebar.classList.add('open'), overlay.classList.add('open'));
+    });
+    overlay.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('open');
+    });
+  </script>
+</body>
+</html>

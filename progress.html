@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Progress — Hypixel SkyBlock</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="topnav">
+    <div class="topnav-wrap">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
+          <line x1="2" y1="4" x2="14" y2="4"/>
+          <line x1="2" y1="8" x2="14" y2="8"/>
+          <line x1="2" y1="12" x2="14" y2="12"/>
+        </svg>
+      </button>
+      <a href="index.html" class="brand">
+        <img src="assets/hypixel.png" alt="" />
+        <span>Hypixel SkyBlock</span>
+      </a>
+      <div class="search-wrap">
+        <div class="search-bar">
+          <svg class="search-icon" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="6.5" cy="6.5" r="4.5"/>
+            <line x1="10" y1="10" x2="14" y2="14"/>
+          </svg>
+          <input type="text" placeholder="Search guides, items, mechanics…" />
+          <span class="search-kbd">⌘K</span>
+        </div>
+      </div>
+      <nav class="topnav-links">
+        <a href="index.html" class="topnav-link">Guidebook</a>
+        <a href="players.html" class="topnav-link">Players</a>
+        <a href="progress.html" class="topnav-link active">Progress</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="wiki-body">
+    <aside class="wiki-sidebar" id="sidebar">
+      <div class="sidebar-inner">
+        <section class="sidebar-section">
+          <h6 class="sidebar-heading">Navigation</h6>
+          <ul class="sidebar-list">
+            <li><a href="index.html" class="sidebar-item">Guidebook</a></li>
+            <li><a href="players.html" class="sidebar-item">Players</a></li>
+            <li><a href="progress.html" class="sidebar-item active">Progress</a></li>
+          </ul>
+        </section>
+        <div class="infobox">
+          <div class="infobox-title">Guide Info</div>
+          <div class="infobox-row"><span>Updated</span><span>May 2026</span></div>
+          <div class="infobox-row"><span>Version</span><span>SkyBlock 0.21</span></div>
+          <div class="infobox-row"><span>Topics</span><span>33 guides</span></div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="wiki-main">
+      <nav class="breadcrumb-nav">
+        <a href="index.html">Home</a>
+        <span class="bc-sep">›</span>
+        <span>Progress</span>
+      </nav>
+
+      <div class="wiki-header">
+        <div>
+          <h1 class="page-title">Progress Tracker</h1>
+          <p class="page-subtitle">Monitor your SkyBlock progression across all major milestones — skills, slayer tiers, dungeon floors, collections, and net worth goals.</p>
+        </div>
+        <div class="header-badges">
+          <span class="badge badge-updated">Updated May 2026</span>
+          <span class="badge badge-version">v0.21</span>
+        </div>
+      </div>
+
+      <div class="panels">
+        <div class="panel active" data-panel="progress">
+
+          <div class="guide-card">
+            <img src="assets/hotm.png" class="card-thumb" alt="Heart of the Mountain" />
+            <div class="card-body">
+              <h3 class="card-title">Skill Milestones</h3>
+              <p class="card-text">Track progress toward key skill thresholds: Mining 12 for Dwarven Mines, Combat 12 for The End, Farming 50 for Garden perks, and Fishing 25 for Trophy Fish. Each skill milestone unlocks new content and passive bonuses.</p>
+            </div>
+          </div>
+
+          <div class="guide-card">
+            <img src="assets/slayer.png" class="card-thumb" alt="Slayer" />
+            <div class="card-body">
+              <h3 class="card-title">Slayer Progress</h3>
+              <p class="card-text">Log your Slayer XP across all 6 bosses — Zombie, Spider, Wolf, Enderman, Blaze, and Vampire. Track unlocks, RNG Meter progress, and key item drops. Level 7+ on all slayers is the standard endgame benchmark.</p>
+            </div>
+          </div>
+
+          <div class="guide-card">
+            <div class="card-body">
+              <h3 class="card-title">Dungeon Checkpoints</h3>
+              <p class="card-text">Monitor Catacombs level, floor completion status, and S/S+ run counts. Key targets: F3 for Shadow Assassin grinding, F7 for Necron's Handle, M5 for Terminator viability, and M7 Cata 45+ for endgame Master Mode.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <nav class="mobile-nav">
+    <a href="index.html">Guidebook</a>
+    <a href="players.html">Players</a>
+    <a href="progress.html" class="active">Progress</a>
+  </nav>
+
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    const toggle  = document.getElementById('sidebarToggle');
+
+    function openSidebar() {
+      sidebar.classList.add('open');
+      overlay.classList.add('open');
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('open');
+    }
+
+    toggle.addEventListener('click', () => {
+      sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+    });
+
+    overlay.addEventListener('click', closeSidebar);
+  </script>
+
+</body>
+</html>

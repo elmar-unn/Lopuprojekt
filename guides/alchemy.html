@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alchemy — Hypixel SkyBlock</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="topnav-wrap">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
+          <line x1="2" y1="4" x2="14" y2="4"/>
+          <line x1="2" y1="8" x2="14" y2="8"/>
+          <line x1="2" y1="12" x2="14" y2="12"/>
+        </svg>
+      </button>
+      <a href="../index.html" class="brand">
+        <img src="../assets/hypixel.png" alt="" />
+        <span>Hypixel SkyBlock</span>
+      </a>
+      <div class="search-wrap">
+        <div class="search-bar">
+          <svg class="search-icon" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="6.5" cy="6.5" r="4.5"/>
+            <line x1="10" y1="10" x2="14" y2="14"/>
+          </svg>
+          <input type="text" placeholder="Search guides, items, mechanics…" />
+          <span class="search-kbd">⌘K</span>
+        </div>
+      </div>
+      <nav class="topnav-links">
+        <a href="../index.html" class="topnav-link active">Guidebook</a>
+        <a href="../players.html" class="topnav-link">Players</a>
+        <a href="../progress.html" class="topnav-link">Progress</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="wiki-body">
+    <aside class="wiki-sidebar" id="sidebar">
+      <div class="sidebar-inner">
+        <section class="sidebar-section">
+          <h6 class="sidebar-heading">Progression</h6>
+          <ul class="sidebar-list">
+            <li><a href="../index.html" class="sidebar-item active"><span class="stage-pip pip-early"></span>Early Game<em>0–160</em></a></li>
+            <li><a href="../index.html" class="sidebar-item"><span class="stage-pip pip-mid"></span>Midgame<em>160–280</em></a></li>
+            <li><a href="../index.html" class="sidebar-item"><span class="stage-pip pip-late"></span>Late Game<em>280–440</em></a></li>
+            <li><a href="../index.html" class="sidebar-item"><span class="stage-pip pip-end"></span>Endgame<em>440+</em></a></li>
+          </ul>
+        </section>
+        <section class="sidebar-section">
+          <h6 class="sidebar-heading">Community</h6>
+          <ul class="sidebar-list">
+            <li><a href="../players.html" class="sidebar-item">Players</a></li>
+            <li><a href="../progress.html" class="sidebar-item">Progress</a></li>
+          </ul>
+        </section>
+        <div class="infobox">
+          <div class="infobox-title">Alchemy</div>
+          <div class="infobox-row"><span>Skill cap</span><span>Alchemy 50</span></div>
+          <div class="infobox-row"><span>Brewing stands</span><span>Up to 9 active</span></div>
+          <div class="infobox-row"><span>God Potion</span><span>1 hour duration</span></div>
+          <div class="infobox-row"><span>Key ingredient</span><span>Nether Wart</span></div>
+          <div class="infobox-row"><span>Best XP method</span><span>Splash Potion spam</span></div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="wiki-main">
+      <nav class="breadcrumb-nav">
+        <a href="../index.html">Home</a>
+        <span class="bc-sep">›</span>
+        <a href="../index.html">Guidebook</a>
+        <span class="bc-sep">›</span>
+        <span>Alchemy</span>
+      </nav>
+
+      <div class="wiki-header">
+        <div>
+          <h1 class="page-title">Alchemy Guide</h1>
+          <p class="page-subtitle">Brewing mechanics, leveling methods, God Potions, useful buff potions, and how to make money from Alchemy.</p>
+        </div>
+        <div class="header-badges">
+          <span class="badge badge-version">v0.21</span>
+        </div>
+      </div>
+
+      <article class="wiki-article">
+
+        <h2>Introduction &amp; Why Alchemy Matters</h2>
+        <p>Alchemy unlocks the ability to brew potions that are used in every serious activity in SkyBlock. The God Potion is arguably the single most impactful consumable in the entire game — every player at mid-game and beyond should be using them. Even at low Alchemy levels you can brew basic buffs that meaningfully improve your grinding efficiency.</p>
+        <p>Getting to Alchemy 50 opens all potion recipes and gives significant stat bonuses per level: +2 Health and +1 Intelligence per level, accumulating to +100 Health and +50 Intelligence at the cap. That's a real number. On top of that, higher Alchemy levels let you brew enhanced versions of potions that would otherwise be unavailable — the difference between Speed III and Speed V is not trivial.</p>
+        <div class="wiki-note"><strong>Tip:</strong> Even if you never intend to sell potions or seriously grind Alchemy, you should at minimum brew and use God Potions during any content above Slayer T2. The stat difference is enormous and the cost is modest once you're past early game.</div>
+
+        <h2>Brewing Basics</h2>
+        <p>Brewing Stands in SkyBlock follow Vanilla Minecraft logic with extensions. You place a Brewing Stand on your private island, fuel it with Blaze Powder, and add up to 3 Water Bottles at a time. The universal first step is always Nether Wart, which converts Water Bottles into Awkward Potions. Every useful potion goes through this step — there is no shortcut.</p>
+        <p>From Awkward Potion, you add the effect ingredient specific to the potion type you want. SkyBlock extends vanilla: Speed, Strength, and most other potions go up to level V instead of the vanilla maximum. Glowstone Dust upgrades potions (increases level or shrinks duration), while Redstone extends duration. Fermented Spider Eye corrupts or modifies certain effects. These modifiers apply after the base effect ingredient, so a typical high-level potion takes 3 brewing steps: Nether Wart, effect ingredient, then Glowstone or Redstone.</p>
+        <p>A single Brewing Stand holds 3 potions per batch. The real leverage comes from running 9 stands simultaneously on your island. Set them all up, load them in sequence, and you can process 27 potions per brew cycle — which at standard brew times is a very fast throughput. Each stand is independent, so staggering the start times keeps a continuous flow going.</p>
+        <div class="wiki-note"><strong>Tip:</strong> Place all 9 brewing stands in a compact area on your island so you can refuel and reload them quickly without running between them.</div>
+
+        <h2>Key Potion Ingredients</h2>
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr>
+                <th>Ingredient</th>
+                <th>Effect</th>
+                <th>Where to Get</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Nether Wart</strong></td><td>Base ingredient — converts Water Bottles to Awkward Potions</td><td>Farm on your island or Bazaar buy order</td></tr>
+              <tr><td><strong>Blaze Powder</strong></td><td>Brewing Stand fuel; also used in Fire Resistance potions</td><td>Blaze farming in Nether or Bazaar</td></tr>
+              <tr><td><strong>Spider Eye</strong></td><td>Poison potions</td><td>Spider drops or Bazaar</td></tr>
+              <tr><td><strong>Magma Cream</strong></td><td>Fire Resistance</td><td>Magma Cube drops or Bazaar</td></tr>
+              <tr><td><strong>Sugar</strong></td><td>Speed (base ingredient)</td><td>Bazaar</td></tr>
+              <tr><td><strong>Golden Carrot</strong></td><td>Night Vision; becomes Invisibility with Fermented Spider Eye</td><td>Bazaar</td></tr>
+              <tr><td><strong>Ghast Tear</strong></td><td>Regeneration</td><td>Ghast drops (uncommon) or Bazaar</td></tr>
+              <tr><td><strong>Rabbit's Foot</strong></td><td>Jump Boost / Leaping</td><td>Rabbit drops or Bazaar</td></tr>
+              <tr><td><strong>Glowstone Dust</strong></td><td>Upgrades potion level (increases effect strength)</td><td>Bazaar</td></tr>
+              <tr><td><strong>Redstone</strong></td><td>Extends potion duration</td><td>Bazaar</td></tr>
+              <tr><td><strong>Fermented Spider Eye</strong></td><td>Corrupts/modifies effects</td><td>Crafted: Spider Eye + Sugar + Brown Mushroom</td></tr>
+              <tr><td><strong>Enchanted Nether Wart</strong></td><td>Required for high-level potions (Alchemy 5+)</td><td>Crafted from 160 Nether Wart or Bazaar</td></tr>
+              <tr><td><strong>Enchanted Glowstone</strong></td><td>Required for level V upgrades</td><td>Crafted or Bazaar</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Most of these are cheaply available via Bazaar buy orders. The expensive ones — Ghast Tears and enchanted ingredients — are what makes certain potions costly. For leveling purposes, stick to cheap ingredients until you're ready to brew the full God Potion recipe.</p>
+
+        <h2>XP Methods — How to Level Alchemy</h2>
+        <p>The core mechanic of Alchemy XP is this: throwing Splash Potions gives XP. Not brewing them — throwing them. A Splash Potion is just any potion with Gunpowder added as the final step. You brew it, throw it on the ground (or against a wall on your island), and collect the XP. The XP amount scales with the ingredient value of the potion, so more complex potions give more XP per throw.</p>
+
+        <h3>Cheapest Method: Nether Wart Splash Spam</h3>
+        <p>The most cost-effective path at low Alchemy levels is to use the cheapest possible potion that still gives meaningful XP. Here's the full workflow:</p>
+        <ul>
+          <li>Buy Nether Wart in bulk via Bazaar buy order (not instant buy — buy orders are typically 30–50% cheaper). At ~2–4 coins each, a thousand Wart costs under 5k.</li>
+          <li>Brew Water Bottles into Awkward Potions using Nether Wart.</li>
+          <li>Add a cheap secondary ingredient — Sugar for Speed potions or Spider Eye for Poison works well.</li>
+          <li>Add Gunpowder to convert them to Splash Potions.</li>
+          <li>Stand in one spot on your island and throw every Splash Potion at the ground in rapid succession. Each throw gives Alchemy XP immediately.</li>
+        </ul>
+        <p>Total cost per XP is very low this way — often the cheapest route per XP point of any skill in SkyBlock. With 9 stands running in parallel and bulk ingredient buys, you can process hundreds of potions per session.</p>
+        <div class="wiki-note"><strong>Tip:</strong> The first time you brew each unique potion type, you receive a one-time bonus XP reward. Early on, try to brew as many different types as possible to collect these bonuses before settling into a spam routine.</div>
+
+        <h3>Mid-Level Method: Upgrading Ingredients</h3>
+        <p>As you approach Alchemy 30+, the XP required per level increases substantially. At this point, upgrading to potions with Glowstone Dust (for level upgrades) gives noticeably more XP per throw. The extra cost is usually worth it since the time saved offsets the ingredient spend. Run the numbers for current Bazaar prices before committing to a large buy.</p>
+        <div class="wiki-warn"><strong>Warning:</strong> Don't use instant-buy for bulk ingredient purchases. The spread between buy-order price and instant-buy price on high-volume items like Nether Wart and Glowstone Dust can be 40–60%. On a run of thousands of potions, that's a very real cost difference.</div>
+
+        <h2>Best Potions to Use</h2>
+        <p>Potions are relevant for every serious activity — combat, farming, and mining all benefit. The best individual potions to keep stocked for combat scenarios are:</p>
+        <ul>
+          <li><strong>Speed V:</strong> Faster movement across every area. Doesn't just feel better — it translates to more mobs per hour in any zone where you're running between spawns.</li>
+          <li><strong>Strength V:</strong> One of the largest flat damage multipliers available. Essential for any physical combat build.</li>
+          <li><strong>Critical V:</strong> Adds Crit Chance. If your gear leaves you short of 100% Crit Chance, this fills the gap and converts all those near-misses into full crits.</li>
+          <li><strong>Haste III:</strong> Minor attack speed and mining speed improvement. Useful but not the priority.</li>
+          <li><strong>True Resistance V:</strong> Significant defense boost. Makes a noticeable survivability difference in Dungeons and Slayer at Tier 3+.</li>
+          <li><strong>Regeneration VI:</strong> HP regeneration between hits. Good for longer fights or solo bossing where you're taking sustained damage.</li>
+          <li><strong>Mana Regeneration IV:</strong> Important for Mage builds that cycle abilities frequently.</li>
+          <li><strong>Magic Find:</strong> Boosts drop rates from all sources. Worth running during any farming or grinding session where rare drops matter.</li>
+          <li><strong>Archery:</strong> Arrow damage multiplier for Archer builds. Necessary to keep Bow damage competitive.</li>
+        </ul>
+
+        <h2>God Potion — The Most Important Item</h2>
+        <p>The God Potion (officially called "God Potion of the Gods") is a combined potion that stacks all major buffs into a single item lasting one full hour of real time. It provides Speed V, Strength V, Critical V, Haste III, True Resistance V, Mana Regeneration IV, and several additional effects simultaneously. One click and you're buffed for the entire session.</p>
+        <p>The ingredient cost per God Potion sits at roughly 50–150k coins depending on current Bazaar prices. For the stat gains it provides, that is extremely efficient. A single God Potion can increase your combat damage by 30–50% and your survivability significantly at the same time. Running content at mid-game without a God Potion active is one of the most common inefficiencies players make.</p>
+        <div class="wiki-note"><strong>Tip:</strong> The Parrot pet amplifies all active potion effects — at Legendary rarity it increases effective potion levels substantially. Running a Parrot during combat sessions with a God Potion active is one of the best stat combinations available to non-endgame players.</div>
+        <p>Always run a God Potion during: Dungeons at any floor, Kuudra, Slayer T3 and above, and any farming session where you're targeting a competitive leaderboard. There is no stage of the game where skipping God Potions is the right call once you can afford them consistently.</p>
+
+        <h2>Profit from Alchemy</h2>
+        <p>Alchemy is not a primary money-making skill, but there's consistent incremental profit available if you approach it correctly. The mechanism is simple: buy ingredients at buy-order prices, brew in bulk, sell the finished potions at sell-order prices. The spread between ingredient cost and potion value is where the margin lives.</p>
+        <p>Individual Speed, Strength, and Critical potions typically sell for 5,000–20,000 coins each on the Bazaar depending on demand. God Potions list for 200,000–400,000 each. With 9 brewing stands running and buy orders filled overnight, a single brewing session can produce dozens of sellable potions from ingredients that cost a fraction of their brewed value.</p>
+        <p>The key rule: never instant-buy ingredients for a brewing-for-profit run, and never instant-sell the finished potions. Both ends of the transaction need to go through the order book. The instant-buy premium on high-demand brewing ingredients routinely wipes out the entire profit margin.</p>
+        <div class="wiki-warn"><strong>Warning:</strong> Potion prices on the Bazaar fluctuate with supply. If many players start flooding God Potions at the same time (common after popular guides), the sell price can drop significantly. Check current sell-order prices and sell volume before committing to a large production run.</div>
+
+        <h2>Alchemy Milestones &amp; Rewards</h2>
+        <p>Each Alchemy level provides +2 Health and +1 Intelligence. Over 50 levels that accumulates to +100 Health and +50 Intelligence, which is a meaningful contributor to your total stats.</p>
+        <p>Notable unlock milestones:</p>
+        <ul>
+          <li><strong>Alchemy 25:</strong> Unlocks Potion Queue — automatically queues the next potion to brew when the current one finishes. This is a major quality of life upgrade for bulk brewing sessions and effectively removes the need to babysit your stands.</li>
+          <li><strong>Alchemy 50:</strong> Final milestone reward and all remaining potion recipes unlocked. The strongest potion variants (level V for most types) require Alchemy 40–50 to brew.</li>
+        </ul>
+        <p>New potion recipes unlock progressively throughout the 50 levels. Higher-level recipes almost always produce stronger potions but require enchanted ingredients. Plan your ingredient sourcing before hitting level gates where you suddenly need Enchanted Nether Wart or Enchanted Glowstone in bulk.</p>
+
+        <h2>Common Mistakes</h2>
+        <ul>
+          <li><strong>Not using God Potions:</strong> This is the single biggest DPS and survivability loss at mid-game. The potion pays for itself in loot value within a single Dungeon run.</li>
+          <li><strong>Only running one or two Brewing Stands:</strong> You have a 9-stand limit on your island. Running 1 stand when you could run 9 is giving up 88% of your potential throughput for no reason.</li>
+          <li><strong>Buying ingredients via instant-buy:</strong> The cost premium is 30–60% on most brewing ingredients. Set buy orders and wait. On bulk purchases the savings are substantial.</li>
+          <li><strong>Not throwing Splash Potions for XP:</strong> Brewing regular potions and not converting them to Splash gives significantly less XP per potion. The Gunpowder cost is minimal and the XP difference is large.</li>
+          <li><strong>Forgetting Redstone for duration:</strong> Many potions can be extended with Redstone during brewing. A 30% longer duration on a Speed V potion means fewer repots per session.</li>
+          <li><strong>Wasting Ghast Tears on low-level potions:</strong> Ghast Tears are the most expensive common ingredient. Save them for Regeneration VI specifically, not low-level Regen brews.</li>
+          <li><strong>Neglecting the first-brew bonus:</strong> Every unique potion type gives extra XP the first time you brew it. Early leveling, try to brew as many different types as possible before committing to spam brewing one type.</li>
+        </ul>
+
+      </article>
+    </main>
+  </div>
+
+  <nav class="mobile-nav">
+    <a href="../index.html" class="active">Guidebook</a>
+    <a href="../players.html">Players</a>
+    <a href="../progress.html">Progress</a>
+  </nav>
+
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    const toggle  = document.getElementById('sidebarToggle');
+    toggle.addEventListener('click', () => {
+      sidebar.classList.contains('open')
+        ? (sidebar.classList.remove('open'), overlay.classList.remove('open'))
+        : (sidebar.classList.add('open'), overlay.classList.add('open'));
+    });
+    overlay.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('open');
+    });
+  </script>
+</body>
+</html>

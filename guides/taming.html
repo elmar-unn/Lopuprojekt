@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taming — Hypixel SkyBlock</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="topnav-wrap">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
+          <line x1="2" y1="4" x2="14" y2="4"/>
+          <line x1="2" y1="8" x2="14" y2="8"/>
+          <line x1="2" y1="12" x2="14" y2="12"/>
+        </svg>
+      </button>
+      <a href="../index.html" class="brand">
+        <img src="../assets/hypixel.png" alt="" />
+        <span>Hypixel SkyBlock</span>
+      </a>
+      <div class="search-wrap">
+        <div class="search-bar">
+          <svg class="search-icon" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="6.5" cy="6.5" r="4.5"/>
+            <line x1="10" y1="10" x2="14" y2="14"/>
+          </svg>
+          <input type="text" placeholder="Search guides, items, mechanics…" />
+          <span class="search-kbd">⌘K</span>
+        </div>
+      </div>
+      <nav class="topnav-links">
+        <a href="../index.html" class="topnav-link active">Guidebook</a>
+        <a href="../players.html" class="topnav-link">Players</a>
+        <a href="../progress.html" class="topnav-link">Progress</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="wiki-body">
+    <aside class="wiki-sidebar" id="sidebar">
+      <div class="sidebar-inner">
+        <section class="sidebar-section">
+          <h6 class="sidebar-heading">Progression</h6>
+          <ul class="sidebar-list">
+            <li><a href="../index.html" class="sidebar-item active"><span class="stage-pip pip-early"></span>Early Game<em>0–160</em></a></li>
+            <li><a href="../index.html" class="sidebar-item"><span class="stage-pip pip-mid"></span>Midgame<em>160–280</em></a></li>
+            <li><a href="../index.html" class="sidebar-item"><span class="stage-pip pip-late"></span>Late Game<em>280–440</em></a></li>
+            <li><a href="../index.html" class="sidebar-item"><span class="stage-pip pip-end"></span>Endgame<em>440+</em></a></li>
+          </ul>
+        </section>
+        <section class="sidebar-section">
+          <h6 class="sidebar-heading">Community</h6>
+          <ul class="sidebar-list">
+            <li><a href="../players.html" class="sidebar-item">Players</a></li>
+            <li><a href="../progress.html" class="sidebar-item">Progress</a></li>
+          </ul>
+        </section>
+        <div class="infobox">
+          <div class="infobox-title">Taming</div>
+          <div class="infobox-row"><span>Skill cap</span><span>Taming 50</span></div>
+          <div class="infobox-row"><span>Pet level cap</span><span>100 (most pets)</span></div>
+          <div class="infobox-row"><span>Golden Dragon cap</span><span>200</span></div>
+          <div class="infobox-row"><span>Pet rarities</span><span>Common → Mythic</span></div>
+          <div class="infobox-row"><span>Key item</span><span>Exp Boost / Tier Boost</span></div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="wiki-main">
+      <nav class="breadcrumb-nav">
+        <a href="../index.html">Home</a>
+        <span class="bc-sep">›</span>
+        <a href="../index.html">Guidebook</a>
+        <span class="bc-sep">›</span>
+        <span>Taming</span>
+      </nav>
+
+      <div class="wiki-header">
+        <div>
+          <h1 class="page-title">Taming Guide</h1>
+          <p class="page-subtitle">Pet leveling mechanics, Taming XP, best pets at every stage, pet items, and how to build an endgame pet collection.</p>
+        </div>
+        <div class="header-badges">
+          <span class="badge badge-version">v0.21</span>
+        </div>
+      </div>
+
+      <article class="wiki-article">
+
+        <h2>Introduction &amp; Why Taming Matters</h2>
+        <p>Taming is unique among SkyBlock skills because you don't grind it directly. Taming XP accumulates as a byproduct of doing everything else with a pet summoned. Every activity that generates skill XP — killing mobs, farming, mining, fishing — also generates Taming XP at a portion of that rate. Simply always having a pet out is sufficient.</p>
+        <p>Each Taming level gives +1 stat to your active pet, scaling their stats upward as your skill improves. At level 50, you've accumulated a meaningful 50 additional stat points applied to your pet. The other direct reward is +0.1% Magic Find per Taming level, reaching +5% Magic Find at cap — a real number for players chasing rare drops.</p>
+        <p>The deeper reason Taming matters is the pet system itself. Pets are among the most impactful items in SkyBlock. The right pet for the right activity can increase your income, XP gain, or damage output by 50–200%. Players who understand the pet system and actively manage which pet they're using will outperform players who don't by a very wide margin. Taming levels are the background mechanic; pet choice and management is the foreground skill.</p>
+
+        <h2>How Taming XP Works</h2>
+        <p>Taming XP is generated whenever you have a pet summoned and earn XP from any activity. The Taming XP rate scales with the activity's XP output — Dungeon runs produce a large burst of Taming XP per run because Dungeons themselves give enormous XP, while casual mob farming produces a slower trickle. You can't control the rate directly; you can only maximize Taming XP by doing high-XP activities with a pet out.</p>
+        <p>Higher Taming levels slightly increase the rate of Taming XP gain, creating a modest compounding effect. Early levels come quickly and naturally. Later levels slow down proportionally, but since they come passively while doing other things, this isn't a frustration point the way active skill grinding can be.</p>
+        <div class="wiki-note"><strong>Tip:</strong> Never unsummon your pet. There is no downside to having a pet active at all times, and every second without one is Taming XP that doesn't accumulate. Make it a habit to check that you have a pet out before starting any activity.</div>
+
+        <h2>Pet Levels &amp; XP</h2>
+        <p>All pets except Golden Dragon level from 1 to 100. Golden Dragon levels from 1 to 200, which is why it takes substantially longer to max out. Pet XP is earned whenever the pet is summoned and you perform activities. The XP required per level follows an exponential curve: early levels are fast, while levels 80–100 require enormous amounts of accumulated XP.</p>
+        <p>Pet XP can be transferred between pets of the same type at the same rarity using Pet Leveling Books. This is how you move XP from a well-leveled lower-rarity version to a newly obtained higher-rarity version without starting from zero. If you level a Rare Tiger to 80, then acquire an Epic Tiger, a Pet Leveling Book can transfer that accumulated XP. The book itself is a rare item but worth significantly less than the time spent releveling from scratch.</p>
+        <p>Important: Pet XP does not transfer across different pet types. A leveled Elephant cannot donate its XP to a Tiger. Keep this in mind when deciding which pet to invest early XP into — commit to pets that will stay in your rotation long-term.</p>
+
+        <h2>Pet Items — Critical for Optimization</h2>
+        <p>Pet items occupy a slot in the pet's inventory and modify its behavior, stats, or XP gain. Ignoring pet items means leaving a large portion of the pet's potential untapped. Every pet you actively use should have an item equipped.</p>
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Effect</th>
+                <th>Best Used On</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>EXP Boost</strong></td><td>Pet gains XP 5× faster while summoned</td><td>Any pet you're actively trying to level quickly</td></tr>
+              <tr><td><strong>Antique Remedies</strong></td><td>Doubles all pet XP gain from all sources</td><td>Best pure leveling item; use on priority pets</td></tr>
+              <tr><td><strong>Lucky Clover</strong></td><td>Doubles pet XP from kills specifically</td><td>Combat pets during active grinding sessions</td></tr>
+              <tr><td><strong>Tier Boost</strong></td><td>Increases pet rarity by one tier (e.g. Rare → Epic)</td><td>Use on a well-leveled lower-rarity pet to get effective Legendary stats at a lower purchase cost</td></tr>
+              <tr><td><strong>Book of Stats</strong></td><td>Permanently increases a specific stat on the pet</td><td>High-rarity pets you'll use long-term</td></tr>
+              <tr><td><strong>Reinforced Scales</strong></td><td>Defense stat bonus to pet</td><td>Combat pets on tanky builds</td></tr>
+              <tr><td><strong>Textbook</strong></td><td>Intelligence bonus to pet</td><td>Mage-build pets (Enderman, Ender Dragon)</td></tr>
+              <tr><td><strong>Washed-Up Souvenir</strong></td><td>Fishing Fortune bonus</td><td>Dolphin, Flying Fish — fishing sessions</td></tr>
+              <tr><td><strong>Cold Brew Coffee</strong></td><td>Mining Speed bonus to pet</td><td>Mole pet during underground mining</td></tr>
+              <tr><td><strong>Fuzzy Tarantula</strong></td><td>Crit Damage to pet</td><td>Combat pets on Crit builds</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The general rule: use EXP Boost or Antique Remedies while leveling a pet, then swap to the activity-specific item once the pet is at a satisfactory level. Don't waste leveling speed on a pet you've already maxed, and don't deprive a leveling pet of XP acceleration by using a stat item during the grind phase.</p>
+        <div class="wiki-note"><strong>Tip:</strong> Tier Boost is one of the most cost-efficient upgrades in the game. A Legendary Tiger on the AH can cost tens of millions of coins. A Rare Tiger plus a Tier Boost item costs a fraction of that and effectively performs identically (same abilities, same stat scaling). Always check the Tier Boost math before buying Legendary pets outright.</div>
+
+        <h2>Pet Rarities &amp; How They Scale</h2>
+        <p>Rarity tiers from lowest to highest: Common, Uncommon, Rare, Epic, Legendary, Mythic. Higher rarity means stronger base stats, better ability values, and often unlocks of abilities that don't even exist at lower rarities. A Common Tiger and a Legendary Tiger share the same species but play almost nothing alike — the Legendary version has abilities that multiply damage in ways the Common version simply doesn't have.</p>
+        <p>This rarity gap is why Tier Boost is so powerful. The cost curve between buying Rare and buying Legendary for the same pet type often follows a 10× or greater multiplier on the AH. Tier Boosting a Rare to Epic or an Epic to Legendary bridges that gap at a fraction of the direct purchase cost.</p>
+        <p>One important rule: Recombobulator 3000 cannot be used on pets. It works on gear but not pets. Tier Boost items are the only way to increase a pet's rarity once obtained. There are no other upgrade paths for rarity.</p>
+
+        <h2>Best Pets by Activity</h2>
+        <p>This is the most practically valuable section. The right pet for the activity you're doing is more impactful than any other single decision in pet management. The wrong pet is a 50–200% stat loss compared to the optimal choice.</p>
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr>
+                <th>Activity</th>
+                <th>Best Pet</th>
+                <th>Rarity</th>
+                <th>Why</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>General Combat</td><td>Tiger</td><td>Legendary</td><td>Ferocity, Crit Chance, and physical damage amplification make this the best all-around combat pet at non-endgame stages</td></tr>
+              <tr><td>Dungeons</td><td>Spirit</td><td>Legendary</td><td>Massive stat boosts specifically inside Dungeon instances; scales well with floor level</td></tr>
+              <tr><td>Dungeons (budget)</td><td>Golden Dragon (any level)</td><td>Legendary</td><td>Excellent general DPS and scaling; most accessible strong Dungeon pet before Spirit</td></tr>
+              <tr><td>Dwarven Mines (Mining)</td><td>Mole</td><td>Legendary</td><td>Stacks Mining Speed underground; dramatically increases blocks broken per hour</td></tr>
+              <tr><td>Crystal Hollows / Gemstones</td><td>Ammonite</td><td>Legendary</td><td>Pristine stat increases gemstone drops from Crystal Hollows mining; massive income boost</td></tr>
+              <tr><td>Farming (general)</td><td>Elephant</td><td>Legendary</td><td>Farming Fortune and crop drop bonuses; best all-around farming pet</td></tr>
+              <tr><td>Farming (Sugar Cane)</td><td>Slug</td><td>Legendary</td><td>Specific Sugar Cane farming bonus; outperforms Elephant on Sugar Cane plots</td></tr>
+              <tr><td>Fishing (open water)</td><td>Dolphin</td><td>Legendary</td><td>Fishing Speed scales sharply in open water; more catches per hour</td></tr>
+              <tr><td>Fishing (general)</td><td>Flying Fish</td><td>Legendary</td><td>General fishing bonuses across all fish and Sea Creature types</td></tr>
+              <tr><td>Foraging</td><td>Monkey</td><td>Legendary</td><td>Foraging XP multiplier and wood drop bonuses</td></tr>
+              <tr><td>Active potion builds</td><td>Parrot</td><td>Legendary</td><td>Amplifies all active potion effect levels; combined with God Potion this is one of the best mid-game combat combinations</td></tr>
+              <tr><td>Endgame general</td><td>Golden Dragon</td><td>Legendary (L200)</td><td>At level 200 this becomes the best all-around pet in the game; scales enormously across the 1–200 journey</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>A few clarifications on the table: Spirit is a rare drop from Floor 6+ Dungeon post-game chests, making it expensive and hard to obtain for early players. Before Spirit, Golden Dragon is the best Dungeon pet accessible without extraordinary RNG. The Parrot's potion amplification is often underestimated — it effectively gives you a free extra level on all potions, which means a Speed V potion behaves like Speed VI when Parrot is active. For mid-game players running God Potions, this is a dramatic combat boost at very low pet cost.</p>
+
+        <h2>Pet Progression Path</h2>
+        <p>Pets to prioritize changes as you move through the game. Here's how the reasonable progression looks:</p>
+
+        <h3>Early Game</h3>
+        <p>Use whatever pets you have or can cheaply obtain. The Grandma Wolf gives a free pet early through NPC dialogue — equip it. An Uncommon Tiger from the Auction House costs roughly 20,000–50,000 coins and is the best early combat upgrade you can make. Don't overspend on pets at this stage — your coins are better spent on mining gear, farming equipment, and minion slots.</p>
+
+        <h3>Midgame</h3>
+        <p>Start building a roster of specialized pets for different activities. The three to prioritize first are Tiger (combat), Elephant (farming), and Dolphin or Flying Fish (fishing). Aim for Rare or Epic rarity on each. Use Tier Boost if the math makes sense — it usually does for the jump from Rare to Epic. At this stage, you should never be doing a dedicated activity session with a mismatched pet.</p>
+        <div class="wiki-note"><strong>Tip:</strong> Build the habit of checking your pet before each activity. It takes one second and the difference between the correct pet and the wrong pet over a multi-hour grinding session is substantial. Many players automate this with an island-portal-to-activity workflow that includes a pet swap step.</div>
+
+        <h3>Late Game</h3>
+        <p>Push your main pets to Legendary rarity. Start the Golden Dragon journey — buy a low-level Legendary Golden Dragon from the AH and begin leveling it. It will take months at normal play pace to reach level 200, so starting early matters. Continue using the right specialized pets for non-combat activities. Tiger can be phased out in favor of Golden Dragon for general combat as the Dragon's level climbs.</p>
+
+        <h3>Endgame</h3>
+        <p>Full Legendary pet roster with the appropriate pet for each activity. Golden Dragon at or approaching level 200. Spirit for serious Dungeon play. Ammonite for Crystal Hollows if gemstone income is a priority. At this stage the pet system is mostly optimized and the remaining gains are incremental.</p>
+
+        <h2>Taming XP Methods</h2>
+        <p>Since Taming XP is a function of activity XP output, the activities that give the most Taming XP are simply the activities that give the most XP in general. In rough order of Taming XP per hour:</p>
+        <ul>
+          <li><strong>F7 and M7 Dungeon runs:</strong> These give by far the largest XP burst per run of any activity. A full party running M7 in under 10 minutes generates more Taming XP per hour than almost any other source.</li>
+          <li><strong>High-tier Slayer runs:</strong> Tier 4 Revenant, Tier 4 Tarantula, and Tier 3+ Blaze/Vampire all generate significant combat XP bursts. Taming XP follows.</li>
+          <li><strong>Zealot farming:</strong> Fast, high-volume combat with quick respawns. Sustained Taming XP accumulation at a reasonable rate.</li>
+          <li><strong>Any active skill grinding with a pet out:</strong> Farming, fishing, and mining all generate Taming XP as a byproduct. Passively you'll accumulate levels over time just by playing normally.</li>
+        </ul>
+        <p>There is no separate "Taming grind." The strategy is simply: always have a pet summoned, always be doing something that generates XP. The Taming accumulates in the background. Players who are grinding multiple skills simultaneously will find Taming levels appear naturally as a byproduct without any deliberate effort.</p>
+
+        <h2>The Golden Dragon — Special Case</h2>
+        <p>Golden Dragon is the only pet in the game with a level cap of 200 instead of 100. Its abilities and stat values continue scaling all the way to that cap, making a level 200 Golden Dragon one of the most powerful all-around pets in the game — and one of the most expensive to fully realize.</p>
+        <p>At low levels (1–100), Golden Dragon performs comparably to other Legendary combat pets. The power curve accelerates sharply from level 100 onward, with abilities like Draconic Sacrifice and passive stat bonuses growing substantially per level. By level 200 the pet's effective contribution to combat stats is dramatically higher than at level 100 — this is why "level 200 Golden Dragon" is specifically called out as a milestone rather than just "Legendary Golden Dragon."</p>
+        <p>Obtaining one: Legendary Golden Dragons are purchaseable on the AH at varying prices based on current level. A level 1 Legendary costs less but requires the most time investment to level. A level 100 costs more but is already halfway through its journey. Most players buy at whatever level they can afford and continue leveling. Expect to spend several months of consistent Dungeon grinding to move from level 1 to level 200 even with Antique Remedies equipped.</p>
+        <div class="wiki-warn"><strong>Warning:</strong> Don't buy a Golden Dragon before you have the rest of your gear and progression in order. A level 50 Golden Dragon on an underdeveloped profile is much less useful than the same coins invested in armor, weapons, and Dungeons progression first. The Golden Dragon pays off most at late-to-endgame when the rest of your build is already strong.</div>
+
+        <h2>Common Mistakes</h2>
+        <ul>
+          <li><strong>Not having a pet summoned at all times:</strong> This is the single most common Taming mistake. Every session without a pet is wasted Taming XP. The pet doesn't have to be perfect — any pet is better than none.</li>
+          <li><strong>Using the wrong pet for the activity:</strong> A Tiger during a farming session does almost nothing. An Elephant during a combat session misses out on all the damage bonuses. Activity-pet matching is the highest-impact habit to build.</li>
+          <li><strong>Buying Legendary pets when Tier Boost is cheaper:</strong> Check the AH price of the Legendary versus (Epic AH price + Tier Boost item cost). The Tier Boost path is frequently 40–80% cheaper for the same functional result.</li>
+          <li><strong>Forgetting to equip pet items:</strong> A pet without an item gives only a fraction of its potential. Always have an appropriate item in the slot — even a cheap Book of Stats is better than nothing.</li>
+          <li><strong>Leveling the wrong pet first:</strong> Investing months of XP into a pet you'll phase out early is a sunk cost. For most builds, Tiger is fine for early combat but gets replaced by Golden Dragon. Starting the Golden Dragon level journey earlier means it's more leveled when you need it.</li>
+          <li><strong>Thinking Taming needs special grinding:</strong> Players sometimes try to "grind Taming" by doing specific activities. There's no such thing. Just always have a pet out. The levels come automatically.</li>
+          <li><strong>Selling or discarding leveled pets:</strong> A level 80 Tiger has significant accumulated XP. If you later need a Tiger for any reason, you'd need to relevel from scratch. Store rather than discard leveled pets, even if you're not actively using them.</li>
+        </ul>
+
+        <h2>FAQ</h2>
+        <h3>What's the best first pet to buy?</h3>
+        <p>For combat, an Uncommon Tiger from the AH costs around 25,000–50,000 coins and is a massive early upgrade. If you got a pet from Grandma Wolf, equip that while saving for a Tiger. Don't spend more than 100k on your first pet — early coins are better directed toward other progression.</p>
+
+        <h3>How do I level pets faster?</h3>
+        <p>Equip the Antique Remedies pet item for the best XP multiplier. Do high-XP activities — Dungeons, Slayer, active combat. The combination of Antique Remedies and Dungeon runs is the fastest realistic leveling path available to most players.</p>
+
+        <h3>Is Golden Dragon worth it?</h3>
+        <p>Yes, but it's a long-term investment. Don't buy one before your core gear and skills are developed. Once you're doing Dungeons consistently and have stable income, starting the Golden Dragon early is correct because the time to level 200 is the bottleneck, not the initial cost.</p>
+
+        <h3>What does Taming level 50 give?</h3>
+        <p>Taming 50 provides cumulative bonuses of +50 stat points applied to your active pet (from the +1 per level) and +5% Magic Find (from the +0.1% per level). The Magic Find bonus is the most broadly impactful for endgame players who care about rare drop rates. The pet stat bonus is applied automatically and grows steadily as you level.</p>
+
+        <h3>Can I use Recombobulator 3000 on pets?</h3>
+        <p>No. Recombobulator 3000 works on gear and accessories but not on pets. Tier Boost items are the only mechanic that raises a pet's rarity.</p>
+
+      </article>
+    </main>
+  </div>
+
+  <nav class="mobile-nav">
+    <a href="../index.html" class="active">Guidebook</a>
+    <a href="../players.html">Players</a>
+    <a href="../progress.html">Progress</a>
+  </nav>
+
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    const toggle  = document.getElementById('sidebarToggle');
+    toggle.addEventListener('click', () => {
+      sidebar.classList.contains('open')
+        ? (sidebar.classList.remove('open'), overlay.classList.remove('open'))
+        : (sidebar.classList.add('open'), overlay.classList.add('open'));
+    });
+    overlay.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('open');
+    });
+  </script>
+</body>
+</html>

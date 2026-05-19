@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mining & HotM Guide — Hypixel SkyBlock</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="topnav">
+    <div class="topnav-wrap">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
+          <line x1="2" y1="4" x2="14" y2="4"/>
+          <line x1="2" y1="8" x2="14" y2="8"/>
+          <line x1="2" y1="12" x2="14" y2="12"/>
+        </svg>
+      </button>
+      <a href="../index.html" class="brand">
+        <img src="../assets/hypixel.png" alt="" />
+        <span>Hypixel SkyBlock</span>
+      </a>
+      <div class="search-wrap">
+        <div class="search-bar">
+          <svg class="search-icon" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="6.5" cy="6.5" r="4.5"/>
+            <line x1="10" y1="10" x2="14" y2="14"/>
+          </svg>
+          <input type="text" placeholder="Search guides, items, mechanics…" />
+          <span class="search-kbd">⌘K</span>
+        </div>
+      </div>
+      <nav class="topnav-links">
+        <a href="../index.html" class="topnav-link active">Guidebook</a>
+        <a href="../players.html" class="topnav-link">Players</a>
+        <a href="../progress.html" class="topnav-link">Progress</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="wiki-body">
+    <aside class="wiki-sidebar" id="sidebar">
+      <div class="sidebar-inner">
+        <section class="sidebar-section">
+          <h6 class="sidebar-heading">Progression</h6>
+          <ul class="sidebar-list">
+            <li><a href="../index.html" class="sidebar-item active"><span class="stage-pip pip-early"></span>Early Game<em>0–160</em></a></li>
+            <li><a href="../index.html" class="sidebar-item"><span class="stage-pip pip-mid"></span>Midgame<em>160–280</em></a></li>
+            <li><a href="../index.html" class="sidebar-item"><span class="stage-pip pip-late"></span>Late Game<em>280–440</em></a></li>
+            <li><a href="../index.html" class="sidebar-item"><span class="stage-pip pip-end"></span>Endgame<em>440+</em></a></li>
+          </ul>
+        </section>
+        <section class="sidebar-section">
+          <h6 class="sidebar-heading">Community</h6>
+          <ul class="sidebar-list">
+            <li><a href="../players.html" class="sidebar-item">Players</a></li>
+            <li><a href="../progress.html" class="sidebar-item">Progress</a></li>
+          </ul>
+        </section>
+        <div class="infobox">
+          <div class="infobox-title">Mining</div>
+          <div class="infobox-row"><span>Skill cap</span><span>Mining 60</span></div>
+          <div class="infobox-row"><span>HotM tiers</span><span>10</span></div>
+          <div class="infobox-row"><span>Powder types</span><span>3</span></div>
+          <div class="infobox-row"><span>Daily commissions</span><span>4</span></div>
+          <div class="infobox-row"><span>Best area income</span><span>Crystal Hollows</span></div>
+          <div class="infobox-row"><span>Best pet</span><span>Legendary Ammonite</span></div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="wiki-main">
+      <nav class="breadcrumb-nav">
+        <a href="../index.html">Home</a>
+        <span class="bc-sep">›</span>
+        <a href="../index.html">Guidebook</a>
+        <span class="bc-sep">›</span>
+        <span>Mining & HotM</span>
+      </nav>
+
+      <div class="wiki-header">
+        <div>
+          <h1 class="page-title">Mining & HotM Guide</h1>
+          <p class="page-subtitle">Full progression through Dwarven Mines, Crystal Hollows, and Glacite Tunnels — HotM tree, powder grinding, drills, gear, and best money-making setups.</p>
+        </div>
+        <div class="header-badges">
+          <span class="badge badge-version">v0.21</span>
+        </div>
+      </div>
+
+      <article class="wiki-article">
+
+        <h2>Introduction & Why Mining Matters</h2>
+        <p>Mining in Hypixel SkyBlock is split into two distinct progression systems that run in parallel. The first is the Mining <em>skill</em> itself — leveled by breaking ores and stone-type blocks, capped at level 60, and granting passive stat bonuses like Mining Speed and Fortune as you level. The second is the <strong>Heart of the Mountain (HotM)</strong> system, a completely separate talent tree that uses its own currency (Powder) and is entirely independent from your Mining skill level. You can have Mining 60 and HotM 1, or HotM 8 and Mining 30 — they do not directly feed each other.</p>
+
+        <p>This distinction matters because many new players grind Mining skill XP but ignore HotM, or vice versa. Both are necessary. Your Mining skill determines which areas you can access and passively scales your stats, while HotM provides the vast majority of your actual mining power through perks, abilities, and Powder-funded stat nodes. Without a developed HotM tree, your mining income is a fraction of what it could be.</p>
+
+        <p>Mining is one of the most scalable money-making methods in the entire game. At the low end, a fresh player in Dwarven Mines with basic gear earns a few hundred thousand coins per hour from Mithril. At the high end, a fully geared player in Crystal Hollows with a maxed HotM tree, Divan's Drill, and a Legendary Ammonite pet regularly sees 15 to 25 million coins per hour from Gemstone mining alone. That range is extreme, and it's entirely a function of time invested into both progression systems. The grind is long, but the ceiling is very high compared to most other skills.</p>
+
+        <p>Mining unlocks in earnest at <strong>Mining level 12</strong>, which opens the portal to Dwarven Mines. From that point forward, the progression path is: unlock HotM via Rhys's quest, do daily commissions for HotM XP, grind Powder to upgrade your tree, acquire better tools and armor from forging, and migrate through Dwarven Mines, Crystal Hollows, and eventually Glacite Tunnels as your HotM level grows.</p>
+
+        <div class="wiki-note"><strong>Important:</strong> The Mining skill and HotM level are separate. Leveling one does not level the other. Mining skill XP comes from breaking blocks. HotM XP comes from completing daily commissions. Powder (the HotM upgrade currency) comes from mining specific ores. All three need attention.</div>
+
+        <h2>Mining Speed & Mining Fortune Explained</h2>
+
+        <h3>Mining Speed</h3>
+        <p>Mining Speed is the stat that determines how quickly you break blocks. More Mining Speed means blocks break faster, which means more blocks broken per minute, which means more ore and powder per hour. The break time formula is approximately:</p>
+
+        <p><strong>Break time = base_break_time / (1 + MiningSpeed / 100)</strong></p>
+
+        <p>So at 100 Mining Speed you break blocks roughly twice as fast as at 0. At 500 Mining Speed you break them six times as fast. At the higher end of HotM progression, players commonly reach 2,000–4,000+ Mining Speed, which translates to extremely fast block-breaking that lets you cycle through entire veins in seconds.</p>
+
+        <p>Different tools have different base break times and different Mining Speed caps. Drills in particular have no Mining Speed cap from the tool itself, though the game engine has a soft cap on how fast blocks can physically be processed. Enchantments like Efficiency add Mining Speed directly — Efficiency V on a pickaxe or drill adds a substantial flat amount. HotM perks like Speedy Mineman and the various passive speed nodes add far more.</p>
+
+        <p>Key sources of Mining Speed in rough order of impact:</p>
+        <ul>
+          <li><strong>HotM tree perks</strong> — Speedy Mineman alone adds up to +2,040 Mining Speed at max level. The T1 speed nodes, Professional (for Gemstones), and Eager Adventurer (Glacite) also add large amounts.</li>
+          <li><strong>Drill upgrades</strong> — Mining Speed Boost modules can be slotted into drills for flat speed gains.</li>
+          <li><strong>Mining Speed Boost ability (HotM T2)</strong> — An active ability that temporarily multiplies your Mining Speed by 1.5×. Use it on cooldown.</li>
+          <li><strong>Armor set bonuses</strong> — Divan's Armor, Mithril Armor, and Gemstone sets all contribute Mining Speed.</li>
+          <li><strong>Efficiency enchantment</strong> — Adds Mining Speed directly. Efficiency V is baseline for serious mining.</li>
+          <li><strong>Sky Mall daily buff</strong> — Can randomly grant +50% Mining Speed for the day.</li>
+          <li><strong>Mole pet ability</strong> — Stacks Mining Speed as you break blocks underground, can get very high over a long session.</li>
+        </ul>
+
+        <h3>Mining Fortune</h3>
+        <p>Mining Fortune directly increases the number of drops you receive from each ore. The formula mirrors Farming Fortune exactly:</p>
+
+        <p><strong>Drop multiplier = 1 + (Mining Fortune / 100)</strong></p>
+
+        <p>At 100 Mining Fortune you receive 2× drops from each ore. At 200 Mining Fortune you receive 3× drops. At 500 Mining Fortune you receive 6× drops. For Gemstone mining, where each gem can sell for thousands of coins, stacking Mining Fortune is the primary driver of your income per hour. The difference between 200 Mining Fortune and 500 Mining Fortune in Crystal Hollows is literally millions of coins per hour.</p>
+
+        <p>Mining Fortune stacks from many sources:</p>
+        <ul>
+          <li><strong>HotM tree</strong> — Fortunate Mineman (T7), Mining Master (T10), and Mithril Infusion contribute significant Fortune.</li>
+          <li><strong>Fortune enchantment</strong> — Fortune III on a pickaxe or drill. Mandatory.</li>
+          <li><strong>Armor set bonuses</strong> — Divan's Armor gives enormous Mining Fortune per piece.</li>
+          <li><strong>Gemstone-specific perks</strong> — The Professional perk in HotM T4 and related nodes give Fortune specifically for Gemstone breaks.</li>
+          <li><strong>Ammonite pet</strong> — Grants the Pristine stat which increases Gemstone drop counts specifically. This works slightly differently from raw Fortune but the effect is the same — more drops per Gemstone broken.</li>
+          <li><strong>Reforge stones</strong> — Mining-specific reforges on pickaxes (like Neolithic) give Mining Fortune.</li>
+        </ul>
+
+        <div class="wiki-note"><strong>Why both stats matter:</strong> Mining Speed increases how many blocks you break per hour. Mining Fortune increases how many drops each block gives. They multiply together — doubling your speed and doubling your fortune gives you 4× the income. This is why late-game mining income scales so dramatically compared to early game.</div>
+
+        <h2>Getting to Dwarven Mines & Unlocking HotM</h2>
+
+        <p>Reach Mining level 12 through standard ore mining — coal, iron, gold, diamonds, whatever you have access to. At Mining 12, a portal to the Dwarven Mines becomes accessible from the Deep Caverns or the Hub mines area. The Dwarven Mines lobby contains everything you need for the next several dozen hours of progression.</p>
+
+        <p>When you first arrive, your priority is unlocking the HotM tree. Do not just start swinging a pickaxe at random Mithril. The HotM tree is where your actual power comes from, and the faster you unlock it, the better.</p>
+
+        <p>Find <strong>Rhys</strong> in the Obsidian Sanctuary, which is a sub-area inside Dwarven Mines. He needs 15 enchanted ore to complete his quest. The cheapest option is Enchanted Cobblestone — buy it from the Bazaar if you don't have it. Hand it over, and the HotM interface becomes available from the King's Quest NPC. This takes literally five minutes and is required for everything else in this guide.</p>
+
+        <p>Once the HotM tree is open, spend your first Tokens of the Mountain to unlock the initial nodes. You get Tokens by leveling HotM (which requires accumulating total Powder spent + unspent). Your first goal is getting HotM to level 3 as quickly as possible to unlock Quick Forge, then level 5 for Daily Grind.</p>
+
+        <div class="wiki-warn"><strong>Do not skip the Rhys quest.</strong> Every day you spend mining without the HotM tree active is a day of missed commission XP, missed powder bonuses, and missed perk benefits. It takes ten minutes to complete. Do it immediately.</div>
+
+        <h2>Daily Commissions — The Most Important Habit in Mining</h2>
+
+        <p>The single highest-leverage habit in all of mining progression is completing your four daily commissions every day without exception. Commissions give HotM XP, which levels your HotM, which unlocks new tiers, which gives you access to better perks. Without commissions, HotM progression slows to a crawl. With commissions done daily, you'll hit HotM 7 in a few weeks of consistent play.</p>
+
+        <p>Commissions reset at midnight UTC. Four are available each day. They are given by the Commission NPC in the Dwarven Mines lobby (and a separate NPC for Glacite commissions when that area opens). The tasks vary — mine X Mithril, mine X Gemstones, find X ore in the tunnels — and are typically completable in 10–20 minutes per commission if you're actively mining.</p>
+
+        <p>HotM XP rewards by area:</p>
+        <ul>
+          <li><strong>Dwarven Mines commissions:</strong> up to 400 HotM XP each</li>
+          <li><strong>Crystal Hollows commissions:</strong> up to 400 HotM XP each</li>
+          <li><strong>Glacite Tunnels commissions:</strong> up to 750 HotM XP each — best rate in the game</li>
+        </ul>
+
+        <p>In addition to HotM XP, commissions reward Mithril Powder, Gemstone Powder (from Crystal Hollows commissions), Glacite Powder (from Glacite commissions), and coins. The coins alone are worth doing them — a full day of four commissions consistently pays out several hundred thousand coins in rewards on top of what you earn mining.</p>
+
+        <p>Once you unlock the <strong>Daily Grind perk at HotM Tier 5</strong>, your first commission each day grants a massive Powder bonus equal to 500 × your current HotM level. At HotM 7, that's 3,500 free Powder on your first commission. At HotM 10, it's 5,000. This compounds daily and dramatically accelerates your later-tier upgrades. Getting Daily Grind as soon as possible is one of the best investments you can make in the HotM tree.</p>
+
+        <div class="wiki-note"><strong>Commission strategy:</strong> Always pick up all four commissions before starting a session. You'll often complete them passively while grinding powder or ores. The ones in Glacite Tunnels are worth prioritizing over Dwarven Mines commissions once you have access, due to the higher HotM XP reward.</div>
+
+        <h2>HotM Tree — Complete Tier-by-Tier Breakdown</h2>
+
+        <p>The Heart of the Mountain tree has 10 tiers, each unlocking a new row of perk and ability nodes. You unlock tiers by spending Tokens of the Mountain, which you receive when reaching certain HotM level thresholds. Each tier contains a mix of passive perks (always active when upgraded) and active abilities (triggered with a keybind, have cooldowns). You upgrade individual nodes by spending the corresponding Powder type.</p>
+
+        <p>The full tree can be reset at any time from the HotM interface — when you reset, all nodes go back to level 0 and you reclaim all the Powder that was spent, allowing you to redistribute it. The only exception is <strong>Core of the Mountain</strong>, which permanently consumes its Powder investment and cannot be refunded. This reset mechanic means your early choices are not permanent — you can and should reassign your tree as you collect more Powder and your priorities shift (e.g., switching from Mithril-focused builds to Gemstone builds).</p>
+
+        <h3>Tier 1 — Foundation</h3>
+        <p>Tier 1 contains the basic passive stat nodes that form the foundation of your mining power. The nodes here increase Mining Speed and add baseline stats. They use Mithril Powder and are relatively cheap to max. Fill these out completely — they're inexpensive and the Mining Speed nodes here stack multiplicatively with later perks.</p>
+        <ul>
+          <li><strong>Mining Speed nodes (×2):</strong> Flat Mining Speed increases. Cheap and always valuable. Max both.</li>
+          <li><strong>Mining Fortune node:</strong> Small Mining Fortune increase. Still worth having at max.</li>
+        </ul>
+
+        <h3>Tier 2 — First Abilities</h3>
+        <p>Tier 2 introduces your first two active abilities and two important passive perks. This is where you start to feel like a real miner.</p>
+        <ul>
+          <li><strong>Mining Speed Boost (ability):</strong> Activatable ability that multiplies your current Mining Speed by 1.5× for a short duration. Has a cooldown. Use this every time it comes off cooldown — over a long session it adds up to a substantial speed increase. Max it out to reduce cooldown and extend duration.</li>
+          <li><strong>Precision Mining (passive):</strong> Highlights specific particles on ore veins that, when hit, deal bonus damage to the vein and sometimes trigger instant breaks. Mostly a quality-of-life perk. Upgrade it for the bonus Mining Speed it provides.</li>
+          <li><strong>Mining Fortune (passive):</strong> Flat Mining Fortune increase. More drops from everything. Max it.</li>
+          <li><strong>Pickobulus (ability):</strong> Throws your pickaxe in an AoE explosion that breaks multiple blocks at once. Extremely useful in Mithril veins — target the center of a cluster and detonate it to break 5–10 blocks simultaneously. Has a longer cooldown than Mining Speed Boost, but the AoE value in dense veins is significant. Max this ability.</li>
+        </ul>
+
+        <h3>Tier 3 — Efficiency Perks</h3>
+        <p>Tier 3 is one of the most impactful tiers early on because of Quick Forge. Get here fast.</p>
+        <ul>
+          <li><strong>Luck of the Cave (passive):</strong> Increases Magic Find while underground in mining areas. Useful for Gemstone crystal drops and rare mob loot. Upgrade when you have spare Mithril Powder.</li>
+          <li><strong>Efficient Miner (passive):</strong> Gives Mining Spread — when you break an ore, nearby ores of the same type have a chance to also break. At higher levels this spreads several blocks deep into a vein. This is an enormous quality-of-life improvement that essentially gives you partial AoE on every swing. Max this as soon as you can.</li>
+          <li><strong>Quick Forge (passive):</strong> Reduces all forge times by up to 30% at max level. This is critical. Without Quick Forge, crafting Divan's Armor takes 24 hours per piece at the base forge time. With Quick Forge maxed, that drops to roughly 17 hours. Across a full Divan's set (4 pieces) that's roughly 28 hours saved. Even more importantly, early drill upgrades and Mithril gear pieces have forge times of several hours — Quick Forge makes iterating on your gear dramatically faster. <strong>This should be the first Tier 3 node you max, ideally the first thing you invest in after unlocking Tier 3.</strong></li>
+        </ul>
+
+        <h3>Tier 4 — Specialization</h3>
+        <p>Tier 4 introduces specialization perks that start to split mining into different playstyles depending on where you mine.</p>
+        <ul>
+          <li><strong>Sky Mall (passive):</strong> Each day at midnight UTC, you receive a random mining buff for the full day. Possible buffs include +50% Mining Speed, +50% Mining Fortune, double Powder from specific ores, +50% chance for Titanium spawns, and several others. Sky Mall is highly variable — some days the buff is irrelevant, other days it's worth tens of extra millions. Always check your current Sky Mall buff at the start of a session so you can adjust your activity accordingly.</li>
+          <li><strong>Professional (passive):</strong> Grants bonus Mining Speed for every Gemstone you mine. The bonus stacks per Gemstone broken, not per session, but resets each time you move areas. In Crystal Hollows where Gemstone deposits are dense and numerous, Professional provides a massive sustained Mining Speed increase. Max this before doing any serious Gemstone grinding.</li>
+          <li><strong>Gem Lover (passive):</strong> Increases Gemstone drop rates. Directly increases the number of Gemstones you get per deposit broken. More gems per deposit = more coins per hour. Upgrade this as Gemstone Powder becomes your primary currency.</li>
+          <li><strong>Seasoned Mineman (passive):</strong> Increases Mining skill XP gained. Helps reach Mining 60 faster, which matters for passive stat bonuses. Less immediately impactful than Professional or Gem Lover but worth maxing eventually.</li>
+        </ul>
+
+        <h3>Tier 5 — Powder Economy</h3>
+        <p>Tier 5 is where the HotM system starts to feel like a real long-term investment system. These perks govern your Powder income and storage.</p>
+        <ul>
+          <li><strong>Daily Grind (passive):</strong> On your first commission completion each day, receive Powder equal to 500 × your HotM level. At HotM 5 that's 2,500 Powder. At HotM 10 that's 5,000 Powder. Every single day. Over months of play this becomes the largest single source of Powder in the game, far outpacing what you mine directly. Unlock and max this as soon as you reach Tier 5. This is not optional — it is the single best Powder investment per Powder spent in the entire tree.</li>
+          <li><strong>Core of the Mountain (unique, permanent):</strong> Unlike every other node, Core of the Mountain permanently consumes its Powder and cannot be reclaimed on a reset. What it does: increases your permanent HotM level cap contribution (i.e., spending Powder here counts toward your HotM level permanently). It also gives bonus Token of the Mountain generation. This is a long-term investment — the Powder you spend here is gone, but the HotM level gains it provides unlock the higher tiers you need. Invest in it gradually as you accumulate surplus Powder. Do not dump everything here early.</li>
+          <li><strong>Daily Powder (passive):</strong> Increases your maximum Powder storage cap. You receive small amounts of Powder passively each day (on top of what you mine and get from commissions), and this cap determines how much can accumulate. Worth upgrading when you have Gemstone Powder to spare.</li>
+        </ul>
+
+        <h3>Tier 6 — Crystal Hollows Specialization</h3>
+        <p>Tier 6 perks and abilities are largely oriented around Crystal Hollows and Glacite Tunnels performance.</p>
+        <ul>
+          <li><strong>Tunnel Vision (ability):</strong> Active ability that gives a large Mining Speed boost while tunneling through stone or hard stone blocks. Useful for quickly digging to ore veins or navigating tunnels. Reduces the time wasted traveling between deposits.</li>
+          <li><strong>Great Explorer (passive):</strong> Increases the spawn rate of treasure chests in Crystal Hollows. This perk is extremely important for two reasons: treasure chests contain Gemstone Powder (sometimes hundreds per chest), and they contain rare drops including Jasper Crystal components and Divan's Fragments. With Great Explorer maxed, chest spawns are significantly higher than baseline, which directly increases both your Powder income and your access to Divan's Armor crafting materials. <strong>Max this once you are actively farming Crystal Hollows.</strong></li>
+          <li><strong>Keep It Cool (passive):</strong> Reduces the heat you take in certain areas of Crystal Hollows (particularly Magma Fields). Heat causes damage if unchecked. This perk reduces that damage intake and lets you mine Topaz and other hot-zone Gemstones more efficiently without needing to constantly retreat.</li>
+          <li><strong>Lonesome Miner (passive):</strong> Grants bonus stats (Mining Speed, Mining Fortune, and Defense) when no other players are nearby. Encourages finding less-populated areas or off-hours play. The bonus can be significant if you consistently mine alone, but it's situational depending on server population.</li>
+        </ul>
+
+        <h3>Tier 7 — Power Tier</h3>
+        <p>Tier 7 is widely considered the most impactful tier in the entire tree. The three perks here massively accelerate your mining output. Getting here should be a top priority.</p>
+        <ul>
+          <li><strong>Speedy Mineman (passive):</strong> Grants up to +2,040 Mining Speed at max level. This is a flat +2,040 to your Mining Speed total — the single largest Mining Speed bonus available from any single source in the game. It transforms how fast you cycle through ore deposits. Maxing Speedy Mineman typically doubles or triples your block break speed compared to your Tier 6 baseline. Invest in this heavily.</li>
+          <li><strong>Powder Buff (passive):</strong> Increases all Powder gained from every source by up to +51% at max level. This applies to Powder from mining, commissions, treasure chests, events, and the Daily Grind perk. With Daily Grind also active, Powder Buff multiplies an already-large daily Powder income. The compounding effect here is huge — every Powder you would have earned now becomes 1.51× that amount. Over weeks of grinding, this adds hundreds of thousands of extra Powder. Max this as soon as possible after Speedy Mineman.</li>
+          <li><strong>Fortunate Mineman (passive):</strong> Grants substantial Mining Fortune. More drops from all ores and Gemstones. This feeds directly into your coins-per-hour in Crystal Hollows. Once you have Speedy Mineman and Powder Buff maxed, start putting Gemstone Powder into Fortunate Mineman.</li>
+        </ul>
+
+        <h3>Tier 8 — Magic Find & Utility</h3>
+        <p>Tier 8 contains a mix of combat-adjacent utility and further specialization perks. The Powder cost at this tier is significant — you are spending Glacite Powder, which requires access to Glacite Tunnels.</p>
+        <ul>
+          <li><strong>Miner's Blessing (passive):</strong> Grants +30 Magic Find permanently. Magic Find affects drop rates from mobs and certain rare item drops. This matters for Glacite Mineshaft corpse loot and any combat you do in mining areas.</li>
+          <li><strong>No Stone Unturned (passive):</strong> Increases the chance of finding rare ore when mining stone or hard stone. Essentially a passive prospecting bonus — rare ore nodes (including Titanium in Dwarven Mines and rare Gemstone clusters in Crystal Hollows) appear slightly more often.</li>
+          <li><strong>Steady Hand (passive):</strong> Reduces the penalty to Mining Speed when your drill fuel is low. Without this perk, a nearly-empty drill fuel tank causes noticeable Mining Speed penalties. With it, you can run your drill nearly dry without losing much speed. Useful for long sessions without stopping to refuel.</li>
+          <li><strong>Surveyor (passive):</strong> Increases the radius of ore detection abilities and highlights more ore veins on your minimap when available. A quality-of-life perk that reduces time spent pathing to deposits.</li>
+        </ul>
+
+        <h3>Tier 9 — Income & Speed in Glacite</h3>
+        <ul>
+          <li><strong>Rags to Riches (passive):</strong> Grants coins directly from mining certain blocks in Glacite Tunnels and Dwarven Mines. The coin amounts scale with your HotM level and the rarity of what you're breaking. Combined with high Mining Speed from Speedy Mineman, this adds a meaningful passive coin stream on top of ore drops.</li>
+          <li><strong>Eager Adventurer (passive):</strong> Grants up to +2,000 Mining Speed specifically while mining in Glacite Tunnels. If you are doing serious Glacite Mineshaft runs for corpse loot and Glacite Powder, this perk is the difference between a slow crawl and rapid cycling through the tunnels. Comparable in impact to Speedy Mineman but Glacite-specific.</li>
+        </ul>
+
+        <h3>Tier 10 — Endgame Abilities</h3>
+        <p>Tier 10 contains the most powerful perks and abilities in the tree. Reaching here requires sustained HotM investment over a long period — the Powder costs for Tiers 8–10 are very high and require serious Glacite Tunnels grinding.</p>
+        <ul>
+          <li><strong>Gemstone Infusion (ability):</strong> Active ability that temporarily supercharges your Gemstone mining — increases all Gemstone drop rates significantly for its duration. Use it during dense Gemstone clusters in Crystal Hollows for maximum gem yield. High cooldown.</li>
+          <li><strong>Sheer Force (ability):</strong> Active ability that dramatically increases your Mining Speed for a short burst. Functions as a second Mining Speed Boost but with a different cooldown window, allowing you to alternate the two abilities to maintain near-constant speed bonuses.</li>
+          <li><strong>Mining Master (passive):</strong> Large flat Mining Fortune increase. The name says it all. At Tier 10, your Mining Fortune from HotM perks alone (Fortunate Mineman + Mining Master) exceeds what most players had from all sources combined at Tier 7.</li>
+          <li><strong>Dead Man's Chest (passive):</strong> Increases the loot from Frozen Corpses found in Glacite Mineshafts. More items per corpse, higher chance of rare drops, and more Glacite Powder per mineshaft. This perk makes Glacite Mineshaft runs dramatically more profitable.</li>
+        </ul>
+
+        <h3>HotM Upgrade Priority Order</h3>
+        <p>With limited Powder early on, here is the recommended investment order. This assumes you are progressing through the areas in order (Dwarven Mines → Crystal Hollows → Glacite Tunnels):</p>
+        <ol>
+          <li><strong>Quick Forge (T3)</strong> — First priority upon reaching Tier 3. The forge time reduction compounds across every piece of gear you craft. Without it, gear progression is agonizingly slow.</li>
+          <li><strong>Daily Grind (T5)</strong> — Get to Tier 5 and unlock this as fast as possible. Free Powder every day is the best investment in the game.</li>
+          <li><strong>Powder Buff (T7)</strong> — Multiplies all future Powder income. The earlier you get this, the more it gives you over time.</li>
+          <li><strong>Speedy Mineman (T7)</strong> — Massive Mining Speed increase. Goes hand-in-hand with Powder Buff for maximizing income.</li>
+          <li><strong>Great Explorer (T6)</strong> — Once you're in Crystal Hollows regularly, Great Explorer massively improves your Powder income and Divan's Fragment access.</li>
+          <li><strong>Fortunate Mineman (T7)</strong> — Stack Mining Fortune after your speed is solid.</li>
+          <li><strong>Professional (T4)</strong> — For Gemstone mining specifically. High impact in Crystal Hollows.</li>
+          <li>Fill in remaining perks in the tiers below 7 as Mithril Powder allows, then invest into Tiers 8–10 with Glacite Powder.</li>
+        </ol>
+
+        <div class="wiki-warn"><strong>HotM Reset:</strong> The entire tree (except Core of the Mountain) can be reset at any time from the HotM interface. All spent Powder is refunded. This costs nothing and is reversible. If you realize your Powder allocation is wrong — say you invested heavily in Mithril-focused perks but you now primarily mine Gemstones — reset the tree and re-invest. There is no penalty. Do not feel locked in to early choices.</div>
+
+        <h2>The Powder System in Detail</h2>
+
+        <p>Powder is the currency used to upgrade HotM nodes. Three types exist, each used for different tiers of the tree. Importantly, <strong>both spent and unspent Powder count toward your HotM level progression</strong>. This means spending Powder on upgrades never reduces your HotM level — you cannot lose progress by investing. The total accumulated Powder (all time, across all types) is what gates your HotM level and Token generation.</p>
+
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr><th>Powder Type</th><th>Primary Source</th><th>Used For</th><th>Best Grinding Method</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mithril Powder</td>
+                <td>Mining Mithril ore in Dwarven Mines (1–3 per ore)</td>
+                <td>HotM Tiers 1–4, early Core of the Mountain</td>
+                <td>Dense Mithril tunnels in Dwarven Mines; prioritize Titanium nodes for 3× Powder per break</td>
+              </tr>
+              <tr>
+                <td>Gemstone Powder</td>
+                <td>Mining Gemstone deposits in Crystal Hollows</td>
+                <td>HotM Tiers 5–7, mid Core of the Mountain</td>
+                <td>Crystal Hollows with Great Explorer maxed for treasure chest spawns; Ruby/Jade-dense zones</td>
+              </tr>
+              <tr>
+                <td>Glacite Powder</td>
+                <td>Glacite Tunnels ores and Mineshaft loot</td>
+                <td>HotM Tiers 8–10, late Core of the Mountain</td>
+                <td>Commission runs in Glacite Tunnels; Mineshaft exploration for bonus Powder caches</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>A few things worth knowing about the Powder system that many players miss:</p>
+
+        <p><strong>Titanium gives far more Mithril Powder per break than regular Mithril.</strong> Titanium nodes appear inside Mithril veins — they look like white/silver blocks mixed into the cyan Mithril clusters. Each Titanium ore broken gives roughly 3× the Mithril Powder of a regular Mithril ore. When you see Titanium, stop and break every piece before moving on. With the No Stone Unturned perk from Tier 8, Titanium appears slightly more frequently.</p>
+
+        <p><strong>Powder Buff applies retroactively to commissions.</strong> Even the Powder granted by commissions and Daily Grind is increased by Powder Buff. This is why getting Powder Buff early matters — it makes every subsequent Powder gain larger, including the compounding daily free Powder from Daily Grind.</p>
+
+        <p><strong>Gemstone Powder from Crystal Hollows treasure chests is highly variable.</strong> A common chest gives 10–30 Gemstone Powder. Rare chests can give 100–300. With Great Explorer maxed, you might open 15–25 chests per hour of active Crystal Hollows farming, adding thousands of Gemstone Powder per session on top of what you mine directly.</p>
+
+        <p><strong>The Nucleus run gives a large one-time Gemstone Powder reward.</strong> When all five crystals are placed in the Crystal Nucleus, a completion reward includes a substantial Gemstone Powder payout. These resets happen every 3 days and are worth organizing around if you have the time.</p>
+
+        <h2>Dwarven Mines — Complete Guide</h2>
+
+        <p>Dwarven Mines is the first major mining area and where most new miners spend their first weeks. The layout is a large underground cavern system with multiple branching tunnel routes. The King's Quest area, Commission NPC, and the Forge are all here.</p>
+
+        <h3>Layout and Navigation</h3>
+        <p>The main hub contains the Commission NPC and fast-travel points. The Forge is located in a dedicated crafting area — find it once and memorize its location because you'll return frequently to queue up craft jobs. The tunnels themselves branch out in all directions. Dense Mithril deposits exist in specific tunnel systems; over time you'll learn which routes give the best Mithril-per-minute.</p>
+
+        <h3>Ores and Resources</h3>
+        <ul>
+          <li><strong>Mithril:</strong> The primary ore. Cyan-colored blocks scattered throughout the tunnels and cave walls. Each gives 1–3 Mithril Powder and Mining XP. With Efficient Miner active, breaking one Mithril can chain-break adjacent Mithril in the same vein. Focus on veins rather than isolated blocks — veins give more Powder per travel distance.</li>
+          <li><strong>Titanium:</strong> Found embedded inside or adjacent to large Mithril veins. White-silver in color and visually distinct from Mithril. Gives roughly 3× the Mithril Powder per break. Always prioritize. Over a session, Titanium can account for 20–30% of your total Mithril Powder income despite being a small fraction of blocks mined.</li>
+          <li><strong>Ruby deposits:</strong> Red Gemstone nodes. Less relevant in Dwarven Mines compared to Crystal Hollows but still worth breaking for Gemstone Mining XP.</li>
+          <li><strong>Hard Stone:</strong> Filler block between ore veins. Mining it gives very little — skip it unless you need the path cleared or you have Tunnel Vision active.</li>
+        </ul>
+
+        <h3>The Forge</h3>
+        <p>The Forge is where you craft mining gear — drills, armor pieces, and upgrade components. Each forge job takes a real-world amount of time (minutes to days depending on the item). The Forge has multiple slots, so you can run multiple jobs simultaneously. Keep every forge slot busy at all times. Idle forge slots are wasted progression.</p>
+
+        <p>Early forge jobs include basic Mithril Pickaxe and Drill components, which take 1–6 hours each. Later, Divan's Armor pieces take 6–24 hours per piece at base time. With Quick Forge maxed (−30%), a 24-hour piece takes roughly 17 hours. With additional forge speed items, you can push it lower. The principle is: always queue the longest, most important job and let it run overnight or while you're doing other activities.</p>
+
+        <div class="wiki-note"><strong>Forge tip:</strong> Log in every morning and check your forge. If a job has finished overnight, immediately start the next one before doing anything else. A 12-hour job that completes at 2am and sits idle until you log in at noon has wasted 10 hours. Start jobs before logging off so they complete while you're sleeping.</div>
+
+        <h3>Mobs in Dwarven Mines</h3>
+        <p>The tunnels contain occasional dwarven mobs — Dwarven Soldiers and similar enemies. They are not a significant threat with reasonable combat gear but can interrupt your mining rhythm. They drop Mithril and some loot. The rare Scatha worm mob occasionally spawns and drops the Scatha pet, which has mining-relevant bonuses. Scatha is rare enough that you shouldn't farm for it specifically, but it's worth knowing about.</p>
+
+        <h2>Crystal Hollows — Complete Guide</h2>
+
+        <p>Crystal Hollows opens at the same Mining level as Dwarven Mines (Mining 12) but is a fundamentally different environment. It is a large, floating-island cave system divided into five distinct zones, each with its own visual aesthetic, primary Gemstone type, and Crystal location. Crystal Hollows is the primary source of Gemstone Powder, Gemstone drops, Divan's Fragments, and late-game coin income from Gemstone mining.</p>
+
+        <div class="wiki-warn"><strong>Crystal Hollows resets every 3 days server-wide.</strong> When a reset occurs, all five crystal locations randomize within their respective zones. If you had crystals placed in the Nucleus and were planning a run, a reset means you need to re-locate all five. Always check the reset timer (visible in the Crystal Hollows lobby) before committing time to a Nucleus run.</div>
+
+        <h3>The Five Zones</h3>
+
+        <ul>
+          <li><strong>Precursor Remnants:</strong> A zone filled with ruins of ancient machine structures. Rich in Mithril alongside Gemstones. Good for players who want a mix of Mithril Powder and Gemstone income. The Crystal here is found inside or near the main ruined structure.</li>
+          <li><strong>Jungle:</strong> A lush green zone with thick vegetation and water features. Primary Gemstone is Jade, which grows in large green clusters on jungle surfaces and cave walls. Jade is frequently one of the more valuable Gemstones on the Bazaar. The Crystal is buried inside the jungle terrain.</li>
+          <li><strong>Goblin Holdout:</strong> Rocky, goblin-infested tunnels with heavy Ruby Gemstone deposits. Goblins are present as enemies and drop some extra loot when killed. Goblins can also drop Goblin Eggs used for crafting. Ruby is common and the zone is good for Gemstone XP grinding. The Crystal is in the main Goblin fortress structure.</li>
+          <li><strong>Mithril Deposits:</strong> Dense Mithril and mixed Gemstone deposits. Similar to Dwarven Mines but with Crystal Hollows bonuses active. Good for hybrid Mithril/Gemstone grinding if you're still building Mithril Powder for lower-tier HotM nodes.</li>
+          <li><strong>Magma Fields:</strong> A hot, volcanic zone dominated by Topaz and Amber Gemstones. Heat mechanic applies here — you take damage over time without the Keep It Cool perk or heat-resistance gear. Topaz and Amber can be highly valuable. The Crystal is inside the volcanic structure at the center of the zone.</li>
+        </ul>
+
+        <h3>Gemstone Types and Bazaar Values</h3>
+        <p>Seven Gemstone types exist in Crystal Hollows. Their Bazaar prices fluctuate with supply and demand from the SkyBlock playerbase. Rough value guidance:</p>
+
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr><th>Gemstone</th><th>Color</th><th>Primary Zone</th><th>Typical Relative Value</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Ruby</td><td>Red</td><td>Goblin Holdout</td><td>Moderate–High</td></tr>
+              <tr><td>Jade</td><td>Green</td><td>Jungle</td><td>High (often top tier)</td></tr>
+              <tr><td>Amber</td><td>Orange</td><td>Magma Fields</td><td>Moderate</td></tr>
+              <tr><td>Topaz</td><td>Yellow</td><td>Magma Fields</td><td>Moderate</td></tr>
+              <tr><td>Sapphire</td><td>Blue</td><td>Various</td><td>Moderate</td></tr>
+              <tr><td>Amethyst</td><td>Purple</td><td>Various</td><td>Moderate</td></tr>
+              <tr><td>Jasper</td><td>Magenta</td><td>Various</td><td>High (used in gear)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Check the Bazaar before a session to see which Gemstone is currently most valuable — prices shift regularly based on what players are buying for gear upgrades. Routing your mining session around the highest-value Gemstone per hour dramatically increases income. Ruby and Jade are historically reliable, but the meta shifts.</p>
+
+        <h3>Treasure Chests</h3>
+        <p>Treasure chests spawn randomly throughout Crystal Hollows as you mine. They require a key to open — Crystallized Hearts function as keys and are earned from commissions and certain activities. Each chest contains Gemstone Powder, Mithril Powder, random Gemstones, and occasionally rare items like Divan's Fragments or Jasper Crystals. With Great Explorer maxed at HotM Tier 6, chest spawn rates are significantly higher. At high HotM levels with Great Explorer maxed, you might find 15–25 chests per hour of active farming — each chest's Powder adds up to thousands of extra Gemstone Powder per session.</p>
+
+        <h3>The Crystal Nucleus</h3>
+        <p>The Crystal Nucleus is the central structure in Crystal Hollows. It has five slots for the five zone Crystals. Finding and placing all five Crystals activates the Nucleus, which produces a large Gemstone Powder reward and some rare loot. The Crystals must be physically found in their respective zones — they are hidden inside structures or underground. Community resources (Discord servers, the SkyBlock wiki) typically update crystal positions after each 3-day reset. Joining a Crystal Hollows community and sharing crystal coordinates with other players significantly reduces the time spent searching.</p>
+
+        <h2>Glacite Tunnels — Complete Guide</h2>
+
+        <p>Glacite Tunnels is the third and final major mining area, unlocking after sufficient HotM progression (typically around HotM 5–6). It is an underground tunnel network with a cold, icy aesthetic featuring unique ores not found elsewhere. The commissions here give 750 HotM XP each — the best rate available — making it the most efficient HotM progression area once accessible.</p>
+
+        <h3>Ores and Resources</h3>
+        <ul>
+          <li><strong>Glacite:</strong> Blue-ish ice mineral that gives Glacite Powder. The primary resource here. Found in dense veins throughout the tunnels. Glacite Powder is what you need for HotM Tiers 8–10 upgrades.</li>
+          <li><strong>Tungsten:</strong> Dense grey ore embedded in the walls. Used as a crafting material and gives some Glacite Powder. Less common than Glacite but worth breaking when spotted.</li>
+          <li><strong>Umber:</strong> Brown mineral found in the deeper tunnel sections. Used for crafting and gives Glacite Powder. Generally found further from the entrance.</li>
+        </ul>
+
+        <h3>Glacite Mineshafts</h3>
+        <p>While exploring the tunnels, you'll occasionally find Glacite Mineshafts — side passages that branch off from the main tunnels. These are special encounter areas containing <strong>Frozen Corpses</strong>: frozen NPC-type enemies encased in ice. To loot a Frozen Corpse, you break the ice encasing it. This reveals a dead NPC with a unique loot table.</p>
+
+        <p>Frozen Corpse loot includes enchanted materials, Glacite Powder caches, rare crafting components, and items tied to Divan's Armor upgrades. At high HotM levels with the Dead Man's Chest perk maxed (Tier 10), each corpse drops substantially more. A well-geared, high-HotM player doing focused Mineshaft runs earns 3–10 million coins per hour from corpse loot plus the Glacite Powder gained, making this one of the better late-game income methods.</p>
+
+        <p>Miner's Blessing from HotM Tier 8 (+30 Magic Find) helps improve the quality of Frozen Corpse drops. Mineshafts can also contain chest-type containers with bonus loot independent of the corpses.</p>
+
+        <div class="wiki-note"><strong>Commissions in Glacite:</strong> Always prioritize completing Glacite commissions over Dwarven Mines commissions. The 750 HotM XP per commission (vs. 400 in Dwarven Mines) makes Glacite commissions worth roughly twice as much for HotM progression. If you can only do commissions in one area per day, do Glacite.</div>
+
+        <h2>Drill & Tool Progression</h2>
+
+        <p>Mining tools in SkyBlock follow a clear progression path. Each tier provides substantially better Mining Speed and, for drills, the ability to slot upgrade components. The jump from pickaxe to drill is significant, and the jump from a basic drill to Divan's Drill is even more dramatic.</p>
+
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr><th>Tool</th><th>How to Get</th><th>Key Stats</th><th>Best Use</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Any starting Pickaxe</td>
+                <td>Craft or buy from Bazaar</td>
+                <td>Low base Mining Speed</td>
+                <td>Pre-Dwarven Mines, Deep Caverns</td>
+              </tr>
+              <tr>
+                <td>Mithril Pickaxe / Drill</td>
+                <td>Crafted at Forge from Enchanted Mithril</td>
+                <td>Moderate Mining Speed, accepts 2–3 upgrade slots</td>
+                <td>Early Dwarven Mines, HotM 1–3</td>
+              </tr>
+              <tr>
+                <td>Ruby-Polished Drill</td>
+                <td>Crafted at Forge with Ruby components</td>
+                <td>Better base speed, Ruby-specific fuel bonus</td>
+                <td>Dwarven Mines with Ruby deposits, early Crystal Hollows</td>
+              </tr>
+              <tr>
+                <td>Titanium-Infused Drill</td>
+                <td>Crafted at Forge with Titanium</td>
+                <td>Significant Mining Speed increase over basic Drill</td>
+                <td>Mid-game, HotM 4–6</td>
+              </tr>
+              <tr>
+                <td>Divan's Drill</td>
+                <td>Crafted from Divan's Drill components (Crystal Hollows drops + Divan's Armor fragments)</td>
+                <td>Best Mining Speed and Fortune in the game</td>
+                <td>Endgame Crystal Hollows and Glacite Tunnels</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Drill Upgrade Components</h3>
+        <p>Drills have upgrade slots that accept specific modules. These slots dramatically increase a drill's effectiveness and should be filled as soon as the components are available. Key upgrade types:</p>
+
+        <ul>
+          <li><strong>Fuel Tank:</strong> Extends the drill's fuel capacity. Without a large fuel tank, your drill runs out mid-session and loses its speed bonus until refueled. Always upgrade the fuel tank first when acquiring a new drill.</li>
+          <li><strong>Titanium-Infused Fuel Tank:</strong> Upgraded version of the fuel tank. Substantially larger capacity and more efficient fuel usage. Replaces the basic tank once crafted.</li>
+          <li><strong>Goblin Omelette:</strong> A fuel item crafted from Goblin Eggs (dropped by Goblins in Crystal Hollows). It's one of the best early drill fuel items and is surprisingly accessible. Farm Goblin Holdout for eggs or buy them on the Bazaar. The Omelette provides a significant fuel boost relative to its cost.</li>
+          <li><strong>Mining Speed Boost module:</strong> Flat Mining Speed increase to the drill. Slot this in any available upgrade slot that isn't occupied by a fuel tank or fortune module.</li>
+          <li><strong>Mining Fortune module:</strong> Flat Mining Fortune increase. Slot this once your Mining Speed is solid and you want to push income per block higher.</li>
+        </ul>
+
+        <h3>Pickaxe Enchantments</h3>
+        <p>The key enchantments for mining tools:</p>
+        <ul>
+          <li><strong>Efficiency I–V:</strong> Each level adds flat Mining Speed. Efficiency V is mandatory baseline for any serious mining setup. If your pickaxe or drill does not have Efficiency V, fix that before anything else.</li>
+          <li><strong>Fortune I–III:</strong> Each level adds Mining Fortune. Fortune III on your tool is standard. Never use Silk Touch on a mining-for-drops setup.</li>
+          <li><strong>Smelting Touch:</strong> Auto-smelts ores on break. Useful for Iron and Gold if you want ingots directly, but irrelevant for Mithril, Gemstones, and other SkyBlock-specific ores.</li>
+          <li><strong>Compact:</strong> Increases Mining XP per block broken, scales as you break more compacted blocks. Levels up as you break more — worth having on your primary grinding tool for the Mining skill XP bonus.</li>
+          <li><strong>Pristine:</strong> A Gemstone-specific enchant that increases Gemstone drop rates. Applied to drills used in Crystal Hollows, this is a substantial income boost on top of the Ammonite pet's Pristine stat.</li>
+        </ul>
+
+        <h2>Mining Armor Progression</h2>
+
+        <p>Mining armor differs from combat armor in that its primary stats are Mining Speed and Mining Fortune rather than damage and HP. Every stage of the Mining armor ladder gives larger Mining Speed and Fortune numbers, translating directly into faster ore cycling and more drops per block.</p>
+
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr><th>Stage</th><th>Armor</th><th>Key Stats</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Early</td>
+                <td>Any combat armor (Hardened Diamond, etc.)</td>
+                <td>Survivability stats, no mining bonuses</td>
+                <td>Fine for the first few hours in Dwarven Mines while building Mithril Powder</td>
+              </tr>
+              <tr>
+                <td>Early-Mid</td>
+                <td>Mithril Armor set</td>
+                <td>Mining Speed, moderate Mining Fortune, set bonus</td>
+                <td>Crafted from Enchanted Mithril at the Forge. First real mining armor. The 4-piece set bonus gives a significant Mining Speed multiplier. Craft this early.</td>
+              </tr>
+              <tr>
+                <td>Mid</td>
+                <td>Gemstone-type armor (e.g., Ruby Armor)</td>
+                <td>Gemstone-specific Mining Fortune, more Mining Speed</td>
+                <td>Each Gemstone type has a dedicated armor set. Match your armor Gemstone type to what you're mining for the relevant bonuses. Ruby Armor is the most commonly used for its strong all-around stats.</td>
+              </tr>
+              <tr>
+                <td>Late-Mid</td>
+                <td>Mineral Armor</td>
+                <td>Strong Mining Speed, good Fortune</td>
+                <td>A versatile mid-tier armor set that doesn't lock you into a specific Gemstone type. Good transition before Divan's.</td>
+              </tr>
+              <tr>
+                <td>Endgame</td>
+                <td>Divan's Armor</td>
+                <td>Massive Mining Speed and Fortune per piece, enormous set bonus</td>
+                <td>The best mining armor in the game by a wide margin. Each piece multiplies Mining Speed and Fortune dramatically. The 4-piece set bonus is game-changing for Crystal Hollows income. Very expensive and slow to craft — requires Divan's Fragments from Crystal Hollows treasure chests plus significant Forge time.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Divan's Armor — How to Get It</h3>
+        <p>Divan's Armor is the endgame goal for mining and the reason Great Explorer is so important. Each piece requires <strong>Divan's Fragments</strong>, which drop from Crystal Hollows treasure chests. They are uncommon drops — expect to spend significant time farming chests before having enough for a full set. With Great Explorer maxed, the chest spawn rate is high enough that you accumulate Fragments passively during normal Gemstone grinding sessions.</p>
+
+        <p>Each armor piece also requires Enchanted Mithril, various Gemstone components, and queuing forge jobs. The full set of four pieces across four forge slots, run simultaneously with Quick Forge, takes several days of real time. Once complete, the armor essentially doubles or triples your Mining Fortune compared to mid-tier gear, and the full set bonus adds another massive multiplier on top. The income jump when switching to Divan's is immediately noticeable in coins per hour.</p>
+
+        <h2>Pets for Mining</h2>
+
+        <p>The right pet equipped during mining can increase your effective income by 30–100% or more. Mining pets have specific bonuses that don't appear on combat pets, and swapping to the correct one for your current activity is worth doing every session.</p>
+
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr><th>Pet</th><th>Rarity Tier</th><th>Key Ability</th><th>Best Use</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ammonite</td>
+                <td>Legendary</td>
+                <td>Grants the Pristine stat, which directly increases Gemstone drop count per break. Also gives Mining Fortune and Speed.</td>
+                <td>Crystal Hollows Gemstone farming. Mandatory for serious income. If you do nothing else, get this pet.</td>
+              </tr>
+              <tr>
+                <td>Mole</td>
+                <td>Legendary</td>
+                <td>Gains stacking Mining Speed per block broken while underground. Stacks can get extremely high over a long session.</td>
+                <td>Dwarven Mines and any underground area. Best pet for Mithril/Titanium grinding.</td>
+              </tr>
+              <tr>
+                <td>Glacite Golem</td>
+                <td>Rare/Epic</td>
+                <td>Mining Speed and Mining Fortune specifically in Glacite Tunnels. Also reduces damage from cold effects.</td>
+                <td>Glacite Tunnels grinding. Swap to this for commission runs in Glacite.</td>
+              </tr>
+              <tr>
+                <td>Scatha</td>
+                <td>Epic/Legendary</td>
+                <td>Mining-related bonuses and chance to drop rare worm loot. Passive bonuses to Mining Speed.</td>
+                <td>General Dwarven Mines use. Rare drop from worm mobs — if you have it, it's good but not mandatory.</td>
+              </tr>
+              <tr>
+                <td>Blue Whale</td>
+                <td>Epic/Legendary</td>
+                <td>Large HP bonus. Passive HP regeneration.</td>
+                <td>Early mining when survivability is low, or Magma Fields with the heat mechanic. Not a primary mining pet.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Pet priority: Mole first while you are primarily in Dwarven Mines. Switch to Ammonite as soon as you move to Crystal Hollows for income. Use Glacite Golem for commission runs in Glacite Tunnels. Do not mine without a pet equipped — the bonus from even a low-rarity Mole or Ammonite is substantial compared to no pet.</p>
+
+        <p>Pet rarity matters significantly. A Common Mole is not comparable to a Legendary Mole — each rarity tier increases the pet's stats substantially. Upgrading your mining pet rarity is one of the better investments you can make once you have coins to spare. The Legendary Ammonite in particular gains the Pristine ability only at Legendary rarity — lower rarities do not have it.</p>
+
+        <h2>Mining for Money — Methods by Stage</h2>
+
+        <p>Mining is unusual in that the income methods available to you are almost entirely gated by HotM level, not by your combat power or tradeable items. The following table gives a realistic overview of income ranges at each stage. These are approximate figures that vary based on Bazaar prices for specific Gemstones, which fluctuate.</p>
+
+        <div class="table-wrap">
+          <table class="wiki-table">
+            <thead>
+              <tr><th>Method</th><th>HotM Requirement</th><th>Approx. Coins/hr</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mithril grinding (Dwarven Mines)</td>
+                <td>HotM 1–3</td>
+                <td>200k–500k/hr</td>
+                <td>Mithril itself sells for little; value comes from skill XP and Powder. Titanium luck can spike this higher.</td>
+              </tr>
+              <tr>
+                <td>Mithril + Titanium focus</td>
+                <td>HotM 3–4</td>
+                <td>500k–2M/hr</td>
+                <td>With Quick Forge, Titanium lets you craft gear faster. Titanium sells at a premium on the Bazaar.</td>
+              </tr>
+              <tr>
+                <td>Ruby Gemstone mining (Goblin Holdout)</td>
+                <td>HotM 4–5</td>
+                <td>2M–5M/hr</td>
+                <td>First real coin income from mining. Ruby prices are stable. Needs Professional perk to be efficient.</td>
+              </tr>
+              <tr>
+                <td>Mixed Gemstone (Crystal Hollows)</td>
+                <td>HotM 5–6</td>
+                <td>5M–10M/hr</td>
+                <td>Targeting the highest-value Gemstone zone. Great Explorer makes this significantly more profitable via chest Powder.</td>
+              </tr>
+              <tr>
+                <td>Optimized Crystal Hollows (Divan's gear)</td>
+                <td>HotM 7+</td>
+                <td>10M–20M/hr</td>
+                <td>Requires Speedy Mineman + Powder Buff + Ammonite pet. With good gear and market timing, 20M+ is achievable.</td>
+              </tr>
+              <tr>
+                <td>Crystal Nucleus runs</td>
+                <td>HotM 6+</td>
+                <td>2M–5M/hr equivalent (powder value)</td>
+                <td>Less direct coin income, high Gemstone Powder. Worth doing every 3-day cycle regardless of your primary method.</td>
+              </tr>
+              <tr>
+                <td>Glacite Mineshaft runs</td>
+                <td>HotM 8+</td>
+                <td>3M–10M/hr</td>
+                <td>High variance — depends on corpse loot RNG and Dead Man's Chest investment. Consistent at high HotM levels.</td>
+              </tr>
+              <tr>
+                <td>Full endgame (Divan's + Ammonite Leg + HotM 10)</td>
+                <td>HotM 10</td>
+                <td>15M–25M/hr</td>
+                <td>Peak Crystal Hollows farming. Requires all systems maxed: drill, armor, pet, HotM tree, enchants.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>The most common bottleneck players hit is being stuck in the HotM 4–6 range with mid-tier gear and wondering why their income is "only" 5–8M/hr when guides talk about 20M+. The answer is almost always the same: missing Speedy Mineman, missing Powder Buff, or missing Ammonite pet. These three things together account for the majority of the gap between mid-game and endgame mining income.</p>
+
+        <h2>Efficiency Tips & Optimization</h2>
+
+        <p>Beyond the main progression systems, a set of habits and strategic decisions separate efficient miners from inefficient ones. None of these are complicated — they are just easy to overlook.</p>
+
+        <h3>Commission Management</h3>
+        <p>Pick up all four commissions before starting any mining session. They complete passively while you grind. If your commissions include tasks in multiple areas (e.g., two Dwarven Mines commissions and two Crystal Hollows commissions), plan your session to hit both areas. The time lost traveling between areas is almost always worth the extra HotM XP from completing commissions in both.</p>
+
+        <p>Once you have Glacite access, always prioritize replacing Dwarven Mines commissions with Glacite commissions if given the option. The 750 HotM XP from Glacite commissions is nearly double the 400 from Dwarven Mines, and the time to complete them is similar.</p>
+
+        <h3>Ability Usage</h3>
+        <p>Mining Speed Boost and Pickobulus both have cooldowns. Active ability players who use these on cooldown consistently out-mine players who never activate abilities by a significant margin. Set up a visual keybind or hotbar slot so you notice when the abilities come off cooldown. The Sheer Force and Gemstone Infusion abilities at Tier 10 follow the same logic — use them on cooldown, always.</p>
+
+        <p>Pickobulus is particularly powerful in Mithril vein mining. A well-placed Pickobulus at the center of a large Mithril cluster can break 10–15 blocks simultaneously. Learn the optimal positioning for your typical vein sizes.</p>
+
+        <h3>Sky Mall Awareness</h3>
+        <p>Each day's Sky Mall buff can radically change your optimal session plan. If the buff is double Mithril Powder, that day is your best day to grind Mithril and Titanium even if you'd normally be in Crystal Hollows. If it's +50% Mining Speed, push hard on Gemstone grinding for maximum blocks per hour. Check the buff every single morning by opening the HotM interface and looking at the Sky Mall node. Do not waste a strong buff day doing the wrong activity.</p>
+
+        <h3>Forge Management</h3>
+        <p>The forge is a passive progression system that runs 24/7, but only if you keep it queued. The single best habit for forge management is: every time you log in, the first thing you do is check the forge before doing anything else. If a job completed, start the next one immediately. With Quick Forge maxed, the marginal forge time savings compound across every job you run — but they only compound if the forge is always running.</p>
+
+        <h3>Bazaar Selling Strategy</h3>
+        <p>Always sell Gemstones via sell orders, not instant-sell. The instant-sell price on most Gemstones is 10–30% below the sell order price. On a 10 million coins per hour farming rate, that gap is 1–3 million coins per hour in lost income. Place sell orders slightly below the current lowest sell order to get them filled quickly. Check which Gemstone types have the deepest buy order depth (meaning more buyers) before deciding which zone to farm in a given session.</p>
+
+        <h3>Dense Mining Paths</h3>
+        <p>With Efficient Miner active, mining has a chain-break mechanic. Learn which tunnel routes in Dwarven Mines and which deposit clusters in Crystal Hollows are the most ore-dense. High-density areas where Efficient Miner triggers frequently are dramatically more efficient than sparse areas where each ore is isolated. Over time you develop a mental map of the best routes — this is a skill that pays back in faster powder grinding and better coins per hour.</p>
+
+        <h2>Common Mistakes</h2>
+
+        <p>These are the mistakes most commonly made by players who are struggling to progress in Mining. If your income is lower than expected or your HotM is progressing slowly, one of these is likely the cause.</p>
+
+        <ul>
+          <li><strong>Not doing daily commissions.</strong> This is the single biggest HotM XP loss available to you. Skipping commissions for a week costs you more HotM XP than most players grind in powder sessions. Do them every day. It takes 30–60 minutes and is the highest-leverage use of your mining time relative to HotM progression.</li>
+          <li><strong>Skipping Quick Forge.</strong> Players who push into Dwarven Mines without immediately investing in Quick Forge spend weeks waiting for forge jobs to complete. Divan's Armor takes long enough with Quick Forge — without it, gearing up takes months of real time. It costs Mithril Powder, which you will have plenty of early on. Get it immediately at Tier 3.</li>
+          <li><strong>Not resetting the HotM tree when priorities shift.</strong> Many players accumulate their early Powder investments into Mithril-focused perks and then never reset when they move to Crystal Hollows. Your optimal Powder allocation in Crystal Hollows (maxing Great Explorer, Professional, Fortunate Mineman) is very different from your Dwarven Mines allocation. Reset the tree when you move areas. It costs nothing.</li>
+          <li><strong>Mining without pets equipped.</strong> The Mole and Ammonite pets each provide 30–60% more effective mining output in their respective areas. A player mining Crystal Hollows without an Ammonite is leaving enormous income on the table. Always have the correct mining pet equipped and leveled.</li>
+          <li><strong>Opening treasure chests before maxing Great Explorer.</strong> The difference in chest spawn rates between Great Explorer level 1 and Great Explorer level max is significant. If you're spending Gemstone Powder on chest keys and opening every chest you find but haven't invested in Great Explorer, you are leaving Powder and Divan's Fragments on the floor. Max Great Explorer first, then farm chests aggressively.</li>
+          <li><strong>Instant-selling Gemstones.</strong> The Bazaar instant-sell vs. sell order gap on Gemstones can be 20–30%. On high-volume grinding, this is millions of coins per session lost. Always use sell orders. The wait time is usually short for commonly-demanded Gemstones like Ruby and Jade.</li>
+          <li><strong>Forgetting to check Sky Mall each day.</strong> Sky Mall can give you a day of double Powder from your primary ore. Ignoring it and farming the wrong thing is a direct waste of that buff. Check it every morning, always.</li>
+          <li><strong>Not upgrading drill fuel tanks.</strong> A drill running on its base fuel tank runs out in 15–30 minutes of active mining. When the drill's fuel is low, Mining Speed penalties apply. An upgraded Titanium-Infused Fuel Tank with a Goblin Omelette fuel item can run for several hours without issue. Fill the tank before every session and upgrade it as soon as possible.</li>
+          <li><strong>Treating Divan's Armor as optional.</strong> Some players get comfortable at 5–8M/hr with mid-tier gear and stop pushing. Divan's Armor more than doubles your Mining Fortune compared to mid-tier sets, which roughly doubles your income per hour. The grind for Divan's Fragments via Great Explorer chest farming is long but passive — it happens during your regular Crystal Hollows sessions. Set it as a background goal and queue forge jobs as you acquire Fragments.</li>
+          <li><strong>Ignoring Titanium in Mithril veins.</strong> Titanium gives roughly 3× the Mithril Powder of regular Mithril per ore. Players who rush through Mithril veins without stopping for Titanium nodes are leaving 20–30% of their Powder income in the ground. Titanium is visually distinct — always stop and break it.</li>
+        </ul>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <h3>Does Mining skill level affect HotM progression?</h3>
+        <p>No. Mining skill and HotM are completely separate systems. Mining skill XP comes from breaking ores and grants passive stat bonuses at each level. HotM XP comes exclusively from daily commissions. Powder comes from mining specific ores. The three systems feed your mining power independently. You need all three progressing simultaneously for optimal results.</p>
+
+        <h3>Can I grind Powder without doing commissions?</h3>
+        <p>Yes, but you shouldn't. Mining ores gives Powder directly and is a large part of your total Powder income. But commissions give HotM XP (which levels the HotM tree, unlocking new perks) as well as bonus Powder. Skipping commissions specifically loses HotM XP, which is not obtainable any other way. Mine for Powder and do commissions for XP — they are complementary, not alternatives.</p>
+
+        <h3>When should I move from Dwarven Mines to Crystal Hollows?</h3>
+        <p>You can enter Crystal Hollows at Mining 12, the same time as Dwarven Mines. However, it becomes your primary income area once you have HotM Tier 4 (for the Professional perk) and decent Gemstone-type armor. Many players run commissions in both areas simultaneously — pick up Dwarven Mines and Crystal Hollows commissions, complete the Crystal Hollows ones first (Gemstone mining is faster with good gear), then finish the Dwarven Mines ones while farming Mithril Powder for lower-tier upgrades.</p>
+
+        <h3>What is the fastest way to get Glacite Powder for Tiers 8–10?</h3>
+        <p>Glacite commissions are the most reliable Glacite Powder source combined with consistent Glacite Tunnels mining. The Eager Adventurer perk from HotM Tier 9 dramatically increases your Mining Speed in Glacite, letting you cycle through more ore per hour. Glacite Mineshaft runs also drop Powder caches from chests and Frozen Corpses. The goal is to have all four daily commissions be Glacite commissions, mine actively in between, and let the hours accumulate. Glacite Powder is slower to accumulate than Mithril or Gemstone Powder early on — budget accordingly and don't try to rush Tiers 8–10 without the Powder base.</p>
+
+        <h3>Is it worth paying for a Legendary Ammonite pet?</h3>
+        <p>Yes, if you are actively farming Crystal Hollows. The Legendary Ammonite's Pristine stat multiplies Gemstone drop counts, and this directly multiplies your coins-per-hour. At 10M/hr baseline, upgrading from an Epic to a Legendary Ammonite might push you to 13–14M/hr — a gain of 3–4M coins per hour. At 1–2 hours of Crystal Hollows farming per day, a Legendary Ammonite pays for itself in coin income within a few weeks of use. It is not cheap, but it is one of the highest-ROI investments available for a mining-focused player.</p>
+
+        <h3>What happens to my HotM progress if I reset the tree?</h3>
+        <p>Nothing bad. When you reset, all Powder that was spent on upgradeable nodes is refunded to you. Your HotM level is unaffected (because HotM level is determined by total accumulated Powder, not Powder allocation). You then reallocate that reclaimed Powder into whatever nodes you now prioritize. The only node that cannot be reset is Core of the Mountain — its Powder investment is permanent. Plan Core of the Mountain investments carefully; everything else is completely reversible.</p>
+
+        <h3>How do I know which Gemstone to farm on a given day?</h3>
+        <p>Check the Bazaar. Open the Bazaar, filter for Gemstones, and look at the sell order (not buy order) prices per unit for each Gemstone type. Then estimate your drops-per-hour for each type based on which zone you'd be farming. The product of price-per-gem and expected gems-per-hour gives you your effective coins-per-hour for each option. It takes two minutes and is worth doing every session — Gemstone prices fluctuate regularly and the best option changes week to week.</p>
+
+        <h3>Do HotM perks that give Mining Speed stack with enchantments?</h3>
+        <p>Yes. All sources of Mining Speed are additive to your total Mining Speed stat (unless specifically noted as a multiplier). HotM perks, enchantments, armor bonuses, ability buffs, and pet bonuses all add together into your total Mining Speed pool, which then determines your block break time. This is why stacking as many Mining Speed sources as possible is so impactful — each additional source adds directly to the total.</p>
+
+      </article>
+    </main>
+  </div>
+
+  <nav class="mobile-nav">
+    <a href="../index.html" class="active">Guidebook</a>
+    <a href="../players.html">Players</a>
+    <a href="../progress.html">Progress</a>
+  </nav>
+
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    const toggle  = document.getElementById('sidebarToggle');
+    toggle.addEventListener('click', () => {
+      sidebar.classList.contains('open')
+        ? (sidebar.classList.remove('open'), overlay.classList.remove('open'))
+        : (sidebar.classList.add('open'), overlay.classList.add('open'));
+    });
+    overlay.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('open');
+    });
+  </script>
+</body>
+</html>

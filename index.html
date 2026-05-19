@@ -1,71 +1,442 @@
 <!DOCTYPE html>
-<html lang="et">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guidebook</title>
+  <title>Guidebook — Hypixel SkyBlock</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <img src="assets/hypixel.jpeg" alt="Hypixel" />
-    <button class="menu-btn">Menu</button>
+  <header class="topnav">
+    <div class="topnav-wrap">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
+          <line x1="2" y1="4" x2="14" y2="4"/>
+          <line x1="2" y1="8" x2="14" y2="8"/>
+          <line x1="2" y1="12" x2="14" y2="12"/>
+        </svg>
+      </button>
+      <a href="index.html" class="brand">
+        <img src="assets/hypixel.png" alt="" />
+        <span>Hypixel SkyBlock</span>
+      </a>
+      <div class="search-wrap">
+        <div class="search-bar">
+          <svg class="search-icon" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="6.5" cy="6.5" r="4.5"/>
+            <line x1="10" y1="10" x2="14" y2="14"/>
+          </svg>
+          <input type="text" placeholder="Search guides, items, mechanics…" />
+          <span class="search-kbd">⌘K</span>
+        </div>
+      </div>
+      <nav class="topnav-links">
+        <a href="index.html" class="topnav-link active">Guidebook</a>
+        <a href="players.html" class="topnav-link">Players</a>
+        <a href="progress.html" class="topnav-link">Progress</a>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <button class="active" data-tab="early">Early game</button>
-    <button data-tab="mid">Midgame</button>
-    <button data-tab="late">Lategame</button>
-    <button data-tab="end">Endgame</button>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="wiki-body">
+    <aside class="wiki-sidebar" id="sidebar">
+      <div class="sidebar-inner">
+        <section class="sidebar-section">
+          <h6 class="sidebar-heading">Progression</h6>
+          <ul class="sidebar-list">
+            <li>
+              <button class="sidebar-item active" data-tab="early">
+                <span class="stage-pip pip-early"></span>
+                Early Game
+                <em>0–160</em>
+              </button>
+            </li>
+            <li>
+              <button class="sidebar-item" data-tab="mid">
+                <span class="stage-pip pip-mid"></span>
+                Midgame
+                <em>160–280</em>
+              </button>
+            </li>
+            <li>
+              <button class="sidebar-item" data-tab="late">
+                <span class="stage-pip pip-late"></span>
+                Late Game
+                <em>280–440</em>
+              </button>
+            </li>
+            <li>
+              <button class="sidebar-item" data-tab="end">
+                <span class="stage-pip pip-end"></span>
+                Endgame
+                <em>440+</em>
+              </button>
+            </li>
+          </ul>
+        </section>
+        <section class="sidebar-section">
+          <h6 class="sidebar-heading">Community</h6>
+          <ul class="sidebar-list">
+            <li><a href="players.html" class="sidebar-item">Players</a></li>
+            <li><a href="progress.html" class="sidebar-item">Progress</a></li>
+          </ul>
+        </section>
+        <div class="infobox">
+          <div class="infobox-title">Guide Info</div>
+          <div class="infobox-row"><span>Updated</span><span>May 2026</span></div>
+          <div class="infobox-row"><span>Version</span><span>SkyBlock 0.21</span></div>
+          <div class="infobox-row"><span>Topics</span><span>33 guides</span></div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="wiki-main">
+      <nav class="breadcrumb-nav">
+        <a href="index.html">Home</a>
+        <span class="bc-sep">›</span>
+        <span>Guidebook</span>
+      </nav>
+
+      <div class="wiki-header">
+        <div>
+          <h1 class="page-title">Progression Guidebook</h1>
+          <p class="page-subtitle">SkyBlock progression from level 0 to endgame. Skills, gear, weapons, and ways to make coins at each stage.</p>
+        </div>
+        <div class="header-badges">
+          <span class="badge badge-updated">Updated May 2026</span>
+          <span class="badge badge-version">v0.21</span>
+        </div>
+      </div>
+
+      <div class="stage-tabs">
+        <button class="stage-tab active" data-tab="early">
+          <span>Early Game</span><small>Lv 0–160</small>
+        </button>
+        <button class="stage-tab" data-tab="mid">
+          <span>Midgame</span><small>Lv 160–280</small>
+        </button>
+        <button class="stage-tab" data-tab="late">
+          <span>Late Game</span><small>Lv 280–440</small>
+        </button>
+        <button class="stage-tab" data-tab="end">
+          <span>Endgame</span><small>Lv 440+</small>
+        </button>
+      </div>
+
+      <div class="panels">
+
+        <div class="panel active" data-panel="early">
+
+          <div class="guide-entry">
+            <img src="assets/dwarven_mines.png" class="entry-thumb" alt="Dwarven Mines" />
+            <div class="entry-body">
+              <h3 class="entry-title">Movement & First Items</h3>
+              <p class="entry-text">Rogue Sword is free from the Weaponsmith in Combat Settlement — right-click gives a speed boost. Grab a Grappling Hook from the AH early. Your main early target is Aspect of the End (AotE), which teleports you forward on right-click and stays useful well into midgame.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/mining.html">Skill Priorities</a></h3>
+              <p class="entry-text">Get Mining, Farming and Foraging to 5 each — that unlocks the Bazaar at SkyBlock Level 7. Combat 12 opens The End. Mining 12 opens Dwarven Mines and the HotM tree. Do your 4 daily Commissions in Dwarven Mines for bonus HotM XP on top of the regular grind.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/combat.html">Armor Progression</a></h3>
+              <p class="entry-text">Iron or Gold to start. Craft Farm Suit at Wheat Collection III. Hardened Diamond at Diamond Collection IV is your first real upgrade worth investing in. Then Ender Armor for The End — it gives a 2x stat multiplier there. Aim for Strong or Unstable Dragon before entering Dungeons. Zombie Knight Armor from the Bazaar is cheap and holds up fine in F1–F3.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/combat.html">Weapons</a></h3>
+              <p class="entry-text">Rogue Sword (free NPC) → Cleaver → Aspect of the End → Aspect of the Dragons (AotD). AotD is crafted from Dragon Fragments and carries you through most of early and mid game. Main enchants to put on it: Sharpness V, Critical V, First Strike IV, Giant Killer V, Lethality V.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <img src="assets/minions.png" class="entry-thumb" alt="Minions" />
+            <div class="entry-body">
+              <h3 class="entry-title">Minions</h3>
+              <p class="entry-text">Craft one of every minion type to unlock more island slots — up to 30 total. Redstone Minion T1 unlocks the Accessory Bag at Redstone Collection II, so get this early. Snow Minions T11 with Super Compactor 3000 + Diamond Spreading + Enchanted Lava Bucket run completely passively and earn 65k–125k coins each per day.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/foraging.html">Early Quests & NPCs</a></h3>
+              <p class="entry-text">The Park has a quick quest chain worth doing: bring logs to Charlie (64 Birch), Kelly (128 Spruce), Molbert (512 Jungle), then Melody (1024 Savanna) for Foraging gear. Melody drops her Hair accessory if you perfect the harp. Lazy Miner near the Gold Mine rewards Auto Smelt. The Bartender in the Graveyard Pub is easy early Combat XP.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <img src="assets/the_end.png" class="entry-thumb" alt="The End" />
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/combat.html">The End & First Dungeons</a></h3>
+              <p class="entry-text">Combat 12 unlocks The End. Buy a Void Sword (~200k) and grind Endermen — Zealots drop Summoning Eyes and Eye of Ender that sell well. For Dungeons, talk to the Catacombs Guide NPC to unlock them. Aim for at least 300 Defense before F1. Grab Bonzo's Mask from F1 — it saves you from one death passively.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/accessories.html">Accessories & Magic Power</a></h3>
+              <p class="entry-text">Accessory Bag unlocks at Redstone Collection II. Good early ones to grab: Speed, Vaccine, Talisman of Coins, Talisman of Magnetism, Campfire Badge (Trial of Fire in The Park). Every accessory adds to your Magical Power — aim for 100–200 MP early on. Always bank your coins before anything risky.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/taming.html">Pets & Passive Systems</a></h3>
+              <p class="entry-text">Grandma Wolf gives you a free pet right at the start — equip it immediately for passive leveling. Uncommon Tiger (~25k) is the best early Combat pet; Rabbit for Farming XP. The Chocolate Factory (/cf) is free, check it daily and hire workers to stack Chocolate for rewards. Booster Cookie early gives 4 days of coin-on-death protection and remote Bazaar access.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <img src="assets/bazaar.png" class="entry-thumb" alt="Bazaar" />
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/combat.html">Making Your First Millions</a></h3>
+              <p class="entry-text">Use Bazaar buy/sell orders for everything — NPC prices are almost never worth it if the item's on the Bazaar. Snow and Clay Minions are passive income from day one. For active grinding, Zealot farming in The End with AotD and Mithril mining in Dwarven Mines both pay well. Get to 100% Crit Chance before stacking Crit Damage. Around 500k–2M per hour once you have a setup going.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="panel" data-panel="mid">
+
+          <div class="guide-entry">
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/combat.html">F3–F6 Armor Path</a></h3>
+              <p class="entry-text">Berserker: Strong/Unstable Dragon → Shadow Assassin (F5–F6) → Necron. Mage: Wise Dragon → Storm's Armor (F6 drop) — Dark Goggles are mandatory in the helmet slot. Necromancer Lord Armor is a solid budget Mage option before Storm's. Shadow Assassin chest + Zombie Knight Chestplate works as cheaper Defense coverage.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <img src="assets/dungeons_f7.png" class="entry-thumb" alt="Dungeons F7" />
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/dungeons.html">Dungeon Floor Guide</a></h3>
+              <p class="entry-text">F3: ~350 Defense. F4: ~400 — Bonzo Mask no longer trivializes deaths. F5: ~550, Livid Dagger is the key drop here, get it Fabled and Recombobulated. F6: drops Shadow Assassin pieces and Storm's Armor. F7: ~700 Defense, Cata 28+ recommended — Necron's Handle drops here and you'll need it for Hyperion later.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/combat.html">Midgame Weapons</a></h3>
+              <p class="entry-text">Berserker: AotD → Livid Dagger (Fabled + Recombobulated) → Axe of the Shredded. Mage: Bonzo's Staff → Spirit Sceptre → Midas Staff. Archer: Juju Shortbow (10–20M) → work toward Terminator. Spirit Sceptre is genuinely strong for Mages pushing F5–F6.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <img src="assets/spiders_den.png" class="entry-thumb" alt="Spider's Den" />
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/slayer.html">Slayer Order</a></h3>
+              <p class="entry-text">There are 6 slayers: Zombie, Spider, Wolf, Enderman, Blaze, Vampire. Start with Zombie (Revenant Horror) — it drops Wand of Healing which is huge QoL. Spider gives Tarantula Armor. Wolf T4 unlocks Enderman. Enderman T3 fills the RNG Meter for guaranteed drops. Blaze needs Voidgloom T3 to unlock. Vampire is in the Rift.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <div class="entry-body">
+              <h3 class="entry-title">Minion Setup</h3>
+              <p class="entry-text">Aim for 20+ slots all running Snow Minions T11. Each needs Super Compactor 3000 + Diamond Spreading + Enchanted Lava Bucket — completely passive once set up. Upgrade tier by tier, never skip. Clay Minions T11 are also good for Fishing XP alongside the coins. Craft one of every minion you haven't done yet to gain collections and unlock more slots.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <img src="assets/helianthus.png" class="entry-thumb" alt="Helianthus Armor" style="object-position: top center;" />
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/farming.html">Jacob's Farming Contest</a></h3>
+              <p class="entry-text">Contests run every SkyBlock day (1 real hour) and last 20 minutes across 3 random crops. Bronze is top 50%, Silver top 25%, Gold top 5%. Gold medals give 25 Jacob's Tickets each — spend these on Turbo-Crop enchant books for Farming Fortune. Unlock the Garden at 100 unique crop collections.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/accessories.html">Upgrading Your Accessories</a></h3>
+              <p class="entry-text">Each accessory upgrades from Talisman to Relic — only the highest tier you own counts. Worth getting midgame: Feather Artifact, Intimidation Artifact, Zombie and Wolf lines, Scarf's Studies. Target 200–400 Magical Power. Maxwell's Power system replaces the old per-accessory reforging — pick a Power that fits your class and upgrade it with MP.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/mining.html">Scaling Your Coin Flow</a></h3>
+              <p class="entry-text">Good sources at this stage: F4–F6 drops like Shadow Assassin pieces and Livid Daggers sell well on the AH. Slayer drops on the Bazaar are solid. Powdersludge Mining with HotM 7+ can hit 10–20M per hour. Bazaar flipping still scales well — reinvest everything. Around 2M–5M per hour consistently in midgame.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="panel" data-panel="late">
+
+          <div class="guide-entry">
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/combat.html">Equipment Slots</a></h3>
+              <p class="entry-text">The 4 equipment slots (Necklace, Cloak, Belt, Gloves) are separate from your armor. For Dungeons: Bone Necklace, SA Cloak, Adaptive Belt, Soul Weaver Gloves — all fragged. For Kuudra and Slayer outside dungeons: Rift Necklace, David Cloak, Implosion Belt, Gauntlet of Contagion. Aim for MP4–5 or MR4–5 attribute rolls on Kuudra pieces.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <img src="assets/reforge.png" class="entry-thumb" alt="Reforging" />
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/combat.html">Reforging</a></h3>
+              <p class="entry-text">Berserker wants Withered or Fabled on weapon and armor. Mage wants Wise or Magical. Archer wants Ancient. Tank wants Reinforced. Reforge your weapon first — it makes the biggest single difference. Reforge Stones come from Dungeons, Slayer drops, and the Bazaar. Basic reforges cost coins at the Blacksmith; advanced ones need Reforge Stones at the Reforge Anvil.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/combat.html">The Hyperion Journey</a></h3>
+              <p class="entry-text">Farm Necron's Handle from F7. Combine with 24 Wither Catalysts to craft Necron's Blade (Unrefined), then add 8 L.A.S.R.'s Eyes to complete Hyperion. Apply all 3 Blade Scrolls at the Anvil to unlock Wither Impact — they drop from Giants in the Blood Room. Other Wither Blades worth knowing: Scylla, Astraea, Valkyrie.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/slayer.html">Slayer Grind</a></h3>
+              <p class="entry-text">Push all Slayers to level 7+. Enderman drops Etherwarp Conduit (big mobility upgrade) and Ender Artifact. Blaze drops Mana Disintegrator and Gauntlet of Contagion, both important for Mage. Vampire Slayer in the Rift unlocks Bloodfiend Armor. Each slayer's RNG Meter at T3+ guarantees drops — always fill it before killing the boss.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <img src="assets/kuudra.png" class="entry-thumb" alt="Kuudra" />
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/kuudra.html">Kuudra Progression</a></h3>
+              <p class="entry-text">Five tiers: Basic through Infernal. Infernal needs 12,000 Crimson Isle reputation to unlock. At T3 (Burning) you want Midas Staff + Storm for clearing, Spiked Terror, and mana regen armor. T5 (Infernal) needs Fiery Terror LL7+, Terminator Duplex 5, and Ember Armor for crate farming. Standard T5 equipment: Molten Necklace, Molten Cloak, Implosion Belt, Glowstone Gauntlet.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/accessories.html">Hitting 1000 Magic Power</a></h3>
+              <p class="entry-text">Get above 1000 Magical Power at this stage. Hegemony Artifact doubles its own MP contribution — it's mandatory, get it first. Scarf's Studies and Thesis are affordable high-MP accessories for dungeon builds. Rift Prism adds +11 MP when imbued at Erihann in the Rift. More MP means stronger Power bonuses and more Tuning Points at Maxwell to put into specific stats.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/taming.html">Pets (Late Game)</a></h3>
+              <p class="entry-text">Golden Dragon (Legendary) at level 200 is the best general pet and worth prioritizing. Spirit Pet is a rare Dungeon drop and highly sought after. Parrot buffs all active potion effects, solid for any potion-heavy build. Baby Yeti from midgame carries over well for survivability. Always match your active pet to what you're doing.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/mining.html">Late Income Sources</a></h3>
+              <p class="entry-text">F7 and Kuudra T4–T5 are the main earners here — Crimson Armor pieces and Molten Equipment go for hundreds of millions on the AH. Pest Farming in the Garden at Farming 40+ is reliable passive income. Crystal Hollows + Powdersludge Mining with HotM 7+ can hit 10–20M per hour. Around 5M–10M per hour consistently at this stage.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="panel" data-panel="end">
+
+          <div class="guide-entry">
+            <img src="assets/master_mode.png" class="entry-thumb" alt="Master Mode" />
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/dungeons.html">Master Mode Requirements</a></h3>
+              <p class="entry-text">MM mobs have dramatically higher HP and damage. Rough Cata level requirements: M1 ~27, M3 ~31–32, M4 ~36, M5 ~38–40, M6 ~41–44, M7 45+. A good rule of thumb: have Master Stars on your armor equal to the floor you're running. Magical Power above 1000 from M4 onward. Terminator is required from M5 — Juju won't cut it.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <img src="assets/divan_armor.png" class="entry-thumb" alt="Armor of Divan" style="object-position: top center;" />
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/dungeons.html">Master Mode Armor & Setup</a></h3>
+              <p class="entry-text">Best-in-slot for M7: Divan's Head, Skeleton Master Chestplate, Necron's Leggings, Maxor's Boots. All gear scales with Catacombs level inside dungeons. Apply perfect gemstones before adding Master Stars. Wax all equipment pieces before starring them — order matters.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/combat.html">Weapons Meta (2026)</a></h3>
+              <p class="entry-text">Hyperion is still the best general weapon — nothing has replaced it in 2026. Terminator is required for M5+ runs; use the Precise enchant. For melee Wither Blades: Scylla for Berserker, Astraea for Tank, Valkyrie if you want something more balanced. Shadow Fury is a cheaper melee option. Fabled Livid Dagger still has a few niche use cases.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <img src="assets/crimson_armor.png" class="entry-thumb" alt="Infernal Crimson Armor" style="object-position: top center;" />
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/kuudra.html">Crimson Armor</a></h3>
+              <p class="entry-text">Best out-of-dungeon melee armor set at Infernal Tier + 15 Stars. Melee hits build up to 10 stacking buffs that boost your stats each hit. Full upgrade cost runs around 1.79M Crimson Essence, 172 Heavy Pearls, 160 Kuudra Teeth, and ~102M in materials. Attribute rolls matter a lot — the right combination can double or triple a piece's value on the AH.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/accessories.html">Maxed Magical Power</a></h3>
+              <p class="entry-text">Cap is 2007 base MP, or 2247 in dungeons with all Dungeon Accessories. Hegemony Artifact doubles its own contribution — mandatory. Rift Prism adds +11 MP when imbued at Erihann. Higher MP unlocks stronger Powers at Maxwell and more Tuning Points to allocate. Getting to 2007 means owning every unique accessory at max rarity.</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <div class="entry-body">
+              <h3 class="entry-title"><a href="guides/kuudra.html">Infernal Kuudra</a></h3>
+              <p class="entry-text">You need Terminator with Duplex 5, Fiery Terror LL7+, Ember Armor for crates, and Hyperion at 1100+ mana for the mage role. Coordinated 4-person teams are the standard — solo is possible but slow. Each run drops 3 Demon Shards plus the full Crimson loot table, with a chance at Crimson Armor, Molten Equipment, Tormentor, Hellstorm Wand, and Ananke Feathers (0.35%).</p>
+            </div>
+          </div>
+
+          <div class="guide-entry">
+            <div class="entry-body">
+              <h3 class="entry-title">Net Worth Milestones</h3>
+              <p class="entry-text">Rough brackets: under 50M is early game, 50M–500M midgame, 500M–5B late, 5B–30B endgame, 30B+ is top player territory. 1B is realistic within a year if you play consistently. Track your profile at soopy.dev/networth or skytools.app. At endgame you can expect 10M–20M+ per hour from M7 or Infernal Kuudra.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <nav class="mobile-nav">
+    <a href="index.html" class="active">Guidebook</a>
+    <a href="players.html">Players</a>
+    <a href="progress.html">Progress</a>
   </nav>
 
-  <main>
-    <div class="panel active" data-panel="early">
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-    </div>
-
-    <div class="panel" data-panel="mid">
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-    </div>
-
-    <div class="panel" data-panel="late">
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-    </div>
-
-    <div class="panel" data-panel="end">
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-    </div>
-  </main>
-
-  <footer>
-    <button class="active">Guidebook</button>
-    <button>Players</button>
-    <button>Progress</button>
-    <button>Settings</button>
-  </footer>
-
   <script>
-    document.querySelectorAll('nav button').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
-        document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-        btn.classList.add('active');
-        document.querySelector(`.panel[data-panel="${btn.dataset.tab}"]`).classList.add('active');
+    function switchTab(tabId) {
+      document.querySelectorAll('.stage-tab').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.tab === tabId);
       });
+      document.querySelectorAll('.sidebar-item[data-tab]').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.tab === tabId);
+      });
+      document.querySelectorAll('.panel').forEach(panel => {
+        panel.classList.toggle('active', panel.dataset.panel === tabId);
+      });
+    }
+
+    document.querySelectorAll('.stage-tab').forEach(btn => {
+      btn.addEventListener('click', () => switchTab(btn.dataset.tab));
     });
+
+    document.querySelectorAll('.sidebar-item[data-tab]').forEach(btn => {
+      btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+    });
+
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    const toggle  = document.getElementById('sidebarToggle');
+
+    function openSidebar() {
+      sidebar.classList.add('open');
+      overlay.classList.add('open');
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('open');
+    }
+
+    toggle.addEventListener('click', () => {
+      sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+    });
+
+    overlay.addEventListener('click', closeSidebar);
   </script>
 
 </body>
