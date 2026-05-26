@@ -1,0 +1,485 @@
+// Värvid
+$bg-main: #0c1118;
+$bg-secondary: #121b28;
+$bg-card: #192336;
+$bg-card-light: #1f2d44;
+
+$text-main: #e4eaf5;
+$text-muted: #8a9bb5;
+$text-dark: #4a6278;
+
+$border: #1c2b40;
+$border-light: #24395a;
+
+$gold: #d49d12;
+
+// Reset
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background: $bg-main;
+  color: $text-main;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+// Topnav
+.topnav {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  height: 56px;
+  background: $bg-secondary;
+  border-bottom: 1px solid $border;
+}
+
+.topnav-wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 20px;
+}
+
+.sidebar-toggle {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+}
+
+.brand {
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.search-wrap {
+  flex: 1;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.search-input {
+  background: $bg-card;
+  border: 1px solid $border;
+  color: $text-muted;
+  border-radius: 8px;
+}
+
+.search-input:focus {
+  background: $bg-card-light;
+  color: $text-main;
+  box-shadow: none;
+  border-color: $gold;
+}
+
+.topnav-links {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.topnav-link {
+  display: block;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  background: rgba(212, 157, 18, 0.1);
+}
+
+// Layout
+.wiki-body {
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  min-height: calc(100vh - 56px);
+}
+
+// Sidebar
+.wiki-sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  border-right: 1px solid $border;
+  position: sticky;
+  top: 56px;
+  height: calc(100vh - 56px);
+  overflow-y: auto;
+  padding: 20px 12px;
+}
+
+.sidebar-section {
+  margin-bottom: 24px;
+}
+
+.sidebar-heading {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  padding: 0 8px;
+  margin-bottom: 4px;
+}
+
+.sidebar-list {
+  list-style: none;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 7px 8px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 600;
+  color: $text-muted;
+  text-align: left;
+}
+
+.sidebar-item em {
+  margin-left: auto;
+  font-style: normal;
+  font-size: 11px;
+}
+
+.sidebar-item:hover {
+  background: $bg-card;
+  color: $text-main;
+}
+
+.sidebar-item.active {
+  background: rgba(212, 157, 18, 0.1);
+  color: $gold;
+}
+
+// Pip
+.stage-pip {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+// Infobox
+.infobox {
+  background: $bg-card;
+  border: 1px solid $border;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.infobox-title {
+  background: $bg-card-light;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 8px 12px;
+  border-bottom: 1px solid $border;
+}
+
+.infobox-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 12px;
+  font-size: 12px;
+}
+
+// Main
+.wiki-main {
+  flex: 1;
+  min-width: 0;
+  padding: 24px 28px 80px;
+}
+
+// Hero
+.hero {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  height: 220px;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  background: linear-gradient(to top, rgba(12, 17, 24, 0.9), transparent);
+}
+
+.hero-title {
+  font-size: 28px;
+  color: $text-main;
+  margin-bottom: 4px;
+}
+
+.hero-text {
+  font-size: 14px;
+  color: $text-muted;
+}
+
+// Breadcrumb
+.breadcrumb-nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+// Header
+.wiki-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid $border;
+}
+
+.page-title {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.page-subtitle {
+  font-size: 13px;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.header-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+}
+
+// Stage tabs
+.stage-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  border: 1px solid $border;
+  border-radius: 8px;
+  padding: 4px;
+  background: $bg-secondary;
+}
+
+.stage-tab {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: $text-muted;
+  font-size: 14px;
+}
+
+.stage-tab small {
+  font-size: 11px;
+}
+
+.stage-tab:hover {
+  background: $bg-card;
+}
+
+.stage-tab.active {
+  background: $bg-card-light;
+}
+
+// Views
+.view {
+  display: none;
+}
+
+.view.active {
+  display: block;
+}
+
+// Panels
+.panel {
+  display: none;
+}
+
+.panel.active {
+  display: block;
+}
+
+// Guide entry
+.guide-entry {
+  background: $bg-card;
+  border: 1px solid $border;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
+}
+
+.guide-entry:hover {
+  border-color: $gold;
+  transform: translateY(-2px);
+}
+
+.entry-title {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.entry-text {
+  font-size: 13px;
+  line-height: 1.7;
+  color: $text-muted;
+}
+
+// Video
+.video-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.video-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+// Bottom nav
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background: $bg-secondary;
+  border-top: 1px solid $border;
+  z-index: 100;
+}
+
+.bottom-nav-btn {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-top: 2px solid transparent;
+  background: transparent;
+  color: $text-muted;
+  font-size: 13px;
+  font-weight: 600;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.bottom-nav-btn:hover {
+  background: $bg-card;
+  color: $text-main;
+}
+
+.bottom-nav-btn.active {
+  color: $gold;
+  border-top-color: $gold;
+}
+
+// Overlay
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 140;
+}
+
+.sidebar-overlay.open {
+  display: block;
+}
+
+// Lehe sisenemise animatsioon
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.wiki-main {
+  animation: fadeIn 0.3s ease;
+}
+
+// Mobile
+@media (max-width: 1023px) {
+  .wiki-sidebar {
+    display: none;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    z-index: 150;
+    background: $bg-secondary;
+  }
+
+  .wiki-sidebar.open {
+    display: block;
+  }
+}
+
+@media (max-width: 639px) {
+  .wiki-main {
+    padding: 16px 16px 80px;
+  }
+
+  .wiki-header {
+    flex-direction: column;
+  }
+}
