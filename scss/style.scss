@@ -78,6 +78,58 @@ button {
   width: 36px;
   height: 36px;
   padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $border-light;
+  border-radius: 8px;
+  background: $bg-card;
+}
+
+.sidebar-toggle:hover {
+  background: $bg-card-light;
+}
+
+// Hamburger-ikoon: keskmine joon + ::before/::after ulemine ja alumine joon
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: $text-main;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.hamburger {
+  position: relative;
+}
+
+.hamburger::before {
+  position: absolute;
+  top: -6px;
+}
+
+.hamburger::after {
+  position: absolute;
+  top: 6px;
+}
+
+// Avatud olekus muutub hamburger X-iks
+.sidebar-toggle.open .hamburger {
+  background: transparent;
+}
+
+.sidebar-toggle.open .hamburger::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.sidebar-toggle.open .hamburger::after {
+  top: 0;
+  transform: rotate(-45deg);
 }
 
 .brand {
@@ -547,8 +599,8 @@ button {
   animation: fadeIn 0.3s ease;
 }
 
-// Mobile
-@media (max-width: 1023px) {
+// Mobile: 991px = Bootstrapi "lg" murdepunkt (sama, mille juures Menu-nupp ilmub)
+@media (max-width: 991px) {
   .wiki-sidebar {
     display: none;
     position: fixed;
@@ -563,6 +615,7 @@ button {
   }
 }
 
+// Telefon: koristan paise ara, et asjad mahuksid 375px laiusele
 @media (max-width: 639px) {
   .wiki-main {
     padding: 16px 16px 80px;
@@ -570,5 +623,27 @@ button {
 
   .wiki-header {
     flex-direction: column;
+  }
+
+  // Otsinguriba ja korduv "Guidebook" link vottsimata ruumi - peidan
+  .search-wrap,
+  .topnav-links {
+    display: none;
+  }
+
+  // Alammenuu nupud vaiksemaks, et 4 nuppu mahuks ilma murdumata
+  .bottom-nav-btn {
+    font-size: 11px;
+    padding: 12px 4px;
+  }
+
+  // Etapi-vahekaardid tihedamaks
+  .stage-tab {
+    padding: 8px 4px;
+    font-size: 12px;
+  }
+
+  .stage-tab small {
+    font-size: 10px;
   }
 }

@@ -23,11 +23,11 @@
     <header class="topnav">
       <div class="topnav-wrap">
         <button
-          class="sidebar-toggle btn btn-outline-secondary d-lg-none"
+          class="sidebar-toggle d-lg-none"
           id="sidebarToggle"
           aria-label="Toggle sidebar"
         >
-          Menu
+          <span class="hamburger"></span>
         </button>
 
         <a href="index.html" class="brand text-warning fw-bold">
@@ -773,11 +773,13 @@
       function openSidebar() {
         sidebar.classList.add("open");
         overlay.classList.add("open");
+        toggle.classList.add("open"); // hamburger -> X
       }
 
       function closeSidebar() {
         sidebar.classList.remove("open");
         overlay.classList.remove("open");
+        toggle.classList.remove("open"); // X -> hamburger
       }
 
       toggle.addEventListener("click", () => {
