@@ -5,17 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guidebook — Hypixel SkyBlock</title>
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <!-- Bootstrap CDN eemaldatud joudluse parandamiseks.
+         Kasutasime sellest ainult paari abiklassi (fw-bold, text-warning jne),
+         mis on nuud otse style.css-is - nii kaob ~230 KB blokeerivat CSS-i. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Kaks fonti: Rubik (sisutekst) + Poppins (pealkirjad) -->
+    <!-- Fondid: Rubik (sisutekst) + Poppins (pealkirjad).
+         Laetakse mitte-blokeerivalt (media=print + onload), et leht avaneks kiiremini. -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Rubik:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Rubik:wght@400;600;700;800&display=swap"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Rubik:wght@400;600;700;800&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Rubik:wght@400;600;700;800&display=swap"
+      />
+    </noscript>
 
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -110,6 +123,9 @@
               src="assets/hero.jpg"
               alt="Hypixel SkyBlock Hub village in-game screenshot"
               class="hero-img"
+              width="1280"
+              height="720"
+              fetchpriority="high"
             />
             <div class="hero-overlay">
               <h2 class="hero-title fw-bold">Welcome to SkyBlock</h2>

@@ -54,6 +54,64 @@ button {
   cursor: pointer;
 }
 
+// === Bootstrapi asendus ===
+// Ainult need abiklassid, mida tegelikult kasutame (varem tuli kogu Bootstrap CDN-ist)
+.fw-bold {
+  font-weight: 700;
+}
+
+.text-warning {
+  color: $gold;
+}
+
+.text-secondary {
+  color: $text-muted;
+}
+
+.list-unstyled {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+// Stage-pip'i (sidebar'i varvilised tapid) varvid
+.bg-success {
+  background-color: #3fb950;
+}
+.bg-primary {
+  background-color: #4493f8;
+}
+.bg-warning {
+  background-color: $gold;
+}
+.bg-danger {
+  background-color: #f85149;
+}
+
+// Otsingusisendi baasstiil
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 6px 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  border: 1px solid $border;
+  border-radius: 6px;
+  outline: none;
+}
+
+.form-control-sm {
+  padding: 4px 8px;
+  font-size: 13px;
+}
+
+// Peida "lg" ekraanil (>=992px) - kasutusel hamburger-nupul
+@media (min-width: 992px) {
+  .d-lg-none {
+    display: none !important;
+  }
+}
+
 // Topnav
 .topnav {
   position: sticky;
