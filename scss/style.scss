@@ -13,6 +13,10 @@ $border-light: #24395a;
 
 $gold: #d49d12;
 
+// Fondid: Rubik sisule, Oswald pealkirjadele
+$font-body: "Rubik", sans-serif;
+$font-display: "Poppins", sans-serif;
+
 // Reset
 * {
   box-sizing: border-box;
@@ -21,10 +25,24 @@ $gold: #d49d12;
 }
 
 body {
-  font-family: "Rubik", sans-serif;
-  background: $bg-main;
+  font-family: $font-body;
+  // Taustapilt: tume blokiline SkyBlock-pind + gradient loetavuse hoidmiseks
+  background-image: linear-gradient(rgba(12, 17, 24, 0.84), rgba(12, 17, 24, 0.9)),
+    url("../assets/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: $text-main;
   min-height: 100vh;
+}
+
+// Pealkirjad kasutavad display-fonti Oswald
+.hero-title,
+.page-title,
+.entry-title,
+.brand {
+  font-family: $font-display;
+  letter-spacing: 0.01em;
 }
 
 a {
@@ -393,6 +411,77 @@ button {
   width: 100%;
   height: 100%;
   border: none;
+}
+
+// Video pisipilt (laeb päris mängija alles klõpsamisel)
+.video-facade {
+  cursor: pointer;
+  background: #000;
+}
+
+.video-thumb {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(212, 18, 18, 0.9);
+  transition: background 0.2s;
+}
+
+.video-play::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 11px 0 11px 18px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.video-facade:hover .video-play {
+  background: #d41212;
+}
+
+// Kontakt: lingid nuppudena
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.contact-btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid $border-light;
+  background: $bg-card;
+  color: $text-main;
+  font-size: 13px;
+  font-weight: 600;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    transform 0.2s;
+}
+
+.contact-btn:hover {
+  background: $bg-card-light;
+  border-color: $gold;
+  transform: translateY(-2px);
+  color: $gold;
 }
 
 // Bottom nav
